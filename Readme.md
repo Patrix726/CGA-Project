@@ -5,6 +5,6 @@ Group members
 1. Nebil Rahmeto
 2. Tekliye Tamiru
 3. Mohammed Kasim
-4.
+4. Hailegiorgis Wagaye
 5.
 6.
