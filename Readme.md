@@ -6,5 +6,5 @@ Group members
 2. Tekliye Tamiru
 3. Mohammed Kasim
 4. Hailegiorgis Wagaye
-5.
+5. Yordanos Belayneh
 6.
