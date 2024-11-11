@@ -7,4 +7,4 @@ Group members
 3. Mohammed Kasim
 4. Hailegiorgis Wagaye
 5. Yordanos Belayneh
-6.
+6. Leul Gedion
