@@ -322,3 +322,157 @@ Question of the Day: How can we use variables to store information in our progra
     ellipse(xdi+120,ydi+(tireSize/3),tireSize,tireSize);
 
     ```
+
+## Lesson 6: Random Numbers
+
+Question of the Day: How can we make our programs behave differently each time they are run?
+
+-   Correctly predicted what the code outputs.
+-   Updated the code to output the ellipse anywhere horizontally on the screen.
+    ```
+    fill("orange");
+    ellipse(randomNumber(0,400), 200, 50, 50);
+    ```
+-   Updated the code to make the ellipse appear anywhere on the screen, random x and y coordinates.
+    ```
+    fill("orange");
+    ellipse(randomNumber(0,400), randomNumber(0,400), 50, 50);
+    ```
+-   Combined random numbers with variables.
+-   Called `randomNumber()` twice and stored it in a variable to show different random sizes for ellipse size.
+
+    ```
+    var petalSize;
+    background("green");
+
+    petalSize = randomNumber(15,65);
+    // petals
+    fill("purple");
+    ellipse(75,100,petalSize,petalSize);
+    ellipse(125,100,petalSize,petalSize);
+    ellipse(100,75,petalSize,petalSize);
+    ellipse(100,125,petalSize,petalSize);
+    // center
+    fill("yellow");
+    ellipse(100,100, 50, 50);
+
+    petalSize = randomNumber(15,65);
+    // petals
+    fill("purple");
+    ellipse(275,300,petalSize,petalSize);
+    ellipse(325,300,petalSize,petalSize);
+    ellipse(300,275,petalSize,petalSize);
+    ellipse(300,325,petalSize,petalSize);
+    // center
+    fill("yellow");
+    ellipse(300,300, 50, 50);
+    ```
+
+-   Debugging: Fixed the code making each rectangle appear in a different random x coordinate instead of the flag appearing in a random x coordinate.
+    ```
+    // Update the code so the rectangles appear stacked at random x positions
+    var xPosition = randomNumber(0,200);
+    fill("pink");
+    rect(xPosition, 100, 250, 50);
+    fill("purple");
+    rect(xPosition, 150, 250, 50);
+    fill("firebrick");
+    rect(xPosition, 200, 250, 50);
+    ```
+-   Completed the rainbow snake. And as a challenge made the size of the circles random as well.
+
+    ```
+    // Add at least three new different colored circles to your rainbow snake.
+    // Use randomNumber to make the rest of the snake's body move up and down like the first three.
+
+    background("skyBlue");
+    var size= randomNumber(40,60);
+    fill("red");
+    ellipse(100, randomNumber(190,210), size, size);
+
+    size= randomNumber(40,60);
+
+    fill("orange");
+    ellipse(140, randomNumber(190,210), size, size);
+
+    size= randomNumber(40,60);
+
+    fill("yellow");
+    ellipse(180, randomNumber(190,210), size, size);
+
+    size= randomNumber(40,60);
+
+    fill("green");
+    ellipse(220, randomNumber(190,210), size, size);
+
+    size= randomNumber(40,60);
+
+    fill("blue");
+    ellipse(260, randomNumber(190,210), size, size);
+
+    size= randomNumber(40,60);
+
+    fill("purple");
+    ellipse(300, randomNumber(190,210), size, size);
+    ```
+
+-   Final Exercise: Random Rainbow. Made all the fill colors to be random.
+
+    ```
+    //1 Update the background to be a random color
+    var red = randomNumber(0,255);
+    var green = randomNumber(0,255);
+    var blue = randomNumber(0,255);
+    background(rgb(red,green,blue));
+
+    //2 Update each arc of the rainbow to a random color
+    red = randomNumber(0,255);
+    green = randomNumber(0,255);
+    blue = randomNumber(0,255);
+    fill(rgb(red,green,blue));
+    ellipse(200, 200, 400, 400);
+
+    red = randomNumber(0,255);
+    green = randomNumber(0,255);
+    blue = randomNumber(0,255);
+    fill(rgb(red,green,blue));
+    ellipse(200, 200, 340, 340);
+
+    red = randomNumber(0,255);
+    green = randomNumber(0,255);
+    blue = randomNumber(0,255);
+    fill(rgb(red,green,blue));
+    ellipse(200, 200, 280, 280);
+
+    red = randomNumber(0,255);
+    green = randomNumber(0,255);
+    blue = randomNumber(0,255);
+    fill(rgb(red,green,blue));
+    ellipse(200, 200, 220, 220);
+
+    red = randomNumber(0,255);
+    green = randomNumber(0,255);
+    blue = randomNumber(0,255);
+    fill(rgb(red,green,blue));
+    ellipse(200, 200, 160, 160);
+
+    red = randomNumber(0,255);
+    green = randomNumber(0,255);
+    blue = randomNumber(0,255);
+    fill(rgb(red,green,blue));
+    ellipse(200, 200, 100, 100);
+
+    red = randomNumber(0,255);
+    green = randomNumber(0,255);
+    blue = randomNumber(0,255);
+    fill(rgb(red,green,blue));
+    ellipse(200, 200, 40, 40);
+
+    //3 Update the ground to a random color
+    red = randomNumber(0,255);
+    green = randomNumber(0,255);
+    blue = randomNumber(0,255);
+    fill(rgb(red,green,blue));
+    rect(0, 200, 400, 200);
+
+    ```
