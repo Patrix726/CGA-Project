@@ -24,7 +24,7 @@
           - Iterate Based on Feedback
 **
 
-### @@@ Lesson Two : Plotting Shapes
+### Lesson Two : Plotting Shapes
 
  # Question of the Day: How can we clearly communicate how to draw something on a screen? #
 
