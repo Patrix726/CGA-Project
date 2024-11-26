@@ -8,3 +8,5 @@ Group members
 4. Hailegiorgis Wagaye
 5. Yordanos Belayneh
 6. Leul Gedion
+7. Misgana Tsegaye
+8. Milki Alemu
