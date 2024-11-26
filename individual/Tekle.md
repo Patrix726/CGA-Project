@@ -3,12 +3,12 @@
 
    ##   ID : ugr/25614/14   @@@
 
-  ###  @@@ Lesssons Summary @@@ ###
+  ###  Lesssons Summary  ###
    
 
-## @@@  Lesson One : Programming for a purpose
+## Lesson One : Programming for a purpose
 
-## @ Question of the Day @ : How can we design animations and games based on the needs of users  ## 
+##  Question of the Day : How can we design animations and games based on the needs of users  ## 
 
 ** Animations and Game Design Templates
 
