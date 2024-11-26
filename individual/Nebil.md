@@ -476,3 +476,6 @@ Question of the Day: How can we make our programs behave differently each time t
     rect(0, 200, 400, 200);
 
     ```
+
+---
+![image](https://github.com/user-attachments/assets/0d2c4acc-7ee1-4efd-a86a-34bea5acbb6c)
