@@ -32,3 +32,20 @@ To clearly communicate how to draw something on a screen, we need to use precise
       Explore using this tool that lets you draw different colored shapes.
          - Choose a color to change the color of the shapes
          - Click on a shape EVERY TIME you want to draw a new shape
+## **Lesson Three - Shapes and Coordinates**
+
+**Question of the Day:** How can we use coordinates to position and size shapes on a canvas?
+
+To position and size shapes effectively on a screen, we must understand how coordinates and dimensions work in a 2D grid system.
+
+- **Key Concepts:**
+  - **Canvas and Grid:** The canvas has a coordinate system starting at `(0, 0)` in the top-left corner. The x-axis increases to the right, and the y-axis increases downward.
+  - **Rect Function:** The `rect(x, y)` function places a rectangle on the canvas with its top-left corner at `(x, y)`. Additional parameters can be used for width and height.
+  - **Predicting Placement:** Experimenting with different `(x, y)` values helps visualize where shapes will appear.
+  - **Default Dimensions:** If width and height are not specified, default values (e.g., 50x50 pixels) are used.
+
+- **Activities:**
+  - Draw shapes on the grid using coordinates.
+  - Test various values to understand their effect on shape position and size.
+  - Discuss with peers to predict shape placement based on given code.
+![Screenshot of 3 Lessons](https://i.ibb.co/R3mj9Dp/Screenshot-3-lesson.png)
