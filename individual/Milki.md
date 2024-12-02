@@ -226,4 +226,5 @@ Challenge: There is a purple square that is covered up by the background. Can yo
 `regularPolygon(150, 275, 12, 50);`
 `regularPolygon(250, 275, 13, 50);`
 `regularPolygon(350, 275, 14, 50);`
+
 ![Uploading Screenshot-2.jpeg…]()
