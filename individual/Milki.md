@@ -78,3 +78,6 @@ Do This
 # Answer
 `fill(rgb(23,45,122));`
 `ellipse(200, 300);`
+
+
+![screenshot](https://github.com/user-attachments/assets/4e493f28-3f3f-4ea4-8b9a-ef8f3a648430)
