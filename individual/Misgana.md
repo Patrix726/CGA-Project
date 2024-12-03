@@ -80,3 +80,27 @@ Learn to use the **Drawing Shapes Template** for visual elements.
 --- 
 ![image](https://github.com/user-attachments/assets/e04447b3-6fd4-4b59-9dcc-6fe7f32b685f)
 
+
+Lesson 4: Parameters in Functions
+Question of the Day: How do parameters make functions more adaptable?
+Key Concepts:
+
+    Parameters enable functions to take inputs and generate varied outputs.
+    They are crucial for creating flexible and reusable code.
+    Activities:
+    Writing functions with parameters to adjust behaviors.
+    Examples include modifying colors or sizes based on input values.
+
+Lesson 5: Variables
+Question of the Day: How do variables help manage data in programs?
+Key Concepts:
+
+    Variables store information that can change as the program runs.
+    They are used for tasks such as tracking scores, user inputs, or program settings.
+    Activities:
+    Creating and updating variables in animations and games.
+    Using variables for interactivity, such as event counting.
+
+
+![Screenshot 2024-12-03 at 13-22-03 Unit 3 - Interactive Animations and Games ('24-'25) - Code org](https://github.com/user-attachments/assets/e0f41eb9-b86e-4d77-8a48-4cea31441ab9)
+
