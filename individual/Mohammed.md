@@ -13,13 +13,20 @@ Question of the day: How can we design animations and games based on the needs o
          - 
 -   Completed the survey
 
+## Lesson 2: Plotting Shapes
+Question of the Day: How can we clearly communicate how to draw something on a screen?
+
+-   After this lesson I was:
+         - able to understand ho to instruct the game lab to display on the screen.
+         - able to drag and drop shapes on the screen.
+
 ## Lesson 3: Drawing In Game Lab
 Question of the Day: How can we communicate to a computer how to draw shapes on the screen?
 
 -   After this lesson I was:
          - able to understand how to draw polygon shapes using functions like rect() and ellipse().
          - able to fill the shapes with different color on the screen.
-## Lesson 3: Shapes and Parameters
+## Lesson 4: Shapes and Parameters
 Question of the Day: How can we use parameters to give the computer more specific instructions?
 
 -   After this lesson I was:
