@@ -48,4 +48,83 @@ To position and size shapes effectively on a screen, we must understand how coor
   - Draw shapes on the grid using coordinates.
   - Test various values to understand their effect on shape position and size.
   - Discuss with peers to predict shape placement based on given code.
+
 ![Screenshot of 3 Lessons](https://i.ibb.co/R3mj9Dp/Screenshot-3-lesson.png)
+
+### **Lesson 4: Parameters in Functions**
+- **Question of the Day:** How can we make functions more flexible using parameters?
+- **Key Concepts:**
+  - Parameters allow functions to take inputs and produce different outputs based on those inputs.
+  - They are essential for creating reusable and dynamic code.
+- **Activities:** 
+  - Writing functions with parameters to customize behaviors.
+  - Using examples like changing colors or sizes based on input values.
+
+---
+
+### **Lesson 5: Variables**
+- **Question of the Day:** How do variables help us store and manage information in programs?
+- **Key Concepts:**
+  - Variables hold data that can change as the program runs.
+  - They are used for tracking scores, user input, or settings in a program.
+- **Activities:**
+  - Creating and updating variables in animations and games.
+  - Using variables for interactivity, like keeping count of events.
+
+---
+
+### **Lesson 6: Random Numbers**
+- **Question of the Day:** How can we use random numbers to make programs dynamic?
+- **Key Concepts:**
+  - Random numbers introduce unpredictability and variation.
+  - They are used for tasks like randomizing movement, generating game challenges, or changing colors.
+- **Activities:**
+  - Using `randomNumber(min, max)` to generate values within a range.
+  - Applying randomness in animations or interactive features.
+
+---
+
+### **Lesson 7: Mini-Project: Robot Face**
+- **Question of the Day:** How can we use randomness creatively in projects?
+- **Key Concepts:**
+  - Combines randomness with shape drawing and coordinates.
+  - Randomly places or modifies elements of a robot face design.
+- **Activities:**
+  - Building a custom robot face that changes features randomly.
+  - Applying random number generation to positioning or sizing elements.
+
+---
+
+### **Lesson 8: Sprites**
+- **Question of the Day:** How can we use sprites to represent objects in animations or games?
+- **Key Concepts:**
+  - Sprites are visual elements that can move or interact in programs.
+  - They simplify complex animations and enhance graphics.
+- **Activities:**
+  - Creating and customizing sprites using the Game Lab.
+  - Incorporating sprites into interactive projects.
+
+---
+
+### **Lesson 9: Sprite Properties**
+- **Question of the Day:** How can sprite properties make animations more dynamic?
+- **Key Concepts:**
+  - Sprites have properties like position, size, and speed that can be manipulated.
+  - Understanding and modifying properties allow for advanced animations and interactivity.
+- **Activities:**
+  - Changing sprite properties over time.
+  - Experimenting with behaviors like bouncing or following paths.
+
+---
+
+### **Lesson 10: Testing and Debugging**
+- **Question of the Day:** Why is testing important in programming, and how can we improve our programs?
+- **Key Concepts:**
+  - Testing ensures programs work as intended and identifies bugs.
+  - Debugging involves finding and fixing errors to improve performance.
+- **Activities:**
+  - Testing interactive programs with users.
+  - Refining code for functionality and user experience.
+
+![Screenshot of 4-10 Lessons](https://i.ibb.co/QMhHbg5/Capture.png)
+
