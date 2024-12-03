@@ -78,4 +78,5 @@ Learn to use the **Drawing Shapes Template** for visual elements.
 - Collaborate with peers to predict shape positions through code analysis.  
 
 --- 
-![Screenshot Of lesson1-3](https://i.ibb.co/tXZ48Y1/Screenshot-2024-11-25-223954.png)
+![image](https://github.com/user-attachments/assets/e04447b3-6fd4-4b59-9dcc-6fe7f32b685f)
+
