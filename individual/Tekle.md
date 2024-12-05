@@ -1,10 +1,14 @@
 
-   ### Name : Tekliye Tamiru 
-   ## ID : ugr/25614/14   
-## Lesssons Summary 
-###   Lesson One : Programming for a purpose
+   ###  Name : Tekliye Tamiru @@@
 
-- Question of the Day : How can we design animations and games based on the needs of users   
+   ##   ID : ugr/25614/14   @@@
+
+  ###  @@@ Lesssons Summary @@@ ###
+   
+
+## @@@  Lesson One : Programming for a purpose
+
+## @ Question of the Day @ : How can we design animations and games based on the needs of users  ## 
 
   ### Animations and Game Design Templates
 
@@ -17,9 +21,13 @@
           - Develop Prototypes
           - Ensure Accessibility
           - Iterate Based on Feedback
-### Lesson Two : Plotting Shapes
- ### Question of the Day: How can we clearly communicate how to draw something on a screen? #
-  - In this lesson, you will explore the challenges of communicating clear instructions using a Game 
+**
+
+### @@@ Lesson Two : Plotting Shapes
+
+ # Question of the Day: How can we clearly communicate how to draw something on a screen? #
+
+     In this lesson, you will explore the challenges of communicating clear instructions using a Game 
        Lab tool to draw shapes on the Game Lab's grid! 
 ### Lesson Three : Drawing in Game Lab
  **Question of the Day:** How can we communicate to a computer how to draw shapes on the screen?

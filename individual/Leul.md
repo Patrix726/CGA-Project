@@ -79,3 +79,69 @@ Learn to use the **Drawing Shapes Template** for visual elements.
 
 --- 
 ![Screenshot Of lesson1-3](https://i.ibb.co/yqKBTd2/Screenshot-2024-11-26-141242.png)
+
+
+**Lesson 4: Parameters in Functions**  
+*Question of the Day:* How do parameters make functions more adaptable?  
+**Key Concepts:**  
+- Parameters enable functions to take inputs and generate varied outputs.  
+- They are crucial for creating flexible and reusable code.  
+**Activities:**  
+- Writing functions with parameters to adjust behaviors.  
+- Examples include modifying colors or sizes based on input values.  
+
+**Lesson 5: Variables**  
+*Question of the Day:* How do variables help manage data in programs?  
+**Key Concepts:**  
+- Variables store information that can change as the program runs.  
+- They are used for tasks such as tracking scores, user inputs, or program settings.  
+**Activities:**  
+- Creating and updating variables in animations and games.  
+- Using variables for interactivity, such as event counting.  
+
+**Lesson 6: Random Numbers**  
+*Question of the Day:* How do random numbers add dynamism to programs?  
+**Key Concepts:**  
+- Random numbers introduce variation and unpredictability.  
+- They are useful for randomizing movements, creating challenges, or changing colors.  
+**Activities:**  
+- Generating random values within a range using `randomNumber(min, max)`.  
+- Incorporating randomness in animations or interactive features.  
+
+**Lesson 7: Mini-Project: Robot Face**  
+*Question of the Day:* How can randomness enhance creative projects?  
+**Key Concepts:**  
+- Combines randomness with drawing shapes and positioning elements.  
+- Allows for dynamic changes to a robot face design.  
+**Activities:**  
+- Designing a robot face with randomly changing features.  
+- Using random numbers to adjust positions or sizes of elements.  
+
+**Lesson 8: Sprites**  
+*Question of the Day:* How are sprites used to represent objects in animations or games?  
+**Key Concepts:**  
+- Sprites are graphical elements that can move and interact in programs.  
+- They simplify complex animations and improve visuals.  
+**Activities:**  
+- Creating and customizing sprites in Game Lab.  
+- Integrating sprites into interactive projects.  
+
+**Lesson 9: Sprite Properties**  
+*Question of the Day:* How do sprite properties enhance animations?  
+**Key Concepts:**  
+- Sprites have attributes like position, size, and speed that can be modified.  
+- Manipulating these properties allows for dynamic animations and interactivity.  
+**Activities:**  
+- Modifying sprite properties over time.  
+- Exploring behaviors like bouncing or following paths.  
+
+**Lesson 10: Testing and Debugging**  
+*Question of the Day:* Why is testing essential, and how can it improve programs?  
+**Key Concepts:**  
+- Testing ensures programs work correctly and identifies issues.  
+- Debugging involves finding and fixing errors for better functionality.  
+**Activities:**  
+- Testing programs with user interactions.  
+- Refining code to enhance performance and user experience.
+
+  ![Screenshot Of lesson4-10](https://i.ibb.co/tDJCxHb/Screenshot-2024-12-03-113706.png)
