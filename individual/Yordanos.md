@@ -170,3 +170,190 @@ How can coordinates help us accurately position and size shapes on a canvas?
 
 
 
+```markdown
+# Programming Lessons Summary
+
+## Lesson 10: Text
+- We can put text anywhere we'd like on the screen using the text block:
+  ```javascript
+  text("first text", 30, 200);
+  text("second text", 50, 100);
+  ```
+- We can change the size of the text using the `textSize` block:
+  ```javascript
+  textSize(40);
+  ```
+- We can change the color of the text using the `fill` block:
+  ```javascript
+  fill("red");
+  ```
+- We can add a border to your text using the `stroke` command:
+  ```javascript
+  stroke("black");
+  ```
+
+---
+
+## Lesson 11: Mini-Project
+```javascript
+background("lightBlue");
+shape(0,200, 200,0, 400,0, 400,200);
+fill("darkBlue");
+shape(0, 200, 400,200, 400,400, 0, 400 );
+fill("green");
+ellipse(100, 200, 100, 150);
+fill("white");
+ellipse(95, 160, 15,15);
+ellipse(125, 160, 15,15);
+fill("green");
+ellipse(300, 200, 100, 150);
+fill("white");
+ellipse(275,160, 15,15);
+ellipse(305, 160, 15,15);
+ellipse(115,240, 30,15);
+ellipse(290,240, 30,15);
+ellipse(290,200, 10,30);
+ellipse(115,200, 10,30);
+fill("red");
+textSize(30);
+text("first person", 10, 100);
+fill("yellow");
+textSize(30);
+text("second person", 180, 100);
+```
+
+---
+
+## Lesson 12: Draw Loop
+- All your code outside the `draw` loop is run first, one time.
+- All your code inside the `draw` loop is run over and over forever.
+
+### Example
+```javascript
+noStroke();
+function draw(){
+  background("Red");
+  ellipse(randomNumber(0,400), randomNumber(0,400));
+}
+```
+- The code below can change its background and draw an ellipse over and over again:
+  ```javascript
+  World.frameRate = 5;
+  noStroke();
+  background("blue");
+  fill("Yellow");
+
+  function draw(){
+    background("Red");
+    ellipse(randomNumber(0,400), randomNumber(0,400));
+  }
+  ```
+
+---
+
+## Practice
+### A) Updating Rotation
+```javascript
+// Setting Frame Rate
+World.frameRate = 10;
+// Creating Alien Sprites
+var greenAlien = createSprite(100, 200);
+greenAlien.setAnimation("greenAlien");
+
+var pinkAlien = createSprite(300, 200);
+pinkAlien.setAnimation("pinkAlien");
+// Setting Up Drawing
+noStroke();
+fill("white");
+function draw() {
+  background("black");
+  ellipse(randomNumber(0,400),randomNumber(0,400),5,5);
+  greenAlien.rotation = randomNumber(-5,5);
+  pinkAlien.rotation = randomNumber(-5,5);
+  drawSprites();
+}
+```
+
+### B) Debug: Blurry Sprite
+```javascript
+var blender = createSprite(200,200);
+blender.setAnimation("blender");
+
+function draw() {
+  background("lightyellow");
+  blender.x = 200 + randomNumber(-5,5);
+  blender.y = 200 + randomNumber(-5,5);
+  drawSprites();
+}
+```
+
+### C) Debug: Sprite Not Moving
+```javascript
+var blender = createSprite(200,200);
+blender.setAnimation("blender");
+
+function draw() {
+  background("lightyellow");
+  blender.x = randomNumber(195,205);
+  blender.y = randomNumber(195,205);
+  drawSprites();
+}
+```
+
+---
+
+## Lesson 13: Sprite Movement
+### The Counter Pattern
+- This pattern is one of the most important ones in all of programming:
+  ```javascript
+  X = X + 1;
+  ```
+- It is used to increase the value of a variable by 1. You might call it the counter pattern since it can be used to make a variable that counts up. You'll use this pattern a lot, especially with the draw loop:
+  ```javascript
+  var counter = 0;
+  function draw(){
+    background("white");
+    textSize(counter);
+    text(counter, 0, 400);
+    counter = counter + 1;
+  }
+  ```
+- This program creates a variable `counter` and then uses the counter pattern to make it count up.
+
+---
+
+## Lesson 14: Mini-Project – Animation
+```javascript
+background(rgb(25, 100, 40))
+shape(200, 0, 0, 400, 400, 400);
+shape(0, 0, 0, 400, 400, 400);
+var greenAlien = createSprite(100, 200);
+greenAlien.setAnimation("Alien");
+var blueAlien = createSprite(300, 200);
+blueAlien.setAnimation("Alien");
+text("first alien", 100, 100);
+text("second alien", 300,100);
+var count = 0;
+function draw(){
+  greenAlien.rotation = randomNumber(-10, 10);
+  blueAlien.y = blueAlien.y - count;
+  count = count + 0.3;
+}
+drawSprites();
+```
+
+---
+
+## Lesson 15: Conditionals
+### Boolean Expressions
+- A **Boolean expression** is an expression that can only evaluate to `TRUE` or `FALSE`.
+```javascript
+if (x > 10) {
+  console.log("x is greater than 10");
+} else {
+  console.log("x is not greater than 10");
+}
+```
+```
+![progress from lesson 10 - 15](https://i.postimg.cc/qqcwkv8z/Screenshot-2024-12-10-133455.png)
+
