@@ -136,4 +136,4 @@ To position and size shapes effectively on a screen, we must understand how coor
 14. **Mini-Project - Animation:** Encourages applying learned skills to create a full animation, using sprite properties and motion.
 15. **Conditionals:** Explores how to use if-statements to control actions based on conditions, enhancing program interactivity and responsiveness.
 
-![Screenshot of 4-10 Lessons](https://i.ibb.co/Mht5pGH/Capture.png)
+![Screenshot of 4-10 Lessons](https://i.ibb.co/PYPz49y/Capture.png)
