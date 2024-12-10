@@ -128,3 +128,12 @@ To position and size shapes effectively on a screen, we must understand how coor
 
 ![Screenshot of 4-10 Lessons](https://i.ibb.co/QMhHbg5/Capture.png)
 
+**Lets Write the Summary in short and simple statment**
+
+11. **Mini-Project - Captioned Scenes:** Focuses on creating scenes with captions, allowing for dynamic storytelling through visual elements.
+12. **The Draw Loop:** Introduces the draw loop to continually update animations and logic, enabling ongoing visual changes in the program.
+13. **Sprite Movement:** Teaches how to move sprites on the screen, using variables and logic to control their behavior.
+14. **Mini-Project - Animation:** Encourages applying learned skills to create a full animation, using sprite properties and motion.
+15. **Conditionals:** Explores how to use if-statements to control actions based on conditions, enhancing program interactivity and responsiveness.
+
+![Screenshot of 4-10 Lessons](https://i.ibb.co/Mht5pGH/Capture.png)
