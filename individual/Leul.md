@@ -145,3 +145,153 @@ Learn to use the **Drawing Shapes Template** for visual elements.
 - Refining code to enhance performance and user experience.
 
   ![Screenshot Of lesson4-10](https://i.ibb.co/tDJCxHb/Screenshot-2024-12-03-113706.png)
+
+
+# README: Lessons 10-15 - Understanding Random Numbers and Visual Dynamics
+
+## Overview:
+In lessons 10-15, we focused on using random numbers in our programs to create dynamic, unpredictable visuals and behaviors. By leveraging the `randomNumber()` function, we were able to manipulate properties like size, position, and color to make our code generate different outcomes each time it is executed. This approach helps us create visually engaging graphics and animations that change every run, enhancing the interactivity and creativity of our projects.
+
+---
+
+## Lesson Breakdown:
+
+### **Lesson 10: Random Ellipse Positioning**
+**Key Concept**: Randomly positioning an ellipse on the screen.
+
+- **Goal**: We used the `randomNumber()` function to randomly place an ellipse on the horizontal axis of the screen. This simple exercise helped us understand how to apply randomness to the positioning of shapes in a 2D space.
+  
+  **Code Example**:
+  ```javascript
+  fill("orange");
+  ellipse(randomNumber(0, 400), 200, 50, 50);
+  ```
+
+### **Lesson 11: Random X and Y Positioning**
+**Key Concept**: Making the ellipse appear anywhere on the screen by randomizing both `x` and `y` coordinates.
+
+- **Goal**: We expanded on the previous exercise by applying randomness to both the `x` and `y` positions of the ellipse, making it appear at different locations across the screen each time the program runs.
+
+  **Code Example**:
+  ```javascript
+  fill("orange");
+  ellipse(randomNumber(0, 400), randomNumber(0, 400), 50, 50);
+  ```
+
+### **Lesson 12: Random Size for Shapes**
+**Key Concept**: Using random numbers to change the size of shapes dynamically.
+
+- **Goal**: We used random numbers to modify the size of elements (e.g., petals of a flower). Each petal had a different random size, creating a more organic and dynamic look.
+
+  **Code Example**:
+  ```javascript
+  var petalSize;
+  petalSize = randomNumber(15, 65);
+  // Petals
+  ellipse(75, 100, petalSize, petalSize);
+  ellipse(125, 100, petalSize, petalSize);
+  ellipse(100, 75, petalSize, petalSize);
+  ellipse(100, 125, petalSize, petalSize);
+  // Center
+  fill("yellow");
+  ellipse(100, 100, 50, 50);
+  ```
+
+### **Lesson 13: Debugging with Random Rectangles**
+**Key Concept**: Debugging and correctly stacking random rectangles.
+
+- **Goal**: We corrected an issue where rectangles were not appearing at random `x` positions. We fixed the code so that the rectangles stacked at different random positions, creating a varied visual effect.
+  
+  **Code Example**:
+  ```javascript
+  var xPosition = randomNumber(0, 200);
+  fill("pink");
+  rect(xPosition, 100, 250, 50);
+  fill("purple");
+  rect(xPosition, 150, 250, 50);
+  fill("firebrick");
+  rect(xPosition, 200, 250, 50);
+  ```
+
+### **Lesson 14: Rainbow Snake with Random Sizes**
+**Key Concept**: Creating a dynamic rainbow snake using random sizes for each segment.
+
+- **Goal**: We made the rainbow snake dynamic by randomizing the size of each segment, making the snake's appearance change each time the program is run. Each segment's position also moved randomly on the vertical axis.
+
+  **Code Example**:
+  ```javascript
+  background("skyBlue");
+  var size = randomNumber(40, 60);
+  fill("red");
+  ellipse(100, randomNumber(190, 210), size, size);
+
+  size = randomNumber(40, 60);
+  fill("orange");
+  ellipse(140, randomNumber(190, 210), size, size);
+
+  size = randomNumber(40, 60);
+  fill("yellow");
+  ellipse(180, randomNumber(190, 210), size, size);
+
+  size = randomNumber(40, 60);
+  fill("green");
+  ellipse(220, randomNumber(190, 210), size, size);
+
+  size = randomNumber(40, 60);
+  fill("blue");
+  ellipse(260, randomNumber(190, 210), size, size);
+
+  size = randomNumber(40, 60);
+  fill("purple");
+  ellipse(300, randomNumber(190, 210), size, size);
+  ```
+
+### **Lesson 15: Random Rainbow and Random Colors**
+**Key Concept**: Using random numbers to change colors and create dynamic visuals.
+
+- **Goal**: We updated the background, rainbow arcs, and ground colors to be randomly generated each time the program is run, adding an extra layer of unpredictability. This involved using `randomNumber()` to generate random values for RGB color components.
+
+  **Code Example**:
+  ```javascript
+  // 1. Update the background to a random color
+  var red = randomNumber(0, 255);
+  var green = randomNumber(0, 255);
+  var blue = randomNumber(0, 255);
+  background(rgb(red, green, blue));
+
+  // 2. Update each arc of the rainbow to a random color
+  red = randomNumber(0, 255);
+  green = randomNumber(0, 255);
+  blue = randomNumber(0, 255);
+  fill(rgb(red, green, blue));
+  ellipse(200, 200, 400, 400);
+
+  red = randomNumber(0, 255);
+  green = randomNumber(0, 255);
+  blue = randomNumber(0, 255);
+  fill(rgb(red, green, blue));
+  ellipse(200, 200, 340, 340);
+
+  // More rainbow arcs...
+
+  // 3. Update the ground to a random color
+  red = randomNumber(0, 255);
+  green = randomNumber(0, 255);
+  blue = randomNumber(0, 255);
+  fill(rgb(red, green, blue));
+  rect(0, 200, 400, 200);
+  ```
+
+---
+
+## Summary:
+In lessons 10-15, we explored the power of random numbers in programming to create dynamic, interactive visuals. Using the `randomNumber()` function, we learned how to:
+- Randomly position shapes and ellipses on the screen.
+- Change the size of shapes randomly.
+- Debug code that involves random placement.
+- Create dynamic animations such as a rainbow snake.
+- Randomize colors for various elements like the background, rainbow arcs, and ground.
+
+These techniques allow us to create more engaging and unpredictable graphics, improving the interactivity of our programs and making each execution feel unique.
+
+![Image of Finished lessons](https://i.ibb.co/dMF7c9z/Screenshot-2024-12-10-104830.png)
