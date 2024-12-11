@@ -466,5 +466,15 @@
       ellipse(250, 150, 10, 5);
       rect(150, 225, 90, 30);
       ```
+### Lesson 8: Sprites
+ **Question of the Day:** How can we use sprites to help us keep track of lots of information in our programs?
 
-        
+   - Today you will learn about sprites which will not only give you a way to keep track of various pieces of information in your programs but will also allow you to create more interesting and fun images!
+   - Level One: Predict
+      draw 
+   - Level Two - Seven: Skill Building
+   - Level Eight: checking for Understanding
+   - Level Nine: Practice
+   - Level Ten: Assessment
+   - Level Eleven: Challenges
+
