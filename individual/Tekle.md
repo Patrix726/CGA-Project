@@ -571,6 +571,8 @@
        // Draw sprite
          drawSprites();
       ```
+      ![lesson1-8](https://github.com/user-attachments/assets/1948ed45-db25-41b9-8878-dba686ebaded)
+
 ### Lesson 9: Sprite Properties
  **Question of the Day:** How can we use sprite properties to change their appearance on the screen?
 
@@ -982,4 +984,6 @@
             drawSprites();
             }
       ```
+      ![lesson 9-13](https://github.com/user-attachments/assets/b00de253-e230-4378-a756-f64adb1c4ca2)
+
 
