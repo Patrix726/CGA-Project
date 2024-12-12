@@ -471,10 +471,515 @@
 
    - Today you will learn about sprites which will not only give you a way to keep track of various pieces of information in your programs but will also allow you to create more interesting and fun images!
    - Level One: Predict
-      draw 
+      draw carrot and apple image
    - Level Two - Seven: Skill Building
+      - Level Two:
+         ```
+         // Create a new sprite variable called sprite1
+            var sprite1 = createSprite(200, 200);
+
+         // Draw your sprites on the screen
+            drawSprites();
+         ```
+      - Level Three:
+         ```
+         var leftSprite = createSprite(100, 200);
+         var rightSprite = createSprite(300, 200);
+         drawSprites();
+         ```
+      - Level Four:
+         ```
+            var fruit = createSprite(200, 150);
+         // Update the fruit animation
+            fruit.setAnimation("strawberry");
+
+            var vegetable = createSprite(200, 300);
+         // Update the vegetable animation
+            vegetable.setAnimation("broccoli");
+
+            drawSprites();
+         ```
+      - Level Five:
+         ```
+         // Create a sprite variable
+            var student = createSprite(200, 200);
+
+         // Set the animation
+            student.setAnimation("Jim");
+
+         // Draw the sprite on the screen
+            drawSprites();
+         ```
+      - Level Six:
+         ```
+            var topLeftSprite = createSprite(100, 100);
+            var topRightSprite = createSprite(300, 100);
+            var bottomLeftSprite = createSprite(100, 300);
+            var bottomRightSprite = createSprite(300,300);
+            bottomRightSprite.setAnimation("alien");
+            topLeftSprite.setAnimation("bunny");
+            topRightSprite.setAnimation("flyBot");
+            bottomLeftSprite.setAnimation("planeRed1");
+            drawSprites();
+         ```
+      - Level Seven:
+         ```
+            var drink = createSprite(300, 200);
+            drink.setAnimation("ice_cream");
+            var dessert = createSprite(100, 200);
+            dessert.setAnimation("soda");
+            var message = createSprite(200, 200);
+            message.setAnimation("textGetReady");
+            drawSprites();
+         ```
    - Level Eight: checking for Understanding
    - Level Nine: Practice
+      ```
+            var sprite = createSprite(300, 200);
+            var sprite1 = createSprite(200, 275);
+            var sprite2 = createSprite(100, 200);
+            sprite.setAnimation("cherry");
+            sprite1.setAnimation("cherry");
+            sprite2.setAnimation("cherry");
+            drawSprites();
+      ```
    - Level Ten: Assessment
+      ```
+             // Go to the animation tab and add at least two animations to your project.
+               var sprite = createSprite(100, 100);
+               sprite.setAnimation("cuteanimals_hen_1");
+               var sprite1 = createSprite(200, 200);
+               sprite1.setAnimation("bluebird_1");
+               var sprite2 = createSprite(300, 300);
+               sprite2.setAnimation("pigeon_1");
+               drawSprites();
+      ```
    - Level Eleven: Challenges
+      i choose B drawing their own image
+      ```
+      // Create character sprite and set animation
+         var character = createSprite(200, 300);
+
+      // Draw background
+         background("skyblue");
+
+      // Draw grass
+         fill("green");
+         noStroke();
+         character.setAnimation("banana_1_1");
+
+       // Draw sprite
+         drawSprites();
+      ```
+### Lesson 9: Sprite Properties
+ **Question of the Day:** How can we use sprite properties to change their appearance on the screen?
+
+   - In this lesson, you will continue working with sprites, using their properties to change their appearance.
+      - Level One: Prediction
+         The Answer is B
+            B a bee sprite in the bottom right corner
+      - Level Two - Three: Skill Building
+         - Level Two:
+            ```
+                  //1) Run the program to see where the sprites appear.
+                        var palette = createSprite();
+                        palette.setAnimation("paint_palette");
+                        var brush = createSprite();
+                        brush.setAnimation("paint_brush");
+                        palette.x = 100;
+                        palette.y = 300;
+                  //2) Change the location of the paint brush to touch the paint palette.
+                        brush.x= 150;
+                        brush.y = 250;
+                        drawSprites();
+            ```
+         - Level Three:
+            ```
+               // Run the program to see how what is different about the first two notes.
+               // Use the same blocks on the last two notes to make them look different, too.
+                  background("skyblue");
+                  var drums = createSprite(200,290);
+                  drums.setAnimation("drum_set");
+                  var note1 = createSprite(50,50);
+                  note1.setAnimation("eighth_note");
+                  note1.scale = 0.3;
+                  note1.rotation = 20;
+                  var note2 = createSprite(150,50);
+                  note2.setAnimation("eighth_note");
+                  note2.scale = 0.7;
+                  note2.rotation = -30;
+                  var note3 = createSprite(250,50);
+                  note3.setAnimation("eighth_note");
+                  note3.scale = 0.5;
+                  note3.rotation = -25;
+                  var note4 = createSprite(350,50);
+                  note4.scale = 0.5;
+                  note4.rotation = -25;
+                  note4.setAnimation("eighth_note");
+                  drawSprites();
+            ```
+      - Level Four: Practice
+         ``` 
+               // I choose B that is Rotation property
+               // Make all of the cars look like they are  traveling correctly down the roads
+                  background("darkseagreen");
+                  shape(150,0,250,0,250,130,400,-20,400,-15,400,121,250,271,250,400,150,400,150,250,0,250,0,150,150,150);
+                  stroke("yellow");
+                  line(200, 0, 200, 150);
+                  line(0, 200, 150, 200);
+                  line(200, 286, 200, 400);
+                  line(250, 200, 400, 55);
+                  var carTop = createSprite(225, 75);
+                  carTop.setAnimation("car_green");
+                  carTop.scale = 0.6;
+                  var carLeft = createSprite(100, 225);
+                  carLeft.setAnimation("car_red");
+                  carLeft.scale = 0.6;
+                  carLeft.rotation = 90;
+                  var carBottom = createSprite(175, 350);
+                  carBottom.setAnimation("car_blue");
+                  carBottom.scale = 0.6;
+                  carBottom.rotation = 180;
+                  var carRight = createSprite(300, 185);
+                  carRight.setAnimation("car_yellow");
+                  carRight.scale = 0.6;
+                  carRight.rotation = 45;
+                  drawSprites();
+         ```
+      - Level Five: Assessment
+         ```
+               // Run the program to see how big the food is.
+               // Use sprite properties to scale all of the food sprites down so they fit on the plate.
+                  background("burlywood");
+                  fill("white");
+                  ellipse(200,200, 350);
+                  var fries = createSprite(250,140);
+                  fries.setAnimation("fries");
+                  var x = 0.7;
+                  fries.scale = x;
+                  var burger = createSprite(110,200);
+                  burger.setAnimation("burger");
+                  burger.scale = x;
+                  var dessert = createSprite(240,270);
+                  dessert.setAnimation("watermelon");
+                  dessert.scale = x;
+                  drawSprites();
+         ```
+      - Level Six: Challenges
+         ```
+            // Using either the sprite already created for you or with any other sprites of your choosing, 
+            //play around with the height and width properties and think about when you would want to use these properties 
+            //versus using the scale property
+               var sprite = createSprite(200, 200);
+               sprite.height = 400;
+               sprite.setAnimation("giraffe_tall");
+               drawSprites();
+         ```
+### Lesson 10: Text
+ **Question of the Day:** How can we use text to improve our scenes and animations?
+
+   - In this lesson, you will learn how to use Game Lab's text commands to add captions to your scenes.
+     - Level One: prediction
+         I think i show on screen is two text that is hello and everyone! on different position
+     - Level Two - Three: Skill Building
+         - Level Two:
+            ```
+                  background("lightyellow");
+               // Change the displayed text in the provided code.
+                  text("hi every on good moring", 50, 200);
+                  text("This addition text ", 200, 300);
+               // Add another sentence in a different part of the screen.
+            ```
+         - Level Three: 
+            ```
+               //1) Run the code to see how it works.
+                  background("lightblue");
+                  textSize(20);
+                  text("small", 170, 100);
+                  textSize(40);
+                  text("medium", 130, 200);
+                  textSize(60);
+               //2) Add code to make the word "large" the biggest.
+                  text("large", 120, 300);
+            ```   
+     - Level Four: Practice
+         ```
+            // Run the code, and see the error message.
+            // Look for clues as to where the bug is in the code.
+            // Once you have found the bug, fix it.
+               var backdrop = createSprite(200,200);
+               backdrop.setAnimation("city");
+               var flybot = createSprite(100,250);
+               flybot.setAnimation("fly_bot");
+               var wingbot = createSprite(300,150);
+               wingbot.setAnimation("wing_bot");
+               var speech1 = createSprite(120,80);
+               speech1.setAnimation("speechLeft");
+               var speech2 = createSprite(280,310);
+               speech2.setAnimation("speechDown");
+               drawSprites();
+               textSize(20);
+               stroke("black");
+               text("What has" , 60, 40);
+               text("wheels and flies," , 40, 65);
+               text("but is not an" , 50, 90);
+               text("aircraft?" , 70, 115);
+               text("A garbage truck!", 220,320);
+         ```
+     - Level Five: Assessment
+         ```
+            //1) Add two pieces of text to the following scene.  
+            //2) Make the two pieces of text different sizes.
+               var grass = createSprite(200,200);
+               grass.setAnimation("floating_grass");
+               var alien = createSprite(180,100);
+               alien.setAnimation("alien");
+               alien.scale = 1.3;
+               var robot = createSprite(300,300);
+               robot.setAnimation("robot");
+               robot.scale = 0.2;
+               drawSprites();
+               textSize(35);
+               text("Floating Grass", 50, 50);
+               textSize(35);
+               text("Robot", 300, 200);
+         ```
+     - Level Six: Challenges
+         ```
+            I choose A color Change
+            // Read the code to see how it works.
+               var sky = createSprite(200,200);
+               sky.setAnimation("rainbow");
+               drawSprites();
+               textSize(50);
+               fill("red");
+               text("Rainbows", 30, 50);
+               fill("orange");
+               text("in the" , 70, 100);
+            // Add a new block to make the word "sky" a different color.
+               fill("white");
+               text("sky...", 110, 150);
+            // Add more text with even more colors.
+               fill(rgb(100,50,122));
+               text("Good", 110, 250);
+         ```
+### Lesson 11: Mini-Project - Captioned Scenes
+ **Question of the Day:** How can we use Game Lab to express our creativity?
+
+   - In this lesson, you will get the opportunity to be creative by using the problem-solving process to design and program a scene of your choice.
+   - Level One: Captioned Scene Example    
+         Immersive Reader
+         Sprite Scenes
+         It's time to put everything together and make a fun scene.
+   - Level Two: Create a Background
+      ```
+         background(rgb(102, 50, 168));
+         var eragna = createSprite(50, 200);
+         eragna.setAnimation("kid_17_1");
+         var x = 0.5;
+         eragna.scale = x;
+         var dula = createSprite(35, 175);
+         dula.setAnimation("recorder_1");
+         dula.scale = x;
+         dula.rotation = -140;
+         var kebt = createSprite(250, 150);
+         kebt.setAnimation("cow_1_1");
+         kebt.scale = x;
+         var ferse = createSprite(250, 250);
+         ferse.setAnimation("horse_1");
+         ferse.scale = x;
+         drawSprites();
+         textSize(40);
+         text("This is Eragna new", 50, 50);
+      ```
+   - Level Three: Add Sprites
+      ```
+         background(rgb(102, 50, 168));
+         var eragna = createSprite(50, 200);
+         eragna.setAnimation("kid_17_1");
+         var x = 0.5;
+         eragna.scale = x;
+         var dula = createSprite(35, 175);
+         dula.setAnimation("recorder_1");
+         dula.scale = x;
+         dula.rotation = -140;
+         var kebt = createSprite(250, 150);
+         kebt.setAnimation("cow_1_1");
+         kebt.scale = x;
+         var ferse = createSprite(250, 250);
+         ferse.setAnimation("horse_1");
+         ferse.scale = x;
+         drawSprites();
+         textSize(40);
+         text("This is Eragna new", 50, 50);
+      ```
+   - Level Four: Add Text
+      ```
+         background(rgb(102, 50, 168));
+         var eragna = createSprite(50, 200);
+         eragna.setAnimation("kid_17_1");
+         var x = 0.5;
+         eragna.scale = x;
+         var dula = createSprite(35, 175);
+         dula.setAnimation("recorder_1");
+         dula.scale = x;
+         dula.rotation = -140;
+         var kebt = createSprite(250, 150);
+         kebt.setAnimation("cow_1_1");
+         kebt.scale = x;
+         var ferse = createSprite(250, 250);
+         ferse.setAnimation("horse_1");
+         ferse.scale = x;
+         drawSprites();
+         textSize(40);
+         text("This is Eragna new", 50, 50);
+      ```
+   - Level Five: Review Your Scene
+      ```
+         background(rgb(102, 50, 168));
+         var eragna = createSprite(50, 200);
+         eragna.setAnimation("kid_17_1");
+         var x = 0.5;
+         eragna.scale = x;
+         var dula = createSprite(35, 175);
+         dula.setAnimation("recorder_1");
+         dula.scale = x;
+         dula.rotation = -140;
+         var kebt = createSprite(250, 150);
+         kebt.setAnimation("cow_1_1");
+         kebt.scale = x;
+         var ferse = createSprite(250, 250);
+         ferse.setAnimation("horse_1");
+         ferse.scale = x;
+         drawSprites();
+         textSize(40);
+         text("This is Eragna new", 50, 50);
+      ```
+### Lesson 12: The Draw Loop
+ **Question of the Day:** How can we animate our images in Game Lab?
+
+   - In this lesson, you will learn how to use the draw loop with random numbers to create your first simple animations.
+   - Level One: Predict
+      continuesly drawing ellipse shape
+   - Level Two: Skill Building
+       ```
+         // Add code to this program so that your drawing has orange circles being drawn, too.
+            noStroke();
+            function draw(){
+            fill("green");
+            ellipse(randomNumber(0,400), randomNumber(0,400));
+            fill("orange");
+            ellipse(randomNumber(0,400), randomNumber(0,400));
+            }
+       ```
+   - Level Three:Predict
+      continousely randomly draw ellipse shape
+   - Level Four and Five: Skill Building
+      - Level Four:
+         ```
+            // Run the code to see how it works.
+            // Discuss with your partner why some code is inside the draw loop and some code is outside.
+               var sprite = createSprite(100,200);
+               sprite.setAnimation("greenAlien");
+               function draw() {
+               background("orange");
+               // Try changing the numbers in the random number block and running the program again.
+               sprite.rotation = randomNumber(0, 45);
+               drawSprites();
+               }
+         ```
+      - Level Five:
+         ```
+            // Run the program to see how it works.
+               var pencil = createSprite(100,200);
+               pencil.setAnimation("pencil");
+
+               var brush = createSprite(300,200);
+               brush.setAnimation("brush");
+
+               function draw(){
+               background("white");
+               pencil.x = randomNumber(100,110);
+               // Edit the code in this program to make the second sprite shake like the first one.
+               brush.x = randomNumber(295, 305);
+               drawSprites();
+               }
+         ```
+   - Level Six: Practice
+      ```
+         // Updating Rotation
+         // Run the program to see how it works.
+
+         // Setting Frame Rate
+            World.frameRate = 10;
+
+         // Creating Alien Sprites
+            var greenAlien = createSprite(100, 200);
+            greenAlien.setAnimation("greenAlien");
+
+            var pinkAlien = createSprite(300, 200);
+            pinkAlien.setAnimation("pinkAlien");
+
+         // Setting Up Drawing
+            noStroke();
+            fill("white");
+
+            function draw() {
+            background("black");
+            ellipse(randomNumber(0,400),randomNumber(0,400),5,5);
+            
+            greenAlien.rotation = randomNumber(-5,5);
+            
+         // Add code to this program to make the other alien shake just like the first.
+            pinkAlien.rotation = randomNumber(-5, 5);
+
+            drawSprites();
+            }
+      ```
+   - Level Seven: Assessment
+      ```
+         // Add the draw loop block to the bottom of this program.
+         // Move any blocks that need to be inside the draw loop.
+
+            var salt = createSprite(200,200);
+            salt.setAnimation("salt");
+            background("skyblue");
+            function draw() {
+            salt.y = randomNumber(205, 195);
+            drawSprites();
+            }
+      ```
+   - Level Eight: Challenges
+      ```
+         //Recreate Scene
+         // Setting Frame Rate
+            World.frameRate = 5;
+
+         // Create your sprite for the background
+            var back = createSprite(200, 200);
+            back.setAnimation("background");
+
+         // Create your sprites for the cow, elephant, and pig and set the x and y location for each.
+            var elephat = createSprite(100, 200);
+            var pigg = createSprite(200, 200);
+            var coww = createSprite(300, 200);
+         // Set the animation for each sprite.
+            elephat.setAnimation("elephant");
+            pigg.setAnimation("pig");
+            coww.setAnimation("cow");
+
+         // Resize your animals.
+            elephat.scale = 0.4;
+            pigg.scale = 0.4;
+            coww.scale = 0.4;
+
+         // Update the appropriate sprite property in the draw loop to 
+         // make the animals appear like they are jumping on the couch like the image
+            function draw() {
+            elephat.y = randomNumber(225, 175);
+            pigg.y = randomNumber(225, 175);
+            coww.y = randomNumber(225, 175);
+            drawSprites();
+            }
+      ```
 
