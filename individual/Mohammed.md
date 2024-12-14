@@ -99,7 +99,7 @@ Question of the Day: Why is testing essential, and how can it improve programs?
        - Refining code to enhance performance and user experience.
 
 
-![Getting Started](./Screenshot.png)
+![Getting Started](./Screenshot_2.png)
 
 
 
