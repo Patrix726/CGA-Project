@@ -228,3 +228,156 @@ Challenge: There is a purple square that is covered up by the background. Can yo
 `regularPolygon(350, 275, 14, 50);`
 
 ![Uploading Screenshot-2.jpeg…]()
+
+## Lesson 5
+ - Debug: Naming Variables`
+`var sizeofcircle = 150;`
+`var dimension = 100;`
+`var YLocation = 200;`
+
+`fill("OrangeRed");`
+`ellipse(dimension, YLocation, sizeofcircle, sizeofcircle);`
+
+- Debug: Variable Names
+`//1) Update the code to match the image`
+`var x = 50;`
+`var y = 200;`
+
+`fill("deeppink");`
+`ellipse(x, 100);`
+`ellipse(350, y);`
+`rect(x, y);`
+
+- Change the program to use the eyeSize variable.
+`var eyeSize = 27;`
+
+`noStroke();`
+`background("green"); `
+
+`// Face`
+`fill("yellow");`
+`ellipse(200,200,200,200);`
+
+`// Eyes`
+`fill("black");`
+`ellipse(160,170,eyeSize,eyeSize);`
+`ellipse(240,170,eyeSize,eyeSize);`
+
+`// Mouth`
+`fill("white");`
+`rect(160,240,80,20);`
+
+## Lesson 6
+- Random numbers
+
+`background("tomato");`
+`//1) Change the code so the ellipse can appear anywhere horizontally on the screen`
+`fill("orange");`
+`ellipse(randomNumber(50,400), 200, 50, 50);`
+
+1) Make the eyes appear at random sizes
+`var eyeSize = randomNumber(1, 40);`
+`noStroke();`
+`background("green");`
+`// Face`
+`fill("yellow");`
+`ellipse(200,200,200,200);`
+`// Eyes`
+`fill("black");`
+`ellipse(160,170,eyeSize,eyeSize);`
+`ellipse(240,170,eyeSize,eyeSize);`
+`// Mouth`
+`fill("white");`
+`rect(160,240,80,20);`
+
+- Rainbow Snake
+`background("skyBlue");`
+
+`fill("red");`
+`ellipse(100, randomNumber(190,210), 50, 50);`
+
+`fill("orange");`
+`ellipse(140, randomNumber(190,210), 50, 50);`
+
+`fill("yellow");`
+`ellipse(180, randomNumber(190,210), 50, 50);`
+`
+`fill("green");`
+`ellipse(220, randomNumber(190,210), 50, 50);`
+
+`fill("blue");`
+`ellipse(260, randomNumber(190,210), 50, 50);`
+
+`fill("violet");`
+`ellipse(300, randomNumber(190,210), 50, 50);`
+
+- Random Rainbow Challenge
+`//1) Update the background to be a random color`
+`background(rgb(randomNumber(0,255), randomNumber(0,255),randomNumber(0,255)));`
+
+`//2) Update each arc of the rainbow to a random color`
+`fill((rgb(randomNumber(0,255), randomNumber(0,255),randomNumber(0,255))));`
+`ellipse(200, 200, 400, 400);`
+`fill(rgb(randomNumber(0,255), randomNumber(0,255),randomNumber(0,255)));`
+`ellipse(200, 200, 340, 340);`
+`fill(rgb(randomNumber(0,255), randomNumber(0,255),randomNumber(0,255)));`
+`ellipse(200, 200, 280, 280);`
+`fill(rgb(randomNumber(0,255), randomNumber(0,255),randomNumber(0,255)));`
+`ellipse(200, 200, 220, 220);`
+`fill(rgb(randomNumber(0,255), randomNumber(0,255),randomNumber(0,255)));`
+`ellipse(200, 200, 160, 160);`
+`fill(rgb(randomNumber(0,255), randomNumber(0,255),randomNumber(0,255)));`
+`ellipse(200, 200, 100, 100);`
+`fill(rgb(randomNumber(0,255), randomNumber(0,255),randomNumber(0,255)));`
+`ellipse(200, 200, 40, 40);`
+
+`//3) Update the ground to a random color`
+`fill(rgb(randomNumber(0,255), randomNumber(0,255),randomNumber(0,255)));`
+`rect(0, 200, 400, 200);`
+
+# Lesson 7
+- Mini Project Robot Face
+`background("yellow");`
+`var eyeSize = 40 ;`
+`var irisSize = 5;`
+`var earWidth = 20;`
+`var earHeight = 120;`
+`fill("grey");`
+`rect(100, 100, 200, 230);`
+`ellipse(160, 170, eyeSize, eyeSize);`
+`ellipse(250, 170, eyeSize, eyeSize);`
+`shape(200, 200, 180, 250, 220, 250);`
+`stroke("black");`
+`strokeWeight(irisSize);`
+`point(160, 170);`
+`stroke("black");`
+`strokeWeight(irisSize);`
+`point(250, 170);`
+`rect(150, 280, 100, 20);`
+`rect(80, 150, earWidth, earHeight);`
+`rect(300, 150, earWidth, earHeight);`
+
+
+# Lesson 8 
+- Sprite
+Sprites are like containers - they can hold several properties that make it easier to manage our animations and make more complex drawings. 
+Right now, our sprites are just gray rectangular containers.
+
+createSprite() - this block creates a new sprite variable.
+setAnimation() - this block tells the sprite which image to use.
+drawSprites() - this block tells the animation to draw the sprites on the screen. If you forget it, nothing will appear!
+
+- Debug Missing Sprite
+`var sprite1 = createSprite(50, 50);`
+`sprite1.setAnimation("planeRed");`
+`var sprite2 = createSprite(50, 150);`
+`sprite2.setAnimation("planeBlue");`
+`var sprite3 = createSprite(50, 250);`
+`sprite3.setAnimation("planeGreen");`
+`var sprite4 = createSprite(50, 350);`
+`sprite4.setAnimation("planeYellow");`
+`var sprite5 = createSprite(300, 200);`
+`sprite5.setAnimation("bunny");`
+`drawSprites();`
+
+![Uploading Screenshot_14-12-2024_124254_studio.code.org.jpeg…]()
