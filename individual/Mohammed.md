@@ -29,9 +29,72 @@ Question of the Day: How can we communicate to a computer how to draw shapes on 
 ## Lesson 4: Shapes and Parameters
 Question of the Day: How can we use parameters to give the computer more specific instructions?
 
--   After this lesson I was:
+  After this lesson I was:
          - able to understand specific parameters that used to specifically design a shape.
          - able to undersatnd the polygon() function that can be used to draw a polygon of any shape.
 
 
-         
+## Lesson 5: Variables
+Question of the Day: How do variables help manage data in programs?
+ After this lesson I understood that:
+
+        - Variables store information that can change as the program runs.
+        - They are used for tasks such as tracking scores, user inputs, or program settings.
+ Activities:
+        - Creating and updating variables in animations and games.
+        - Using variables for interactivity, such as event counting.
+## Lesson 6: Random Numbers
+ Question of the Day: How do random numbers add dynamism to programs?
+ After this lesson I understood that:
+
+       - Random numbers introduce variation and unpredictability.
+       - They are useful for randomizing movements, creating challenges, or changing colors.
+ Activities:
+       - Generating random values within a range using randomNumber(min, max).
+       - Incorporating randomness in animations or interactive features.
+ ## Lesson 7: Mini-Project: Robot Face
+ Question of the Day: How can randomness enhance creative projects?
+ After this lesson I understood that randomness:
+
+       - Combines randomness with drawing shapes and positioning elements.
+       - Allows for dynamic changes to a robot face design.
+ Activities:
+       - Designing a robot face with randomly changing features.
+       - Using random numbers to adjust positions or sizes of elements.
+
+## Lesson 8: Sprites
+ Question of the Day: How are sprites used to represent objects in animations or games?
+ After this lesson I understood that :
+
+       - Sprites are graphical elements that can move and interact in programs.
+       - They simplify complex animations and improve visuals.
+ Activities:
+       - Creating and customizing sprites in Game Lab.
+       - Integrating sprites into interactive projects.
+
+## Lesson 9: Sprite Properties
+Question of the Day: How do sprite properties enhance animations?
+ After this lesson I understood that :
+
+       - Sprites have attributes like position, size, and speed that can be modified.
+       - Manipulating these properties allows for dynamic animations and interactivity.
+ Activities:
+       - Modifying sprite properties over time.
+       - Exploring behaviors like bouncing or following paths.
+
+## Lesson 10: Testing and Debugging
+Question of the Day: Why is testing essential, and how can it improve programs?
+ After this lesson I understood that :
+
+       - Testing ensures programs work correctly and identifies issues.
+       - Debugging involves finding and fixing errors for better functionality.
+ Activities:
+       - Testing programs with user interactions.
+       - Refining code to enhance performance and user experience.
+
+
+![alt](https://C:\Users\SU-VP\CGA\CGA-Project\Screenshot_2.png)
+
+
+
+      
