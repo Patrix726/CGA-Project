@@ -36,6 +36,7 @@ Question of the Day: How can we use parameters to give the computer more specifi
 
 ## Lesson 5: Variables
 Question of the Day: How do variables help manage data in programs?
+ 
  After this lesson I understood that:
 
         - Variables store information that can change as the program runs.
@@ -45,6 +46,7 @@ Question of the Day: How do variables help manage data in programs?
         - Using variables for interactivity, such as event counting.
 ## Lesson 6: Random Numbers
  Question of the Day: How do random numbers add dynamism to programs?
+ 
  After this lesson I understood that:
 
        - Random numbers introduce variation and unpredictability.
@@ -54,6 +56,7 @@ Question of the Day: How do variables help manage data in programs?
        - Incorporating randomness in animations or interactive features.
  ## Lesson 7: Mini-Project: Robot Face
  Question of the Day: How can randomness enhance creative projects?
+ 
  After this lesson I understood that randomness:
 
        - Combines randomness with drawing shapes and positioning elements.
@@ -64,6 +67,7 @@ Question of the Day: How do variables help manage data in programs?
 
 ## Lesson 8: Sprites
  Question of the Day: How are sprites used to represent objects in animations or games?
+ 
  After this lesson I understood that :
 
        - Sprites are graphical elements that can move and interact in programs.
@@ -74,6 +78,7 @@ Question of the Day: How do variables help manage data in programs?
 
 ## Lesson 9: Sprite Properties
 Question of the Day: How do sprite properties enhance animations?
+ 
  After this lesson I understood that :
 
        - Sprites have attributes like position, size, and speed that can be modified.
@@ -84,6 +89,7 @@ Question of the Day: How do sprite properties enhance animations?
 
 ## Lesson 10: Testing and Debugging
 Question of the Day: Why is testing essential, and how can it improve programs?
+ 
  After this lesson I understood that :
 
        - Testing ensures programs work correctly and identifies issues.
@@ -93,7 +99,7 @@ Question of the Day: Why is testing essential, and how can it improve programs?
        - Refining code to enhance performance and user experience.
 
 
-![alt](https://C:\Users\SU-VP\CGA\CGA-Project\Screenshot_2.png)
+![Getting Started](./Screenshot.png)
 
 
 
