@@ -632,3 +632,49 @@ Question of the Day: How can we make our programs behave differently each time t
     ghost.alpha = 0.6;
     drawSprites();
     ```
+
+## Lesson 10: Text
+
+-   Learned how to create a text block.
+
+    ```
+    background("lightyellow");
+
+    //1 Change the displayed text in the provided code.
+    text("Sure!", 50, 200);
+    text("Here is another one!", 150, 300);
+
+    ```
+
+-   Learned about `textSize` block to change the size of text blocks.
+
+    ```
+    //1 Run the code to see how it works.
+    background("lightblue");
+    textSize(20);
+    text("small", 170, 100);
+    textSize(40);
+    text("medium", 130, 200);
+    //2 Add code to make the word "large" the biggest.
+    textSize(60);
+    text("large", 120, 300);
+    ```
+
+-   Learned to change the color of text blocks.
+    ```
+    //1 Read the code to see how it works.
+    var sky = createSprite(200,200);
+    sky.setAnimation("rainbow");
+    drawSprites();
+    textSize(50);
+    fill("red");
+    text("Rainbows", 30, 50);
+    fill("orange");
+    text("in the" , 70, 100);
+    //2 Add a new block to make the word "sky" a different color.
+    fill("blue");
+    text("sky...", 110, 150);
+    //3 Add more text with even more colors.
+    fill("pink");
+    text("Here is another text",120,180);
+    ```
