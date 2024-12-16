@@ -859,7 +859,6 @@
       ```
 ### Lesson 12: The Draw Loop
  **Question of the Day:** How can we animate our images in Game Lab?
-
    - In this lesson, you will learn how to use the draw loop with random numbers to create your first simple animations.
    - Level One: Predict
       continuesly drawing ellipse shape
@@ -985,5 +984,591 @@
             }
       ```
       ![lesson 9-13](https://github.com/user-attachments/assets/b00de253-e230-4378-a756-f64adb1c4ca2)
+### Lesson 13: Sprite Movement
+**Question of the Day:** How can we control sprite movement in Game Lab?
+
+  - In this lesson, you will learn how to control sprite movement using the counter pattern.
+  - Lesson One: Prediction
+  - Lesson Two-Five: Skills Development
+     - Lesson Two: 
+        ```
+            var jet = createSprite(350, 350);
+            jet.setAnimation("jet");
+            var plane = createSprite(50, 200);
+            plane.setAnimation("plane");
+            function draw() {
+            background("skyblue"); 
+         // Read the code that makes the jet go up the screen
+            jet.y = jet.y - 3;
+         // Add code that makes the plane move to the right
+            plane.x = plane.x + 3;
+            drawSprites();
+            }
+        ```
+     - Lesson Three:
+        ```
+            var fly = createSprite(350, 200);
+            fly.setAnimation("fly");
+            function draw() {
+            background("skyblue");
+         // Use the counter pattern to make the sprite move to the left.
+            fly.x = fly.x - 10;
+            drawSprites();
+            }
+        ```
+     - Lesson Four:
+        ```
+         // Read the code that makes the mouse go down.
+         // Run the program and look at the watchers to see what is happening 
+            var mouse = createSprite(50, 50);
+            mouse.setAnimation("mouse");
+            mouse.scale = 0.5;
+            function draw() {
+            background("lightgreen");
+            mouse.y = mouse.y + 2;
+         // Add one more line of code to make the mouse move diagonally.
+            mouse.x = mouse.x + 2;   
+            drawSprites();
+            }
+         // Run your code again and look at the watchers.
+        ```
+     - Lesson Five:
+        ```
+         The answer is C
+        ```
+  - Lesson Six: Practice
+      ```
+      // Take a look at the value in the watcher
+      // Add a watcher for the y property
+      // Run the program to see what happens to the properties and why the motorcycle disappears
+      // Debug the code so the program runs like the image
+         var cycle = createSprite(0, 400);
+         cycle.setAnimation("motorcycle");
+         cycle.rotation = 45;
+         function draw() {
+         background("lightgrey");
+         cycle.x = cycle.x + 4;
+         cycle.y = cycle.y + -4;
+         drawSprites();
+         }
+      ```
+  - Lesson Seven: Assessment
+      ```
+         var orangeFish = createSprite(400, randomNumber(0, 100));
+         orangeFish.setAnimation("orange_fish");
+         var blueFish = createSprite(250, randomNumber(0, 200));
+         blueFish.setAnimation("blue_fish");
+         var greenFish = createSprite(300, randomNumber(200, 300));
+         greenFish.setAnimation("green_fish");
+         function draw() {
+      // Draw Background
+         background("navy");
+      // Update Values
+         orangeFish.x = orangeFish.x - 2;
+         greenFish.x = greenFish.x - 1;     
+      // Use the counter pattern to make the blue fish move across the screen faster than the other fish
+         blueFish.x = blueFish.x + -3;
+      // Use the counter pattern to make the green fish move across the screen slower than the other fish.  
+      // Draw Animations
+         drawSprites();
+         }
+      ```
+  - Lesson Eight: Challenges
+      ```
+         var orangeFish = createSprite(400, randomNumber(0, 100));
+         orangeFish.setAnimation("orange_fish");
+         var blueFish = createSprite(250, randomNumber(0, 200));
+         blueFish.setAnimation("blue_fish");
+         var greenFish = createSprite(300, randomNumber(200, 300));
+         greenFish.setAnimation("green_fish");
+         var shark1 = createSprite(40, 360);
+         shark1.setAnimation("shark_1");
+         shark1.scale = 0.4;
+         var purple1 = createSprite(200, 200);
+         purple1.setAnimation("gameplayadventure_12_1");
+         purple1.scale = 0.1;
+         var counter = 0.1;
+         function draw() {
+      // Draw Background
+         background("navy"); 
+      // Update Values
+         orangeFish.x = orangeFish.x - 2;
+         blueFish.x = blueFish.x - 2;
+         greenFish.x = greenFish.x + -2;
+         shark1.x = shark1.x + 3;
+         purple1.scale = counter;
+         counter = counter + 0.005; 
+      // Draw Animations
+         drawSprites();
+         }
+      ```
+### Lesson 14: Mini-Project - Animation
+**Question of the Day:** How can we combine different programming patterns to make a complete animation?
+
+  - In this lesson, you will combine all the concepts you have learned in the previous lessons to create your first animated scene of your own design!
+  - Lesson One: Animated Scene Example
+  - Lesson Two: Draw a Background
+     ```
+       background("green");
+     ```
+  - Lesson Three: Add Sprites
+     ```
+      sprite1.setAnimation("ship14_1");
+      sprite1.scale = 0.3;
+      var sprite2 = createSprite(100, 300);
+      sprite2.setAnimation("boxcar_11_1");
+      sprite2.scale = 0.3;
+      var sprite3 = createSprite(300, 350);
+      sprite3.setAnimation("boxcar_07_1");
+      sprite3.scale = 0.3;
+      sprite3.rotation = 90;
+     ```
+  - Lesson Four: Add Text
+     ```
+      fill("black");
+      textSize(25);
+      text("Ethiopian Jet", 50, 30);
+      textSize(25);
+      text("This my Car", 50, 200);
+      textSize(25);
+      text("This is my bro car", 250, 200);
+     ```
+  - Lesson Five: Add Movement
+     ```
+      sprite1.x = sprite1.x + randomNumber(1, 3);
+      sprite2.x = sprite2.x + randomNumber(1, 3);
+      sprite3.y = sprite3.y - randomNumber(1, 3);
+     ```
+  - Lesson Six: Check your Animated Scene
+     ```
+      var sprite1 = createSprite(100, 75);
+      sprite1.setAnimation("ship14_1");
+      sprite1.scale = 0.3;
+      var sprite2 = createSprite(100, 300);
+      sprite2.setAnimation("boxcar_11_1");
+      sprite2.scale = 0.3;
+      var sprite3 = createSprite(300, 350);
+      sprite3.setAnimation("boxcar_07_1");
+      sprite3.scale = 0.3;
+      sprite3.rotation = 90;
+      function draw() {
+      background("green");
+      fill("black");
+      textSize(25);
+      text("Ethiopian Jet", 50, 30);
+      textSize(25);
+      text("This my Car", 50, 200);
+      textSize(25);
+      text("This is my bro car", 250, 200);
+      sprite1.x = sprite1.x + randomNumber(1, 3);
+      sprite2.x = sprite2.x + randomNumber(1, 3);
+      sprite3.y = sprite3.y - randomNumber(1, 3);
+      drawSprites();
+      }
+     ```
+### Lesson 15: Conditionals
+ **Question of the Day:** How can programs react to changes as they are running?
+  - In this lesson, you will learn about booleans and conditionals, which will allow you to create programs that run differently depending on whether a condition is true.
+  - Lesson One: Prediction
+  - Lesson Two: Quick Check
+  - Lesson Three-Five: Skills Development
+     - Lesson Three:
+        ```
+            var finishLine = createSprite(40, 200);
+            finishLine.setAnimation("finish_line");
+            var raceCar = createSprite(400, 200);
+            raceCar.setAnimation("race_car");
+            function draw() {
+         // Draw Background
+            background("white");  
+         // Counter pattern to make car move across the screen
+            raceCar.x = raceCar.x - 2; 
+         //Program text
+            fill("black");
+            strokeWeight(5);
+            textSize(25);
+            text("The race car has crossed the finish line:", 100, 20, 300, 60);
+            fill("blue");
+         // Add blocks to the text command to print the boolean to the screen
+            text(raceCar.x < finishLine.x, 100, 100);  
+         // Draw Animations
+            drawSprites();
+            }
+        ```
+     - Lesson Four:
+     - Lesson Five:
+        ```
+            var fruit = createSprite(200, 200);
+            fruit.setAnimation("apple");
+            fruit.scale = 0.1;
+            function draw() {
+            // Draw Background
+            background("white");
+         // Update Values
+            fruit.scale = fruit.scale + 0.01;
+         // Add a conditional to the draw loop.
+         // Add code to the conditional statement that asks if the scale of the fruit greater than 2.
+         // Add code inside the conditional to change the fruit to a pear.
+            if (fruit.scale > 2) {
+               fruit.setAnimation("pear");
+            }
+         // Draw Animations
+            drawSprites();
+            }
+        ```
+  - Lesson Six: Practice
+     ```
+         var scene = createSprite(200, 200);
+         scene.setAnimation("background");
+         var spaceship = createSprite(200, 200);
+         spaceship.setAnimation("spaceship");
+         var alien = createSprite(300, 350);
+         alien.setAnimation("alien_standing");
+         function draw() {
+         spaceship.y = spaceship.y - 3;
+         if (50 > spaceship.y) {
+            alien.setAnimation("alien_dance");
+         }  
+      // Add a conditional that detects when the spaceship is in the sky.
+      // Set the sprite's animation to be a dancing alien.
+         drawSprites();
+         }
+     ```
+  - Lesson Seven: Assessment
+     ```
+         var backdrop = createSprite(200,200);
+         backdrop.setAnimation("sci_fi");
+         var dinosaur = createSprite(200, 350);
+         dinosaur.scale = 0.2;
+         dinosaur.setAnimation("tyrannosaurus");
+         function draw() {
+         //move the dinosaur up
+         dinosaur.y = dinosaur.y - 5;
+      // Add a conditional that detects when the dinosaur is in the sky.
+      // Set the sprite's animation to a pterodactyl when it reaches the sky.
+         if (70 > dinosaur.y) {
+            dinosaur.setAnimation("pterodactyl");
+         }
+         //draw everything
+         drawSprites();
+         }
+     ```
+  - Lesson Eight: Challenges
+     ```
+         var tree = createSprite(200, 220);
+         tree.setAnimation("tree");
+         tree.scale = 0.75;
+         var ghost = createSprite(300, 320);
+         ghost.setAnimation("ghost");
+         var monster = createSprite(400, 320);
+         monster.setAnimation("orange_monster");
+         monster.scale = 0.35;
+         function draw() {
+      // Draw Background
+         background("plum");
+         fill("palegreen");
+         rect(-5, 350, 405, 50);
+      // Use the counter pattern to make the ghost and monster sprites both travel from right to left.
+         ghost.x = ghost.x - 2;
+         monster.x = monster.x - 2;
+      // Add a conditional that checks to see if the ghost sprite has gone off the left side of the screen.
+         if (50 > ghost.x) {
+            ghost.x = 50;
+         }
+         if (50 > monster.x) {
+            ghost.x = 50;
+            ghost.x = ghost.x - 2;
+            monster.x = monster.x - 2;
+         }
+      // Inside the conditional, reset the ghost sprite's location to the right side of the screen
+      // Repeat steps 2 & 3 for the monster sprite
+      // Draw Animations
+         drawSprites();  
+         }
+     ```
+### Lesson 16: Keyboard Input
+ **Question of the Day:** How can our programs react to user input?
+  - In this lesson, you will learn how to use the keyDown() block which will let your programs respond to user input.
+  - Lesson One: Prediction
+  - Lesson Two-Four: Skills Development
+     - Lesson Two:
+        ```
+         // Run the code and try pressing the "p" and "h" keys.
+            var sprite = createSprite(200, 200);
+            sprite.setAnimation("giraffe");
+            function draw() {
+            background("white");
+         // Look inside the first two conditional statements to see how the code works.
+            if(keyDown("h")) {
+               sprite.setAnimation("hippo");
+            }
+            if(keyDown("p")) {
+               sprite.setAnimation("pig");
+            }
+            if(keyDown("r")) {
+                  //3) Add code to change the sprite to a different animal when the "r" key is pressed.
+                  sprite.setAnimation("rabbit");
+            }
+            drawSprites();
+            }
+        ```
+     - Lesson Three:
+        ```
+            var bug = createSprite(200, 200);
+            bug.setAnimation("ladybug");
+            function draw() {
+         // Draw Background
+            background("white");
+         // Add a conditional statement to check if the right arrow key has been pressed down.
+            if (keyDown("right")) {
+               bug.x = bug.x + 5;
+            }
+            if (keyDown("left")) {
+               bug.x = bug.x + -5;
+            }
+         // Add code to move the sprite right if the right arrow is down.
+         // Draw Animations
+            drawSprites();
+            }
+        ```
+     - Lesson Four:
+        ```
+            var blueGear = createSprite(100, 220);
+            blueGear.setAnimation("blue_gear");
+            var greenGear = createSprite(183, 298);
+            greenGear.setAnimation("green_gear");
+            var redGear = createSprite(185, 145);
+            redGear.setAnimation("red_gear");
+            function draw() {
+            background("white");
+            if (keyDown("space")) {
+               blueGear.rotation = blueGear.rotation - 1;
+               greenGear.rotation = greenGear.rotation + 1;
+               redGear.rotation = redGear.rotation + 1;
+            }
+         // Add code that will check if the space key is being pressed down.
+         // Adjust the program so that the gears only rotate when the space key is pressed down.
+            drawSprites();
+            }
+        ```
+  - Lesson Five: Practice
+      ```
+         var turtle = createSprite(200,200);
+         turtle.setAnimation("turtle");
+         turtle.scale = 0.5;
+         function draw() {
+         background("navy");
+         if (keyDown("up")) {
+            turtle.y = turtle.y - 3;
+         }
+         if (keyDown("down")) {
+            turtle.y = turtle.y + 3;
+         }
+         if (keyDown("left")) {
+            turtle.x = turtle.x - 3;
+         }
+         if (keyDown("right")) {
+            turtle.x = turtle.x + 3;
+         }
+         drawSprites();
+         }
+      ```
+  - Lesson Six: Assessment
+      ```
+         var backdrop = createSprite(200,200);
+         backdrop.setAnimation("rainbow");
+         var flyer = createSprite(200,200);
+         flyer.setAnimation("wing_bot");
+         function draw() {
+      // Add code to move the sprite left when the left arrow is pressed
+         if (keyDown("left")) {
+         flyer.x = flyer.x - 5;
+         }
+      // Add code to move the sprite right when the right arrow is pressed
+         if (keyDown("right")) {
+         flyer.x = flyer.x + 5;
+         }
+      // Add code to move the sprite up when the up arrow is pressed
+         if (keyDown("up")) {
+         flyer.y = flyer.y - 5;
+         }
+      // Add code to move the sprite down when the down arrow is pressed
+         if (keyDown("down")) {
+         flyer.y = flyer.y + 5;
+         }
+         drawSprites();
+         }
+      ```
+  - Lesson Seven: Challenges
+      ```
+      // Duplicate your chosen bug image four times in the animation tab.
+      // Edit each of your images to point in one of the four directions.
+         var bug = createSprite(200, 200);
+         bug.setAnimation("fly");
+         function draw() {
+      // Draw Background
+         background("white");
+      // Add code to each of your conditionals 
+         //to change the animation of the sprite if different arrow keys are pressed.
+         if(keyDown("up")){
+            bug.y = bug.y - 5;
+            bug.rotation = 90;
+         }
+         if(keyDown("down")){
+            bug.y = bug.y + 5;
+            bug.rotation = -90;
+         }
+         if(keyDown("left")){
+            bug.x = bug.x - 5;
+            bug.rotation = 0;
+         }
+         if(keyDown("right")){
+            bug.x = bug.x + 5;
+            bug.rotation = 180;
+         }
+      // Draw Animations
+         drawSprites();
+         }
+      ```
+### Lesson 17: Mouse Input
+ **Question of the Day:** What are more ways that the computer can react to user input?
+  - In this lesson, you will expand on what you have learned about if statements and explore if-else statements as well as learn about how to use the mouse to get input from your user that you can use in your conditional statements.
+  - Lesson One: Prediction
+  - Lesson Two-Five: Skills Development
+     - Lesson Two:
+        ```
+            var blueGear = createSprite(100, 220);
+            blueGear.setAnimation("blue_gear");
+            var greenGear = createSprite(183, 298);
+            greenGear.setAnimation("green_gear");
+            var redGear = createSprite(185, 145);
+            redGear.setAnimation("red_gear");
+            function draw() {
+            background("white"); 
+         // Make the gears spin the opposite way when the space bar is **not** being pressed.
+            if (keyDown("space")) {
+               blueGear.rotation = blueGear.rotation - 1;
+               greenGear.rotation = greenGear.rotation + 1;
+               redGear.rotation = redGear.rotation + 1;
+            } else {
+               blueGear.rotation = blueGear.rotation - (-1);
+               greenGear.rotation = greenGear.rotation + -1;
+               redGear.rotation = redGear.rotation + -1;
+            }  
+            drawSprites();
+            }
+        ```
+     - Lesson Three:
+        ```
+            var balloon = createSprite(200, 50);
+            balloon.setAnimation("balloon");
+            balloon.scale = 0.1;
+            function draw() {
+            background("white"); 
+         // Add code that checks whether the mouse is being pressed.
+         // Move the balloon up the screen if the mouse is being pressed.
+         // Otherwise, move the balloon down the screen.
+            if (mouseDown("leftButton")) {
+               balloon.y = balloon.y - 1;
+            } else {
+               balloon.y = balloon.y + 1;
+            }
+            drawSprites();
+            }
+        ```
+     - Lesson Four:
+        ```
+            var blender = createSprite(100, 300);
+            blender.setAnimation("blender");
+            var mixer = createSprite(300, 300);
+            mixer.setAnimation("mixer");
+            function draw() {
+            background("lightyellow");
+            fill("burlywood");
+            rect(0, 350, 400, 50);
+         // Add to the conditional so that when the mouse is on the other side of the screen, the mixer shakes instead.
+            if (World.mouseX < 200) {
+               blender.x = randomNumber(95, 105);
+               blender.y = randomNumber(295, 305);
+            } else {
+               mixer.x = randomNumber(295, 305);
+               mixer.y = randomNumber(295, 305);
+            }
+            drawSprites();
+            }
+        ```
+     - Lesson Five:
+        ```
+            var blender = createSprite(100, 300);
+            blender.setAnimation("blender");
+            var mixer = createSprite(300, 300);
+            mixer.setAnimation("mixer");
+            function draw() {
+            background("lightyellow");
+            fill("burlywood");
+            rect(0, 350, 400, 50);
+         // Add to the conditional so that when the mouse is on the other side of the screen, the mixer shakes instead.
+            if (World.mouseX < 200) {
+               blender.x = randomNumber(95, 105);
+               blender.y = randomNumber(295, 305);
+            } else {
+               mixer.x = randomNumber(295, 305);
+               mixer.y = randomNumber(295, 305);
+            }
+            drawSprites();
+            }
+        ```
+  - Lesson Six: Practice
+     ```
+         var emoji = createSprite(200, 200);
+         emoji.setAnimation("smileEmoji");
+         function draw() {
+         background("white");
+      // If the mouse is pressed down, change the emoji to a different emoji
+         if (mouseDown("leftButton")) {
+            emoji.setAnimation("glassesEmoji");
+         } else {
+            emoji.setAnimation("smileEmoji");
+         } 
+      // Otherwise, keep the emoji as a smile emoji 
+         drawSprites();
+         }
+     ```
+  - Lesson Seven: Assessment
+     ```
+         var backdrop = createSprite(200,200);
+         backdrop.setAnimation("sky");
+         var creature = createSprite(200,250);
+         creature.setAnimation("creature");
+         creature.scale = 0.2;
+         function draw() {
+      // Change the code so that the creature only shakes when the mouse is pressed.
+         if (mouseDown("leftButton")) {
+            creature.rotation = randomNumber(-5,5);
+         }
+         drawSprites();
+      // Change the code so the directions ("Press the mouse to shake the creature.") **only show** 
+      // when the user is **NOT** pressing the mouse.
+         fill("black");
+         textSize(40);
+         text("Press the mouse to shake the creature.", 20, 50, 360, 100);
+         }
+     ```
+  - Lesson Eight: Challenges
+     ```
+      //Create a bee sprite
+         var bee1 = createSprite(200, 200);
+         bee1.setAnimation("bee");
+         function draw(){
+         background("white");
+      //Update the position of the bee to the position of the mouse
+         if (mouseDown("leftButton")) {
+         bee1.x = World.mouseX;
+         bee1.y = World.mouseY;
+         }
+         drawSprites();
+         }
+     ```
+
 
 
