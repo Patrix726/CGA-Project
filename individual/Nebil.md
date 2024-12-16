@@ -721,3 +721,46 @@ Question of the Day: How can we make our programs behave differently each time t
     text("It is over Anakin!", 100, 360);
     text("I have the high ground", 65, 390);
     ```
+
+## Lesson 12: The draw loop
+
+-   Learned how to utilize the draw loop.
+
+    ```
+    //1 Add code to this program so that your drawing has orange circles being drawn, too.
+    noStroke();
+
+    function draw(){
+    fill("green");
+    ellipse(randomNumber(0,400), randomNumber(0,400));
+    fill("orange");
+    ellipse(randomNumber(0,400), randomNumber(0,400));
+    }
+
+    ```
+
+-   Learned to use the `background` block inside the `draw` function to erase previous sprites or shapes.
+
+    ```
+    //1 Run the code to see how it works.
+    background("lightblue");
+    textSize(20);
+    text("small", 170, 100);
+    textSize(40);
+    text("medium", 130, 200);
+    //2 Add code to make the word "large" the biggest.
+    textSize(60);
+    text("large", 120, 300);
+    ```
+
+-   Learned updating the properties of sprites inside the draw function creates animations.
+    ```
+    var blender = createSprite(200,200);
+    blender.setAnimation("blender");
+    function draw() {
+        background("lightyellow");
+        blender.x = 200 + randomNumber(-5,5);
+        blender.y = 200 + randomNumber(-5,5);
+        drawSprites();
+    }
+    ```
