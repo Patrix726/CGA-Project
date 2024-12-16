@@ -988,9 +988,9 @@
 **Question of the Day:** How can we control sprite movement in Game Lab?
 
   - In this lesson, you will learn how to control sprite movement using the counter pattern.
-  - Lesson One: Prediction
-  - Lesson Two-Five: Skills Development
-     - Lesson Two: 
+  - Level One: Prediction
+  - Level Two-Five: Skills Development
+     - Level Two: 
         ```
             var jet = createSprite(350, 350);
             jet.setAnimation("jet");
@@ -1005,7 +1005,7 @@
             drawSprites();
             }
         ```
-     - Lesson Three:
+     - Level Three:
         ```
             var fly = createSprite(350, 200);
             fly.setAnimation("fly");
@@ -1016,7 +1016,7 @@
             drawSprites();
             }
         ```
-     - Lesson Four:
+     - Level Four:
         ```
          // Read the code that makes the mouse go down.
          // Run the program and look at the watchers to see what is happening 
@@ -1032,11 +1032,11 @@
             }
          // Run your code again and look at the watchers.
         ```
-     - Lesson Five:
+     - Level Five:
         ```
          The answer is C
         ```
-  - Lesson Six: Practice
+  - Level Six: Practice
       ```
       // Take a look at the value in the watcher
       // Add a watcher for the y property
@@ -1052,7 +1052,7 @@
          drawSprites();
          }
       ```
-  - Lesson Seven: Assessment
+  - Level Seven: Assessment
       ```
          var orangeFish = createSprite(400, randomNumber(0, 100));
          orangeFish.setAnimation("orange_fish");
@@ -1073,7 +1073,7 @@
          drawSprites();
          }
       ```
-  - Lesson Eight: Challenges
+  - Level Eight: Challenges
       ```
          var orangeFish = createSprite(400, randomNumber(0, 100));
          orangeFish.setAnimation("orange_fish");
@@ -1106,12 +1106,12 @@
 **Question of the Day:** How can we combine different programming patterns to make a complete animation?
 
   - In this lesson, you will combine all the concepts you have learned in the previous lessons to create your first animated scene of your own design!
-  - Lesson One: Animated Scene Example
-  - Lesson Two: Draw a Background
+  - Level One: Animated Scene Example
+  - Level Two: Draw a Background
      ```
        background("green");
      ```
-  - Lesson Three: Add Sprites
+  - Level Three: Add Sprites
      ```
       sprite1.setAnimation("ship14_1");
       sprite1.scale = 0.3;
@@ -1123,7 +1123,7 @@
       sprite3.scale = 0.3;
       sprite3.rotation = 90;
      ```
-  - Lesson Four: Add Text
+  - Level Four: Add Text
      ```
       fill("black");
       textSize(25);
@@ -1133,13 +1133,13 @@
       textSize(25);
       text("This is my bro car", 250, 200);
      ```
-  - Lesson Five: Add Movement
+  - Level Five: Add Movement
      ```
       sprite1.x = sprite1.x + randomNumber(1, 3);
       sprite2.x = sprite2.x + randomNumber(1, 3);
       sprite3.y = sprite3.y - randomNumber(1, 3);
      ```
-  - Lesson Six: Check your Animated Scene
+  - Level Six: Check your Animated Scene
      ```
       var sprite1 = createSprite(100, 75);
       sprite1.setAnimation("ship14_1");
@@ -1169,10 +1169,10 @@
 ### Lesson 15: Conditionals
  **Question of the Day:** How can programs react to changes as they are running?
   - In this lesson, you will learn about booleans and conditionals, which will allow you to create programs that run differently depending on whether a condition is true.
-  - Lesson One: Prediction
-  - Lesson Two: Quick Check
-  - Lesson Three-Five: Skills Development
-     - Lesson Three:
+  - Level One: Prediction
+  - Level Two: Quick Check
+  - Level Three-Five: Skills Development
+     - Level Three:
         ```
             var finishLine = createSprite(40, 200);
             finishLine.setAnimation("finish_line");
@@ -1195,8 +1195,8 @@
             drawSprites();
             }
         ```
-     - Lesson Four:
-     - Lesson Five:
+     - Level Four:
+     - Level Five:
         ```
             var fruit = createSprite(200, 200);
             fruit.setAnimation("apple");
@@ -1216,7 +1216,7 @@
             drawSprites();
             }
         ```
-  - Lesson Six: Practice
+  - Level Six: Practice
      ```
          var scene = createSprite(200, 200);
          scene.setAnimation("background");
@@ -1234,7 +1234,7 @@
          drawSprites();
          }
      ```
-  - Lesson Seven: Assessment
+  - Level Seven: Assessment
      ```
          var backdrop = createSprite(200,200);
          backdrop.setAnimation("sci_fi");
@@ -1253,7 +1253,7 @@
          drawSprites();
          }
      ```
-  - Lesson Eight: Challenges
+  - Level Eight: Challenges
      ```
          var tree = createSprite(200, 220);
          tree.setAnimation("tree");
@@ -1289,9 +1289,9 @@
 ### Lesson 16: Keyboard Input
  **Question of the Day:** How can our programs react to user input?
   - In this lesson, you will learn how to use the keyDown() block which will let your programs respond to user input.
-  - Lesson One: Prediction
-  - Lesson Two-Four: Skills Development
-     - Lesson Two:
+  - Level One: Prediction
+  - Level Two-Four: Skills Development
+     - Level Two:
         ```
          // Run the code and try pressing the "p" and "h" keys.
             var sprite = createSprite(200, 200);
@@ -1312,7 +1312,7 @@
             drawSprites();
             }
         ```
-     - Lesson Three:
+     - Level Three:
         ```
             var bug = createSprite(200, 200);
             bug.setAnimation("ladybug");
@@ -1331,7 +1331,7 @@
             drawSprites();
             }
         ```
-     - Lesson Four:
+     - Level Four:
         ```
             var blueGear = createSprite(100, 220);
             blueGear.setAnimation("blue_gear");
@@ -1351,7 +1351,7 @@
             drawSprites();
             }
         ```
-  - Lesson Five: Practice
+  - Level Five: Practice
       ```
          var turtle = createSprite(200,200);
          turtle.setAnimation("turtle");
@@ -1373,7 +1373,7 @@
          drawSprites();
          }
       ```
-  - Lesson Six: Assessment
+  - Level Six: Assessment
       ```
          var backdrop = createSprite(200,200);
          backdrop.setAnimation("rainbow");
@@ -1399,7 +1399,7 @@
          drawSprites();
          }
       ```
-  - Lesson Seven: Challenges
+  - Level Seven: Challenges
       ```
       // Duplicate your chosen bug image four times in the animation tab.
       // Edit each of your images to point in one of the four directions.
@@ -1433,9 +1433,9 @@
 ### Lesson 17: Mouse Input
  **Question of the Day:** What are more ways that the computer can react to user input?
   - In this lesson, you will expand on what you have learned about if statements and explore if-else statements as well as learn about how to use the mouse to get input from your user that you can use in your conditional statements.
-  - Lesson One: Prediction
-  - Lesson Two-Five: Skills Development
-     - Lesson Two:
+  - Level One: Prediction
+  - Level Two-Five: Skills Development
+     - Level Two:
         ```
             var blueGear = createSprite(100, 220);
             blueGear.setAnimation("blue_gear");
@@ -1458,7 +1458,7 @@
             drawSprites();
             }
         ```
-     - Lesson Three:
+     - Level Three:
         ```
             var balloon = createSprite(200, 50);
             balloon.setAnimation("balloon");
@@ -1476,7 +1476,7 @@
             drawSprites();
             }
         ```
-     - Lesson Four:
+     - Level Four:
         ```
             var blender = createSprite(100, 300);
             blender.setAnimation("blender");
@@ -1497,7 +1497,7 @@
             drawSprites();
             }
         ```
-     - Lesson Five:
+     - Level Five:
         ```
             var blender = createSprite(100, 300);
             blender.setAnimation("blender");
@@ -1518,7 +1518,7 @@
             drawSprites();
             }
         ```
-  - Lesson Six: Practice
+  - Level Six: Practice
      ```
          var emoji = createSprite(200, 200);
          emoji.setAnimation("smileEmoji");
@@ -1534,7 +1534,7 @@
          drawSprites();
          }
      ```
-  - Lesson Seven: Assessment
+  - Level Seven: Assessment
      ```
          var backdrop = createSprite(200,200);
          backdrop.setAnimation("sky");
@@ -1554,7 +1554,7 @@
          text("Press the mouse to shake the creature.", 20, 50, 360, 100);
          }
      ```
-  - Lesson Eight: Challenges
+  - Level Eight: Challenges
      ```
       //Create a bee sprite
          var bee1 = createSprite(200, 200);
