@@ -564,3 +564,71 @@ Question of the Day: How can we make our programs behave differently each time t
     message.setAnimation("textGetReady");
     drawSprites();
     ```
+
+## Lesson 9: Sprite Properties
+
+-   Learned how to change the position of sprites
+    ```
+    //1 Run the program to see where the sprites appear.
+    var palette = createSprite();
+    palette.setAnimation("paint_palette");
+    var brush = createSprite();
+    brush.setAnimation("paint_brush");
+    palette.x = 150;
+    palette.y = 350;
+    //2 Change the location of the paint brush to touch the paint palette.
+    brush.x= 200;
+    brush.y = 150;
+    drawSprites();
+    ```
+-   Learned about new properties `rotate` and `scale` to change sprites.
+
+    ```
+    //1 Run the program to see how what is different about the first two notes.
+    //2 Use the same blocks on the last two notes to make them look different, too.
+    background("skyblue");
+    var drums = createSprite(200,290);
+    drums.setAnimation("drum_set");
+    var note1 = createSprite(50,50);
+    note1.setAnimation("eighth_note");
+    note1.scale = 0.3;
+    note1.rotation = 20;
+    var note2 = createSprite(150,50);
+    note2.setAnimation("eighth_note");
+    note2.scale = 0.7;
+    note2.rotation = -30;
+    var note3 = createSprite(250,50);
+    note3.setAnimation("eighth_note");
+    note3.scale = 0.4;
+    note3.rotation = 30;
+    var note4 = createSprite(350,50);
+    note4.scale = 0.6;
+    note4.rotation = 120;
+    note4.setAnimation("eighth_note");
+    drawSprites();
+    ```
+
+-   Learned the tint property to overlay a color on sprites.
+    ```
+    //1 Using either the sprite already created for you or with any other sprites of your choosing,
+    //play around with the tint property and
+    //see how it works and how it changes on different colored sprites
+    var creature = createSprite(200, 200);
+    creature.setAnimation("crowned_creature_1");
+    creature.scale = 0.3;
+    creature.tint = "green";
+    drawSprites();
+    ```
+-   Learned the alpha property to change the opacity (transparency) of sprites.
+    ```
+    //1 Using either the sprite already created for you or with any other sprites of your choosing,
+    //play around with the transparency and
+    //see how it works and how it changes on different sprites!
+    var house = createSprite(200, 200);
+    house.setAnimation("front_of_house_1");
+    var ghost = createSprite(200, 200);
+    ghost.setAnimation("ghost_1");
+    ghost.scale = 2;
+    ghost.alpha = 0.6;
+    drawSprites();
+    ```
