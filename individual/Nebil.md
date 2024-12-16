@@ -678,3 +678,46 @@ Question of the Day: How can we make our programs behave differently each time t
     fill("pink");
     text("Here is another text",120,180);
     ```
+
+## Lesson 11: Mini-project - Captioned Scenes
+
+-   Created the background features for my scene.
+
+    ```
+    background(rgb(40,0,0));
+    var landscape = createSprite(240, 240);
+
+    landscape.setAnimation("landscape");
+    landscape.scale = 1.4;
+    landscape.tint = "red";
+
+    drawSprites();
+
+    ```
+
+-   Created my main characters.
+
+    ```
+    var higher = createSprite(300, 90);
+    var lower = createSprite(100, 300);
+
+    higher.setAnimation("higher_robot");
+    lower.setAnimation("lower_robot");
+
+    higher.scale = 0.4;
+    lower.scale = 0.2;
+
+    higher.tint = "blue";
+    lower.tint = "brown";
+
+    drawSprites();
+
+    ```
+
+-   Added text for the scene.
+    ```
+    textSize(26);
+    fill("white");
+    text("It is over Anakin!", 100, 360);
+    text("I have the high ground", 65, 390);
+    ```
