@@ -381,3 +381,236 @@ drawSprites() - this block tells the animation to draw the sprites on the screen
 `drawSprites();`
 
 ![Uploading Screenshot_14-12-2024_124254_studio.code.org.jpeg…]()
+
+# Lesson 9
+### Sprite Properties
+  - Sprite properties keep track of all the information your program needs to know about a sprite, such as its size and location. You can change the values of these         properties just like you do variables, and see the results when your sprite is drawn to the screen.
+```
+ 1. Add blocks to the code to make the alien, astronaut, and comet look like they are floating in space similar to the image
+
+var space = createSprite(200, 200);
+space.setAnimation("space");
+var comet = createSprite(200, 180);
+comet.setAnimation("comet");
+comet.scale = 0.5;
+var alien = createSprite(250, 300);
+alien.setAnimation("alien");
+alien.scale = 1;
+alien.rotation = randomNumber(1, 360);
+var astronaut = createSprite(100, 120);
+astronaut.setAnimation("astronaut");
+astronaut.scale = 0.5;
+astronaut.rotation = randomNumber(1, 360);
+
+drawSprites();
+```
+### Alpha
+  - alpha is a property that can control the transparency of a sprite. It uses decimal values to represent transparency:
+
+      * sprite.alpha = 1; would be not transparent at all - it will look like a normal sprite.
+
+      * sprite.alpha = 0; would be completely transparent - it will look invisible!
+
+      * sprite.alpha = 0.5; would be 50% transparent (partially transparent, like it's see-through) 
+
+```
+// 1) Using either the sprite already created for you or with any other sprites of your choosing, 
+//play around with the transparency and 
+//see how it works and how it changes on different sprites!
+var house = createSprite(200, 200);
+house.setAnimation("front_of_house_1");
+var ghost = createSprite(200, 200);
+ghost.setAnimation("ghost_1");
+ghost.scale = 2;
+ghost.alpha = 0.5;
+drawSprites();
+```
+
+# Lesson 10 
+   ### Text
+You can put text anywhere you'd like on the screen using the text block. Read the documentation by clicking on the block in the toolbox to see how to change the size and color of your text.
+ ### Text Size
+ Text Size
+You can change the size of the text using the  `textSize` block.
+```
+//1) Run the code to see how it works.
+background("lightblue");
+textSize(20);
+text("small", 170, 100);
+textSize(40);
+text("medium", 130, 200);
+//2) Add code to make the word "large" the biggest.
+`textSize(60)
+text("large", 120, 300);
+```
+
+# Lesson 12 
+  ### The Draw Loop
+```
+ //1) Run the program to see how it works.
+var pencil = createSprite(100,200);
+pencil.setAnimation("pencil");
+
+var brush = createSprite(300,200);
+brush.setAnimation("brush");
+
+function draw(){
+  background("white");
+  pencil.x = randomNumber(100,110);
+  //2) Edit the code in this program to make the second sprite shake like the first one.
+  brush.x = randomNumber(200, 320);
+  drawSprites();
+}
+```
+
+```
+// Creating Alien Sprites
+var greenAlien = createSprite(100, 200);
+greenAlien.setAnimation("greenAlien");
+
+var pinkAlien = createSprite(300, 200);
+pinkAlien.setAnimation("pinkAlien");
+
+// Setting Up Drawing
+noStroke();
+fill("green");
+
+function draw() {
+  background("black");
+  ellipse(randomNumber(0,400),randomNumber(0,400),5,5);
+  
+  greenAlien.rotation = randomNumber(-5,5);
+  
+  pinkAlien.rotation = randomNumber(-5, 10);
+
+  drawSprites():
+}
+```
+```
+//1) Add the draw loop block to the bottom of this program.
+//2) Move any blocks that need to be inside the draw loop.
+World.frameRate = 10;
+
+var salt = createSprite(200,200);
+salt.setAnimation("salt");
+function draw() {
+  background("skyblue");
+  salt.y = randomNumber(200, 250);
+  drawSprites();
+}
+```
+### Create An Animated Scene
+```
+// Setting Frame Rate
+World.frameRate = 5;
+
+//1) Create your sprite for the background
+var couch = createSprite(200, 200);
+couch.setAnimation("background");
+
+//2) Create your sprites for the cow, elephant, and pig and set the x and y location for each.
+var elephant = createSprite(100, 200);
+elephant.setAnimation("elephant");
+var pig = createSprite(210, 220);
+pig.setAnimation("pig");
+var cow = createSprite(310, 200);
+cow.setAnimation("cow");
+//3) Set the animation for each sprite.
+
+
+//4) Resize your animals.
+elephant.scale = 0.5;
+pig.scale = 0.4;
+cow.scale = 0.5;
+
+//5) Update the appropriate sprite property in the draw loop to 
+function draw() {
+  elephant.y = randomNumber(150, 250);
+  pig.y = randomNumber(150, 250);
+  cow.y = randomNumber(150, 250);
+  drawSprites();
+}
+```
+# Lesson 13
+### The Sprite Movement
+Sprite Movement
+Using the counter pattern, you can write programs that animate sprites smoothly. Adding to or removing from a sprite's x or y property in the draw loop makes your sprite move just a bit each time it is redrawn.
+
+```
+var jet = createSprite(350, 350);
+jet.setAnimation("jet");
+var plane = createSprite(50, 200);
+plane.setAnimation("plane");
+
+function draw() {
+  background("skyblue");
+  
+  //1) Read the code that makes the jet go up the screen
+  jet.y = jet.y - 3;
+  
+  //2) Add code that makes the plane move to the right
+  plane.x = plane.x + 3;
+
+  drawSprites();
+}
+```
+- Moving to the Left
+
+   ` sprite.x = sprite.x - 3`
+
+- Diagonal Movement
+
+Updating both the x or y properties of a sprite can make it move diagonally. You can use the watchers under the code area to see how each property is changing.
+```
+     sprite.x = sprite.x + 3 
+     sprite.y = sprite.y + 3  
+```
+- Rotate the Gears
+```var blueGear = createSprite(100, 220);
+blueGear.setAnimation("blue_gear");
+
+var greenGear = createSprite(183, 298);
+greenGear.setAnimation("green_gear");
+
+var redGear = createSprite(185, 145);
+redGear.setAnimation("red_gear");
+
+function draw() {
+  background("white");
+  //1) Make the gears rotate so they look like they are working as one system
+  blueGear.rotation = blueGear.rotation - 3;
+  redGear.rotation = redGear.rotation + 3;
+  greenGear.rotation = greenGear.rotation + 3;
+  
+  drawSprites();
+}
+```
+- Fish Animation
+```
+var orangeFish = createSprite(400, randomNumber(0, 100));
+orangeFish.setAnimation("orange_fish");
+var blueFish = createSprite(250, randomNumber(0, 200));
+blueFish.setAnimation("blue_fish");
+var greenFish = createSprite(300, randomNumber(200, 300));
+greenFish.setAnimation("green_fish");
+
+function draw() {
+  // Draw Background
+  background("navy");
+  
+  // Update Values
+  orangeFish.x = orangeFish.x - 2;
+  
+  
+  //1) Use the counter pattern to make the blue fish move across the screen faster than the other fish
+blueFish.x = blueFish.x - 4;
+  //2) Use the counter pattern to make the green fish move across the screen slower than the other fish.
+  greenFish.x = greenFish.x - 1;
+  
+  // Draw Animations
+  drawSprites();
+}
+```
+
+###  Screenshot
+![Screenshot_16-12-2024_145613_studio code org](https://github.com/user-attachments/assets/26dc0877-9190-4dc4-a01d-4e82197f8833)
