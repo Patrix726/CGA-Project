@@ -531,3 +531,36 @@ Question of the Day: How can we make our programs behave differently each time t
     rect(robotPosX+110,230,10,mouthHeight);
     rect(robotPosX+130,230,10,mouthHeight);
     ```
+
+## Lesson 8: Sprites
+
+-   Learned how to create sprites
+    ```
+    var sprite = createSprite(100, 200);
+    drawSprites();
+    ```
+-   Learned about setAnimation block to change sprite appearance.
+
+    ```
+    var fruit = createSprite(200, 100);
+
+    //1 Update the fruit animation
+    fruit.setAnimation("strawberry");
+
+    var vegetable = createSprite(200, 300);
+    //2 Update the vegetable animation
+    vegetable.setAnimation("broccoli");
+
+    drawSprites();
+    ```
+
+-   Debugged some sprites and learned that order matters in showing sprites.
+    ```
+    var drink = createSprite(100, 200);
+    drink.setAnimation("soda");
+    var dessert = createSprite(300, 200);
+    dessert.setAnimation("ice_cream");
+    var message = createSprite(200, 200);
+    message.setAnimation("textGetReady");
+    drawSprites();
+    ```
