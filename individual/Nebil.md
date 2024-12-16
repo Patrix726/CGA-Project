@@ -478,4 +478,56 @@ Question of the Day: How can we make our programs behave differently each time t
     ```
 
 ---
+
 ![image](https://github.com/user-attachments/assets/0d2c4acc-7ee1-4efd-a86a-34bea5acbb6c)
+
+## Lesson 7: Mini-Project - Robot Faces
+
+-   Reviewed about the `point()` block. Filled the remaining points like in the picture.
+    ```
+    strokeWeight(35);
+    point(200, 170);
+    strokeWeight(5);
+    fill("red");
+    ellipse(200, 200);
+    point(200, 190);
+    point(210, 200);
+    point(190, 200);
+    point(200, 210);
+    ```
+-   Made a silly robot face using 6 variables with random values.
+
+    ```
+    var robotPosX = randomNumber(50,200);
+    var leftEyePosX = randomNumber(robotPosX+40,robotPosX+60);
+    var leftEyePosY = randomNumber(140,160);
+    var rightEyePosX = randomNumber(robotPosX+140,robotPosX+160);
+    var rightEyePosY = randomNumber(140,160);
+    var mouthHeight = randomNumber(10,30);
+
+    fill(rgb(200,200,200));
+    rect(robotPosX,100,200,200);
+
+    // Left Eye white
+    fill("white");
+    ellipse(robotPosX+50,150,35,35);
+
+    // Right Eye white
+    fill("white");
+    ellipse(robotPosX+150,150,35,35);
+
+    // Left Iris
+    fill("black");
+    ellipse(leftEyePosX,leftEyePosY,20,20);
+
+    // Right Iris
+    fill("black");
+    ellipse(rightEyePosX,rightEyePosY,20,20);
+
+    // Mouth Lines
+    rect(robotPosX+50,230,10,mouthHeight);
+    rect(robotPosX+70,230,10,mouthHeight);
+    rect(robotPosX+90,230,10,mouthHeight);
+    rect(robotPosX+110,230,10,mouthHeight);
+    rect(robotPosX+130,230,10,mouthHeight);
+    ```
