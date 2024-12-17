@@ -295,3 +295,20 @@ In lessons 10-15, we explored the power of random numbers in programming to crea
 These techniques allow us to create more engaging and unpredictable graphics, improving the interactivity of our programs and making each execution feel unique.
 
 ![Image of Finished lessons](https://i.ibb.co/dMF7c9z/Screenshot-2024-12-10-104830.png)
+
+Lesson 16: Keyboard Input
+Question of the Day: How can our programs react to user input?
+
+Lesson Resources
+Key Concepts:
+
+The keyDown() block enables interaction with the keyboard.
+Responding to user input creates dynamic and interactive programs.
+Activities:
+Prediction: Predict how keyboard input could enhance interactivity.
+2-4. Skill Building: Learn to use the keyDown() block to respond to user actions.
+Practice: Create programs that respond to various key inputs.
+Assessment: Show mastery by designing an interactive program using keyboard input.
+Challenges: Explore creative and advanced applications of keyboard interactivity.
+
+![lesson 16-19](https://i.ibb.co/S6GdDdL/Screenshot-2024-12-17-132335.png)
