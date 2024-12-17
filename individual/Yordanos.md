@@ -356,4 +356,174 @@ if (x > 10) {
 ```
 ```
 ![progress from lesson 10 - 15](https://i.postimg.cc/qqcwkv8z/Screenshot-2024-12-10-133455.png)
+![lesson-15](https://i.postimg.cc/ZnGQZNF6/lesson-15.png)
+
+
+```
+## Lesson 16: Keyboard Input
+
+### Key Features
+- Detects when specific keys are pressed using the `keyDown()` block.
+
+### Example: Fish with Arrows
+```javascript
+var orangeFish = createSprite(400, randomNumber(0, 100));
+orangeFish.setAnimation("orange_fish");
+var blueFish = createSprite(250, randomNumber(0, 200));
+blueFish.setAnimation("blue_fish");
+var greenFish = createSprite(300, randomNumber(200, 300));
+greenFish.setAnimation("green_fish");
+var counter1 = 0;
+var counter2 = 0;
+
+function draw() {
+  background("navy");
+  if (keyDown("space")) {
+    orangeFish.x = orangeFish.x - 2;
+    blueFish.x = blueFish.x - counter1;
+    counter1 = counter1 + 1;
+    greenFish.x = greenFish.x - counter2;
+    counter2 = counter2 + 0.5;
+  }
+  drawSprites();
+}
+```
+
+### Practice: Move in All Directions
+```javascript
+var backdrop = createSprite(200, 200);
+backdrop.setAnimation("rainbow");
+var flyer = createSprite(200, 200);
+flyer.setAnimation("wing_bot");
+
+function draw() {
+  if (keyDown("up")) flyer.y = flyer.y - 2;
+  if (keyDown("down")) flyer.y = flyer.y + 2;
+  if (keyDown("left")) flyer.x = flyer.x - 2;
+  if (keyDown("right")) flyer.x = flyer.x + 2;
+  drawSprites();
+}
+```
+
+### Responding to a Single Click
+- Uses `keyWentDown()` to detect new key presses.
+```javascript
+var clicks = 0;
+
+function draw() {
+  if (keyWentDown("space")) {
+    clicks = clicks + 1;
+  }
+  background("white");
+  textSize(50);
+  text(clicks, 165, 175, 70, 50);
+}
+```
+
+---
+
+## Lesson 17: Mouse Input
+
+### Example: Reverse the Gears
+```javascript
+var blueGear = createSprite(100, 220);
+blueGear.setAnimation("blue_gear");
+var greenGear = createSprite(183, 298);
+greenGear.setAnimation("green_gear");
+var redGear = createSprite(185, 145);
+redGear.setAnimation("red_gear");
+
+function draw() {
+  background("white");
+  if (mouseDown("leftButton")) {
+    blueGear.rotation = blueGear.rotation - 1;
+    greenGear.rotation = greenGear.rotation + 1;
+    redGear.rotation = redGear.rotation + 1;
+  } else {
+    blueGear.rotation = blueGear.rotation + 1;
+    greenGear.rotation = greenGear.rotation - 1;
+    redGear.rotation = redGear.rotation - 1;
+  }
+  drawSprites();
+}
+```
+
+### Example: Mouse Clicks
+```javascript
+var balloon = createSprite(200, 50);
+balloon.setAnimation("balloon");
+balloon.scale = 0.1;
+
+function draw() {
+  background("white");
+  if (mouseDown("leftButton")) {
+    balloon.y = balloon.y - 1;
+  } else {
+    balloon.y = balloon.y + 1;
+  }
+  drawSprites();
+}
+```
+
+### Practice Examples
+#### Ladybug Walk
+```javascript
+var outside = createSprite(200, 200);
+outside.setAnimation("pine_trees");
+var bug = createSprite(350, 350);
+bug.setAnimation("ladybug");
+
+function draw() {
+  if (World.mouseY > 300) {
+    bug.x = bug.x - 3;
+  }
+  drawSprites();
+}
+```
+
+#### Ghost Moving with the Mouse
+```javascript
+var outside = createSprite(200, 200);
+outside.setAnimation("meadow");
+var ghost = createSprite(200, 300);
+ghost.setAnimation("ghost");
+
+function draw() {
+  if (World.mouseX > 200) {
+    ghost.x = ghost.x + 2;
+  }
+  if (World.mouseX < 200) {
+    ghost.x = ghost.x - 2;
+  }
+  drawSprites();
+}
+```
+
+---
+
+## Twin Spirals
+```javascript
+var spiral = createSprite(100, 200);
+spiral.setAnimation("lollipop");
+var spiral2 = createSprite(300, 200);
+spiral2.setAnimation("lollipop2");
+
+function draw() {
+  background("pink");
+  spiral.scale = spiral.scale / 1.01;
+  spiral.rotation = spiral.rotation + 3;
+  spiral2.scale = spiral2.scale * 1.01;
+  spiral2.rotation = spiral2.rotation - 3;
+
+  if (mouseDown("leftButton")) {
+    spiral.scale = spiral.scale * 1.02;
+    spiral2.scale = spiral2.scale / 1.02;
+  }
+  drawSprites();
+}
+```
+![progress from lesson 16-18](https://i.postimg.cc/fR9wx7rQ/Screenshot-2024-12-17-132713.png)
+
+
+
 
