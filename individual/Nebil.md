@@ -764,3 +764,366 @@ Question of the Day: How can we make our programs behave differently each time t
         drawSprites();
     }
     ```
+
+## Lesson 13: Sprite Movement
+
+-   Learned how to animate sprite movement;
+
+    ```
+    var jet = createSprite(350, 350);
+    jet.setAnimation("jet");
+    var plane = createSprite(50, 200);
+    plane.setAnimation("plane");
+
+    function draw() {
+    background("skyblue");
+
+    //1 Read the code that makes the jet go up the screen
+    jet.y = jet.y - 3;
+
+    //2 Add code that makes the plane move to the right
+    plane.x = plane.x + 3;
+    drawSprites();
+    }
+    ```
+
+-   Learned to use the counter pattern not just in movement but in rotation as well.
+
+    ```
+    var pan = createSprite(200, 200);
+    pan.setAnimation("pan");
+
+    function draw() {
+    background("palegreen");
+    //1 Make the pan spin like in the image
+    pan.rotation = pan.rotation + 5;
+    drawSprites();
+    }
+    ```
+
+## Lesson 14: Mini-project - Animation
+
+-   Added animation to my previous mini-project
+
+    ```
+    background(rgb(40,0,0));
+    var landscape = createSprite(200, 170);
+    var higher = createSprite(300, 240);
+    var lower = createSprite(100, 300);
+
+    higher.setAnimation("higher_robot");
+    lower.setAnimation("lower_robot");
+
+    higher.scale = 0.3;
+    lower.scale = 0.2;
+
+    higher.tint = "blue";
+    lower.tint = "brown";
+
+    landscape.setAnimation("landscape");
+    landscape.scale = 1.13;
+    landscape.tint = "red";
+
+    function draw() {
+        background("white");
+        higher.y = higher.y -0.4;
+        lower.rotation = randomNumber(5,-5);
+        drawSprites();
+        textSize(26);
+        fill("white");
+        text("It is over Anakin!", 100, 360);
+        text("I have the high ground", 65, 390);
+    }
+
+
+    ```
+
+## Lesson 15: Conditionals
+
+-   Learned how to use conditionals in Game Lab.
+
+    ```
+    var fruit = createSprite(200, 200);
+    fruit.setAnimation("apple");
+    fruit.scale = 0.1;
+
+    function draw() {
+    // Draw Background
+    background("white");
+
+    // Update Values
+    fruit.scale = fruit.scale + 0.01;
+
+    //1 Add a conditional to the draw loop.
+    //2 Add code to the conditional statement that asks if the scale of the fruit greater than 2.
+
+    if (fruit.scale > 2) {
+
+        //3 Add code inside the conditional to change the fruit to a pear.
+        fruit.setAnimation("pear") ;
+    }
+
+    // Draw Animations
+    drawSprites();
+    }
+
+    ```
+
+-   Learned about the `visibility` property of sprites.
+
+    ```
+    var balloon = createSprite(200, 200);
+    balloon.setAnimation("balloon");
+    balloon.scale = 0.1;
+
+    //1 Create a pop sprite which uses the "pop" visual in the animation tab.
+    var pop = createSprite(200, 200);
+    pop.setAnimation("pop");
+
+
+
+    //2 Set the pop sprite to be hidden at the beginning.
+    pop.visible = false;
+
+    function draw() {
+    // Draw Background
+    background("white");
+
+    // Update Values
+    balloon.scale = balloon.scale + 0.01;
+
+    pop.visible = balloon.scale > 0.8;
+    //3 Add a conditional that checks the size of the balloon to see when it touches the edge of the screen.
+    //4 Inside your conditional, set the balloon sprite to be hidden *and* set the pop sprite to appear.
+
+
+
+    // Draw Animations
+    drawSprites();
+    }
+    ```
+
+## Lesson 16: Keyboard Input
+
+-   Learned how to detect key press using the `keyDown` block.
+
+    ```
+    var bug = createSprite(200, 200);
+    bug.setAnimation("ladybug");
+
+    function draw() {
+    //Draw Background
+    background("white");
+
+    //1 Add a conditional statement to check if the right arrow key has been pressed down.
+    if (keyDown("right")) {
+        //2 Add code to move the sprite right if the right arrow is down.
+        bug.x = bug.x + 5;
+    }
+    if (keyDown("left")) {
+        bug.x = bug.x - 5;
+    }
+    //Draw Animations
+    drawSprites();
+    }
+
+
+    ```
+
+-   Made sprite movement accessible using the four direction arrows on keyboard.
+
+    ```
+    var backdrop = createSprite(200,200);
+    backdrop.setAnimation("rainbow");
+    var flyer = createSprite(200,200);
+    flyer.setAnimation("wing_bot");
+
+    function draw() {
+
+    //1) Add code to move the sprite left when the left arrow is pressed
+    if (keyDown("left")){
+        flyer.x = flyer.x -5;
+    }
+    //2) Add code to move the sprite right when the right arrow is pressed
+    if (keyDown("right")){
+        flyer.x = flyer.x+5;
+    }
+    //3) Add code to move the sprite up when the up arrow is pressed
+    if (keyDown("up")){
+        flyer.y = flyer.y -5;
+    }
+    //4) Add code to move the sprite down when the down arrow is pressed
+    if (keyDown("down")){
+        flyer.y = flyer.y+5;
+    }
+
+
+
+    drawSprites();
+    }
+    ```
+
+-   Learned about the block `keyWentDown` and its difference with `keyDown`.
+
+    ```
+    var clicks = 0;
+
+    function draw() {
+    // 2 Change the code to use the new block, so the program only gives you a point for new clicks.
+    if (keyWentDown("space")) {
+        clicks = clicks + 1;
+    }
+    background("white");
+    textSize(100);
+    fill("red");
+    text(clicks, 165, 175);
+    }
+    ```
+
+## Lesson 17: Mouse Input
+
+-   Learned how to use if-else statement for cool animation effects.
+
+    ```
+    var blueGear = createSprite(100, 220);
+    blueGear.setAnimation("blue_gear");
+
+    var greenGear = createSprite(183, 298);
+    greenGear.setAnimation("green_gear");
+
+    var redGear = createSprite(185, 145);
+    redGear.setAnimation("red_gear");
+
+    function draw() {
+    background("white");
+
+    if (keyDown("space")) {
+        blueGear.rotation = blueGear.rotation - 1;
+        greenGear.rotation = greenGear.rotation + 1;
+        redGear.rotation = redGear.rotation + 1;
+    } else {
+
+    //1) Make the gears spin the opposite way when the space bar is **not** being pressed.
+        blueGear.rotation = blueGear.rotation + 1;
+        greenGear.rotation = greenGear.rotation - 1;
+        redGear.rotation = redGear.rotation - 1;
+    }
+
+    drawSprites();
+    }
+    ```
+
+-   Learned to use mouse events using `mouseDown` block.
+
+    ```
+    var blueGear = createSprite(100, 220);
+    blueGear.setAnimation("blue_gear");
+
+    var greenGear = createSprite(183, 298);
+    greenGear.setAnimation("green_gear");
+
+    var redGear = createSprite(185, 145);
+    redGear.setAnimation("red_gear");
+
+    function draw() {
+    background("white");
+
+    if (mouseDown("leftButton")) {
+        blueGear.rotation = blueGear.rotation - 1;
+        greenGear.rotation = greenGear.rotation + 1;
+        redGear.rotation = redGear.rotation + 1;
+    } else {
+        blueGear.rotation = blueGear.rotation + 1;
+        greenGear.rotation = greenGear.rotation - 1;
+        redGear.rotation = redGear.rotation - 1;
+
+    }
+    //3) Make the gears spin the opposite way when there is no user input.
+
+
+    drawSprites();
+    }
+    ```
+
+-   Learned about the blocks `World.mouseX` and `World.mouseY` to find the position of mouth.
+
+    ```
+    var blender = createSprite(100, 300);
+    blender.setAnimation("blender");
+    var mixer = createSprite(300, 300);
+    mixer.setAnimation("mixer");
+
+    function draw() {
+    background("lightyellow");
+    fill("burlywood");
+    rect(0, 350, 400, 50);
+    if (World.mouseX < 200) {
+        blender.x = randomNumber(95, 105);
+        blender.y = randomNumber(295, 305);
+    } else {
+        mixer.x = randomNumber(295, 305);
+        mixer.y = randomNumber(295, 305);
+
+    }
+    //2 Add to the conditional so that when the mouse is on the other side of the screen, the mixer shakes instead.
+
+    drawSprites();
+    }
+
+    ```
+
+## Lesson 18: Project - Interactive Card
+
+-   Learned how to detect key press using the `keyDown` block.
+
+    ```
+    var backgroundSprite = createSprite(200,200);
+    backgroundSprite.setAnimation("space");
+
+    var vase = createSprite(350, 350);
+    var flower1 = createSprite(50, 300);
+    var flower2 = createSprite(150, 300);
+    var flower3 = createSprite(250, 300);
+
+    vase.setAnimation("vase");
+    vase.visible = false;
+    flower1.setAnimation("flower");
+    flower2.setAnimation("flower");
+    flower3.setAnimation("flower");
+
+    flower1.tint= 'red';
+    flower2.tint= 'blue';
+    flower3.tint= 'green';
+
+    flower1.scale = 0.4;
+    flower2.scale = 0.4;
+    flower3.scale = 0.4;
+
+    function draw() {
+    background("white");
+    if (mouseDown("leftButton")){
+        if (World.mouseX > 0 && World.mouseX < 100 && World.mouseY > 250 && World.mouseY < 350){
+        flower1.visible= false;
+        }
+        if (World.mouseX > 100 && World.mouseX < 200 && World.mouseY > 250 && World.mouseY < 350){
+        flower2.visible= false;
+        }
+        if (World.mouseX > 200 && World.mouseX < 300 && World.mouseY > 250 && World.mouseY < 350){
+        flower3.visible= false;
+        }
+    }
+    if (!flower1.visible && !flower2.visible && !flower3.visible){
+        vase.visible = true;
+        flower1.x = 340;
+        flower2.x = 350;
+        flower3.x = 360;
+        flower1.visible= true;
+        flower2.visible= true;
+        flower3.visible= true;
+        flower1.scale= 0.2;
+        flower2.scale= 0.2;
+        flower3.scale= 0.2;
+    }
+    drawSprites();
+    }
+    ```
