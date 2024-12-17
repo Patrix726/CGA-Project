@@ -1569,6 +1569,541 @@
          drawSprites();
          }
      ```
+### Lesson 18: Project - Interactive Card
+ **Question of the Day:** What skills and practices are important when creating an interactive program?
+
+  - In this lesson, you will plan and develop an interactive greeting card using all the programming concepts and techniques you have learned so far!
+  - Lesson One: Demo Application: Interactive Card
+  - Lesson Two: Interactive Card Examples
+  - Lesson Three-Seven: Project working
+     - Lesson Three:
+       ```
+            var sprite = createSprite(100, 100);
+            sprite.setAnimation("monstertruck_03_1");
+            sprite.scale = 0.3;
+            var sprite1 = createSprite(100, 200);
+            sprite1.setAnimation("motoside_07_1");
+            sprite1.scale = 0.4;
+            var sprite2 = createSprite(100, 300);
+            sprite2.setAnimation("ship15_1");
+            sprite2.scale = 0.3;
+            function draw() {
+            if (keyDown("space")) {
+               background(rgb(82, 168, 50));
+               sprite.x = sprite.x + randomNumber(1, 3);
+               sprite1.x = sprite1.x + randomNumber(1, 5);
+               sprite2.x = sprite2.x + randomNumber(1, 4);
+               drawSprites();
+               if (sprite.x > 350) {
+                  stroke("red");
+                  textSize(30);
+                  text("Game Over", 100, 200);
+               }
+               if (sprite1.x > 350) {
+                  stroke("red");
+                  textSize(30);
+                  text("Game Over", 100, 200);
+               }
+               if (sprite2.x > 350) {
+                  stroke("red");
+                  textSize(30);
+                  text("Game Over", 100, 200);
+               }
+            } else {
+               background("green");
+               stroke("white");
+               textSize(35);
+               text("Please Click ", 70, 200);
+               textSize(35);
+               text("or hold Space", 70, 250);
+            }
+            }
+       ```
+     - Lesson Four:
+       ```
+         var sprite = createSprite(100, 100);
+         sprite.setAnimation("monstertruck_03_1");
+         sprite.scale = 0.3;
+         var sprite1 = createSprite(100, 200);
+         sprite1.setAnimation("motoside_07_1");
+         sprite1.scale = 0.4;
+         var sprite2 = createSprite(100, 300);
+         sprite2.setAnimation("ship15_1");
+         sprite2.scale = 0.3;
+         function draw() {
+         if (keyDown("space")) {
+            background(rgb(82, 168, 50));
+            sprite.x = sprite.x + randomNumber(1, 3);
+            sprite1.x = sprite1.x + randomNumber(1, 5);
+            sprite2.x = sprite2.x + randomNumber(1, 4);
+            drawSprites();
+            if (sprite.x > 350) {
+               stroke("red");
+               textSize(30);
+               text("Game Over", 100, 200);
+            }
+            if (sprite1.x > 350) {
+               stroke("red");
+               textSize(30);
+               text("Game Over", 100, 200);
+            }
+            if (sprite2.x > 350) {
+               stroke("red");
+               textSize(30);
+               text("Game Over", 100, 200);
+            }
+         } else {
+            background("green");
+            stroke("white");
+            textSize(35);
+            text("Please Click ", 70, 200);
+            textSize(35);
+            text("or hold Space", 70, 250);
+         }
+         }
+       ```
+     - Lesson Five:
+       ```
+            var sprite = createSprite(100, 100);
+            sprite.setAnimation("monstertruck_03_1");
+            sprite.scale = 0.3;
+            var sprite1 = createSprite(100, 200);
+            sprite1.setAnimation("motoside_07_1");
+            sprite1.scale = 0.4;
+            var sprite2 = createSprite(100, 300);
+            sprite2.setAnimation("ship15_1");
+            sprite2.scale = 0.3;
+            function draw() {
+            if (keyDown("space")) {
+               background(rgb(82, 168, 50));
+               sprite.x = sprite.x + randomNumber(1, 3);
+               sprite1.x = sprite1.x + randomNumber(1, 5);
+               sprite2.x = sprite2.x + randomNumber(1, 4);
+               drawSprites();
+               if (sprite.x > 350) {
+                  stroke("red");
+                  textSize(30);
+                  text("Game Over", 100, 200);
+               }
+               if (sprite1.x > 350) {
+                  stroke("red");
+                  textSize(30);
+                  text("Game Over", 100, 200);
+               }
+               if (sprite2.x > 350) {
+                  stroke("red");
+                  textSize(30);
+                  text("Game Over", 100, 200);
+               }
+            } else {
+               background("green");
+               stroke("white");
+               textSize(35);
+               text("Please Click ", 70, 200);
+               textSize(35);
+               text("or hold Space", 70, 250);
+            }
+            }
+       ```
+     - Lesson Six:
+     - Lesson Seven:
+       ```
+            var sprite = createSprite(100, 100);
+            sprite.setAnimation("monstertruck_03_1");
+            sprite.scale = 0.3;
+            var sprite1 = createSprite(100, 200);
+            sprite1.setAnimation("motoside_07_1");
+            sprite1.scale = 0.4;
+            var sprite2 = createSprite(100, 300);
+            sprite2.setAnimation("ship15_1");
+            sprite2.scale = 0.3;
+            function draw() {
+            if (keyDown("space")) {
+               background(rgb(82, 168, 50));
+               sprite.x = sprite.x + randomNumber(1, 3);
+               sprite1.x = sprite1.x + randomNumber(1, 5);
+               sprite2.x = sprite2.x + randomNumber(1, 4);
+               drawSprites();
+               if (sprite.x > 350) {
+                  stroke("red");
+                  textSize(30);
+                  text("Game Over", 100, 200);
+               }
+               if (sprite1.x > 350) {
+                  stroke("red");
+                  textSize(30);
+                  text("Game Over", 100, 200);
+               }
+               if (sprite2.x > 350) {
+                  stroke("red");
+                  textSize(30);
+                  text("Game Over", 100, 200);
+               }
+            } else {
+               background("green");
+               stroke("white");
+               textSize(35);
+               text("Please Click ", 70, 200);
+               textSize(35);
+               text("or hold Space", 70, 250);
+            }
+            }
+       ```
+  - Lesson Eight: Reflection
+### Lesson 19: Velocity
+ **Question of the Day:** How can programming languages hide complicated patterns so that it is easier to program?
+
+  - In this lesson, you will learn how to set a sprite's velocity which uses the counter pattern to move your sprites.
+  - Level One: Predict
+  - Level Two-Seven: Skills Development
+     - Level Two:
+        ```
+            fish.setAnimation("orange_fish");
+         // Add the new movement block outside of the draw loop.
+            fish.velocityX = 1;
+         // Assign the velocity a value of 1.
+            function draw() {
+         // draw the background
+            background(rgb(0,50,250));
+            fill(rgb(250,250,250, 80));
+            noStroke();
+            ellipse(60, 20, 50, 50);
+            ellipse(150, 100, 50, 50);
+            ellipse(300, 130, 50, 50);
+            ellipse(250, 200, 50, 50);
+            ellipse(20, 250, 50, 50);
+            ellipse(370, 330, 50, 50);
+            fill(rgb(219, 208, 125));
+            noStroke();
+            ellipse(100, 400, 300, 100);
+            ellipse(300, 400, 300, 75);
+            drawSprites();
+            }
+        ```
+     - Level Three:
+        ```
+         // Find the block that will make the feather sprite go down the screen
+
+            var feather = createSprite(200, 50);
+            feather.setAnimation("feather");
+         // Use that block outside of the draw loop.
+            feather.velocityY = 1;
+         // Give the block a value to make the feather move down the screen.
+            function draw() {
+            background("skyblue");
+            drawSprites();
+            }
+        ```
+     - Level Four:
+        ```
+            var sun = createSprite(200, 200);
+            sun.setAnimation("sun");
+         // Make the sun rotate by 3 degrees each time it's drawn.
+            sun.rotationSpeed = 3;
+            function draw() {
+            background("blue");
+            drawSprites();
+            }
+        ```
+     - Level Five:
+        ```
+            var wheel = createSprite(200, 200);
+            wheel.setAnimation("wheel");
+            function draw() {
+            background("blue");
+            if (keyWentDown("space")) {
+               // Make the color wheel start spinning when the user presses the space bar.
+               wheel.rotationSpeed = 3;
+            }
+            drawSprites();
+            }
+        ```
+     - Level Seven:
+        ```
+            var field = createSprite(200,200);
+            field.setAnimation("field");
+            var ball = createSprite(200, 50);
+            ball.setAnimation("ball");
+            ball.scale = 0.2;
+            ball.velocityY = 5;
+            function draw() {
+         // Look at how conditionals and velocity are used to make the ball bounce at the bottom of the screen.
+            if (ball.y > 380) {
+               ball.velocityY = -5;
+            }
+         // Add code to make the ball bounce at the top of the screen.
+            if (20 > ball.y) {
+               ball.velocityY = 5;
+            }
+            drawSprites();
+            }
+        ```
+    
+  - Level Eight: Practice
+     ```
+         var palatte = createSprite(180, 350);
+         palatte.setAnimation("paint_pallette");
+         var brush = createSprite(220, 50);
+         brush.setAnimation("paint_brush");
+         function draw() {
+         background("skyblue");
+      // Use a conditional to send the paint brush down if the down arrow is pressed.
+         if (keyWentDown("down")) {
+            brush.velocityY = 2;
+         }
+      // Use a different conditional to send the paint brush up if it reaches the palette.
+         if (brush.y > 255) {
+            brush.velocityY = -3;
+         }
+         drawSprites();
+         }
+     ```
+  - Level Nine: Assessment
+     ```
+         var fish = createSprite(200, 200);
+         fish.setAnimation("fishR");
+         function draw() {
+         background("blue");
+      // Use a the correct block inside each conditional statement to make the three following movements:
+      // If the user presses the right arrow key, move the fish to the right.
+         if (keyWentDown("right")) {
+         fish.velocityX = 3;
+         }
+      // If the fish gets to the right-hand side of the screen, move the fish to the left.
+         if (fish.x > 400) {
+         fish.velocityX = -3;
+         }
+         //If the fish gets to the left-hand side of the screen, move the fish to the right.
+         if (fish.x < 0) {
+         fish.velocityX = 3;
+         }
+      // The fish should always be facing the same direction it's moving, so you will also need to
+      // update the fish's animation inside each of the conditional statements.
+      // Draw the fish.
+         drawSprites();
+         }
+     ```
+  - Level Ten: Challenges
+     ```
+         var alien = createSprite(50,200);
+         alien.setAnimation("alien");
+         alien.velocityX = 0;
+         alien.velocityY = -3;
+         function draw() {
+      // Add the appropriate velocity blocks to each conditional 
+      // to make the alien complete the full circuit.
+         if (alien.y < 50) {
+         alien.velocityX = 3;
+         alien.velocityY = 0;
+         }
+         if (alien.x > 350) {
+         alien.velocityX = 0;
+         alien.velocityY = 3;
+         }
+         if (alien.y > 350) {
+         alien.velocityX = -3;
+         alien.velocityY = 0;
+         }
+         if (alien.x < 50) {
+         alien.velocityX = 0;
+         alien.velocityY = -3;
+         }        
+         drawSprites();
+         }
+         var space = createSprite(200, 200);
+         space.setAnimation("space");
+         var flag1 = createSprite(50, 50);
+         flag1.setAnimation("yellow_flag");
+         var flag2 = createSprite(350, 50);
+         flag2.setAnimation("yellow_flag");
+         var flag3 = createSprite(350, 350);
+         flag3.setAnimation("yellow_flag");
+         var flag4 = createSprite(50, 350);
+         flag4.setAnimation("yellow_flag");
+         alien.depth=7;
+     ```
+### Lesson 20: Collision Detection
+ **Question of the Day:** How can programming help make complicated problems more simple?
+  - In this lesson, you will learn about collision detection by exploring how a computer could use math, the sprite location, and size to detect whether sprites are touching.
+  - Level One: Sample game
+  - Level Two-Five: Skills Development
+     - Level Two:
+     - Level Three:
+        ```
+         // Create the sprites and start them moving
+            var backdrop = createSprite(200,200);
+            backdrop.setAnimation("meadow");
+            var bunny = createSprite(50, 300);
+            bunny.setAnimation("bunny");
+            bunny.velocityX = 3;
+            var robot = createSprite(400, 320);
+            robot.setAnimation("robot");
+            robot.scale = 0.2;
+            robot.velocityX = -3;
+            var dinner = createSprite(370, 350);
+            dinner.setAnimation("stew");
+            dinner.velocityX = -3;
+
+            function draw() {
+         // Check if the bunny is touching the dinner.
+            if (bunny.isTouching(dinner)) {
+            // stop everything and change to empty bowl
+               bunny.velocityX = 0;
+               dinner.velocityX = 0;
+               robot.velocityX = 0;
+               dinner.setAnimation("bowl");
+            }
+            drawSprites();
+            }
+        ```
+     - Level Four:
+        ```
+         // Create the sprites and start them moving
+            var backdrop = createSprite(200,200);
+            backdrop.setAnimation("meadow");
+            var bunny = createSprite(50, 300);
+            bunny.setAnimation("bunny");
+            bunny.velocityX = 3;
+            var robot = createSprite(400, 320);
+            robot.setAnimation("robot");
+            robot.scale = 0.2;
+            robot.velocityX = -3;
+            var dinner = createSprite(370, 350);
+            dinner.setAnimation("stew");
+            dinner.velocityX = -3;
+            function draw() {
+         // Check if the bunny is touching the dinner.
+            if (bunny.isTouching(dinner)) {
+            // stop everything and change to empty bowl
+               bunny.velocityX = 0;
+               dinner.velocityX = 0;
+               robot.velocityX = 0;
+               dinner.setAnimation("bowl");
+            }
+            drawSprites();
+            }
+        ```
+     - Level Five:
+        ```
+            var balloon = createSprite(200,200);
+            balloon.setAnimation("balloon");
+         // Change the code on line 4 from false to true.
+            balloon.debug = true;
+         // Debug the tack sprite.
+            var tack = createSprite(350, 50);
+            tack.setAnimation("tack");
+            tack.debug = true;
+            function draw() {
+            background("gray");  
+         // check if tack is touching balloon
+            if (balloon.isTouching(tack)) {
+            // replace balloon image
+               balloon.setAnimation("popped");
+            }
+         // make tack move with arrow keys
+            if (keyDown("up")) {
+               tack.y = tack.y - 1;
+            }
+            if (keyDown("down")) {
+               tack.y = tack.y + 1;
+            }
+            if (keyDown("left")) {
+               tack.x = tack.x - 1;
+            }
+            if (keyDown("right")) {
+               tack.x = tack.x + 1;
+            }
+            drawSprites();
+            }
+        ```
+  - Level Six: Practice
+      ```
+         var coin1 = createSprite(100, 100);
+         coin1.setAnimation("bronze_coin");
+         coin1.velocityX = 1;
+         coin1.velocityY = 1;
+      // Change the collider of each coin to a circle.
+         coin1.setCollider("circle");
+         coin1.debug=true;
+         var coin2 = createSprite(300, 300);
+         coin2.setAnimation("bronze_coin");
+         coin2.velocityX = -1;
+         coin2.velocityY = -1;
+      // Change the collider of each coin to a circle.
+         coin2.setCollider("circle");
+         coin2.debug=true;
+         function draw() {
+         background("teal");
+         if (coin1.isTouching(coin2)) {
+            coin1.velocityX = 0;
+            coin1.velocityY = 0;
+            coin2.velocityX = 0;
+            coin2.velocityY = 0;
+         }
+         drawSprites();
+         }
+      ```
+  - Level Seven: Assessment
+      ```
+         // create the sprites
+            var horse = createSprite(200, 150);
+            horse.setAnimation("horse");
+            var rainbow = createSprite(400, 370);
+            rainbow.setAnimation("rainbow");
+            rainbow.velocityX = -5;
+            rainbow.velocityY = -5;
+            rainbow.rotateToDirection = true;
+            function draw() {
+         // draw the background
+            background("skyblue");
+         // Change the horse into a unicorn when the rainbow touches it.
+            if (rainbow.isTouching(horse)) {
+               horse.velocityX = 2;
+               horse.velocityY = -2;
+            } 
+            drawSprites();
+            }
+      ```
+  - Level Eight: Challenges
+      ```
+        // Read and run the code to understand how it works, and what is going wrong.
+            var points = 0;
+            var coin = createSprite(200, 100);
+            coin.setAnimation("coin");
+            var ghost = createSprite(200, 300);
+            ghost.setAnimation("ghost");
+            function draw() {
+         // Identify the code that increases the score.
+            if (ghost.isTouching(coin)) {
+               points = points + 1;
+            // Add a line of code so that at least one sprite moves to a new location.
+               coin.x = randomNumber(1, 400);
+               coin.y = randomNumber(1, 400);
+            }
+            background("lightblue");
+            text("Points: " + points, 25, 25);
+            if(keyDown("up")) {
+               ghost.y = ghost.y - 5;
+            }
+            if(keyDown("down")) {
+               ghost.y = ghost.y + 5;
+            }
+            if(keyDown("left")) {
+               ghost.x = ghost.x - 5;
+            }
+            if(keyDown("right")) {
+               ghost.x = ghost.x + 5;
+            }
+            drawSprites();
+            }
+      ```
+
+
+
+
+
+
+
 
 
 
