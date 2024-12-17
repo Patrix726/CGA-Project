@@ -51,6 +51,9 @@ To position and size shapes effectively on a screen, we must understand how coor
 
 ![Screenshot of 3 Lessons](https://i.ibb.co/R3mj9Dp/Screenshot-3-lesson.png)
 
+
+
+
 ### **Lesson 4: Parameters in Functions**
 - **Question of the Day:** How can we make functions more flexible using parameters?
 - **Key Concepts:**
@@ -126,7 +129,10 @@ To position and size shapes effectively on a screen, we must understand how coor
   - Testing interactive programs with users.
   - Refining code for functionality and user experience.
 
+
 ![Screenshot of 4-10 Lessons](https://i.ibb.co/QMhHbg5/Capture.png)
+
+
 
 **Lets Write the Summary in short and simple statment**
 
@@ -137,3 +143,17 @@ To position and size shapes effectively on a screen, we must understand how coor
 15. **Conditionals:** Explores how to use if-statements to control actions based on conditions, enhancing program interactivity and responsiveness.
 
 ![Screenshot of 4-10 Lessons](https://i.ibb.co/PYPz49y/Capture.png)
+
+
+
+**Lesson 16   to 20 Summary in short and simple statment**
+
+11. **Key Board Input:** This is focus on Key board events what happen with the entites or the sprite when the key is pressed how to use them in condition and more. Example: KeyDown("space")
+12. **Mouse input:** This is focus on Mouse events what happen with the entites or the sprite when the Mouse button is clicked how to use them in condition and more. Example: MouseDown()
+13. **Sprite Movement:** develop an interactive greeting card using all the programming concepts and techniques you have learned so far!
+14. **Velocity:** This is seting movment direction speed to the entities along in y or x with speed setted same or differently. We focus on the function like setVelocity(), sprite.velocityX or Y and more with condition , in function and outside of it.
+15. **Collision Detaction :** This is mainly focus on the interconnection between object and how they should interacte what action should they need to replay and more other action to the game. mostly we use the isTouching through out the trainning.
+
+
+
+![Screenshot of 4-10 Lessons](https://i.ibb.co/T1tzXgs/20.png)
