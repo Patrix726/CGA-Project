@@ -1127,3 +1127,125 @@ Question of the Day: How can we make our programs behave differently each time t
     drawSprites();
     }
     ```
+
+## Lesson 19: Velocity
+
+-   Learned about the block `velocityX` and `velocityY` that replace the counter pattern.
+
+    ```
+    //1) Find the block that will make the feather sprite go down the screen
+
+    var feather = createSprite(200, 50);
+    feather.setAnimation("feather");
+    //2) Use that block outside of the draw loop.
+    feather.velocityY = 2;
+    //3) Give the block a value to make the feather move down the screen.
+
+    function draw() {
+    background("skyblue");
+    drawSprites();
+    }
+
+    ```
+
+-   Learned how to rotate a sprite by setting `rotationspeed` block;
+
+    ```
+    var sun = createSprite(200, 200);
+    sun.setAnimation("sun");
+    sun.rotationSpeed = 3;
+    //1) Make the sun rotate by 3 degrees each time it's drawn.
+
+
+    function draw() {
+    background("blue");
+    drawSprites();
+    }
+
+    ```
+
+## Lesson 20: Collision Detection
+
+-   Learned to use `isTouching` to detect if two sprites are colliding.
+
+    ```
+    // Create the sprites and start them moving
+    var backdrop = createSprite(200,200);
+    backdrop.setAnimation("meadow");
+    var bunny = createSprite(50, 300);
+    bunny.setAnimation("bunny");
+    bunny.velocityX = 3;
+    var robot = createSprite(400, 320);
+    robot.setAnimation("robot");
+    robot.scale = 0.2;
+    robot.velocityX = -3;
+    var dinner = createSprite(370, 350);
+    dinner.setAnimation("stew");
+    dinner.velocityX = -3;
+
+    function draw() {
+    //1) Check if the bunny is touching the dinner.
+    if (bunny.isTouching(dinner)) {
+        // stop everything and change to empty bowl
+        bunny.velocityX = 0;
+        dinner.velocityX = 0;
+        robot.velocityX = 0;
+        dinner.setAnimation("bowl");
+    }
+    drawSprites();
+    }
+
+    ```
+
+-   Learned to use the `debug` block to detect bugs in Game Lab.
+
+    ```
+    var balloon = createSprite(200,200);
+    balloon.setAnimation("balloon");
+    //2) Change the code on line 4 from false to true.
+    balloon.debug = true;
+    //3) Debug the tack sprite.
+
+
+    var tack = createSprite(350, 50);
+    tack.setAnimation("tack");
+
+    function draw() {
+    background("gray");
+
+    // check if tack is touching balloon
+    if (balloon.isTouching(tack)) {
+        // replace balloon image
+        balloon.setAnimation("popped");
+    }
+    // make tack move with arrow keys
+    if (keyDown("up")) {
+        tack.y = tack.y - 1;
+    }
+    if (keyDown("down")) {
+        tack.y = tack.y + 1;
+    }
+    if (keyDown("left")) {
+        tack.x = tack.x - 1;
+    }
+    if (keyDown("right")) {
+        tack.x = tack.x + 1;
+    }
+
+    drawSprites();
+    }
+
+    ```
+
+-   Learned how to set custom collider parameters using `setCollider` block.
+
+    ```
+    var roller = createSprite(200, 200);
+    roller.scale = 2;
+    roller.setAnimation("roller_1");
+    //1) Use .setCollider() with all 6 parameters.
+    roller.debug = true;
+    roller.setCollider("rectangle",0,0,45,180,30);
+    drawSprites();
+
+    ```
