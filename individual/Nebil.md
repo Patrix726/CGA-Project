@@ -1249,3 +1249,232 @@ Question of the Day: How can we make our programs behave differently each time t
     drawSprites();
 
     ```
+
+## Lesson 21: Mini-Project - Side Scroller
+
+-   Made a mini-project with everything I learned in the past 3 lessons.
+
+    ```
+    //GAME SETUP
+    // Create the sprites
+    var frog = createSprite(100, 320);
+    var fly = createSprite(400, 200);
+    var mushroom = createSprite(420,320);
+
+    frog.setAnimation("frog");
+    fly.setAnimation("fly");
+    mushroom.setAnimation("mushroom");
+    // set velocity for the obstacle and the target
+    fly.velocityX = -3;
+    mushroom.velocityX = -2;
+
+    //create the variables
+    var score = 0;
+    var health = 100;
+
+    function draw() {
+    // BACKGROUND
+    background("skyblue");
+    // draw the ground and other background
+    fill("brown");
+    rect(0,300,400,100);
+
+    // SPRITE INTERACTIONS
+    // if the player touches the obstacle
+    // the health goes down, and the obstacle turns
+    if (frog.isTouching(mushroom)) {
+        health = health - 1;
+        mushroom.rotation = 10;
+    }
+    // if the player touches the target
+    // the score goes up, the target resets
+    if (frog.isTouching(fly)) {
+        score = score + 1;
+        fly.x = 405;
+    }
+
+    // JUMPING
+    // if the player has reached the ground
+    // stop moving down
+    if (frog.y >= 320) {
+        frog.velocityY = 0;
+    }
+
+    // if the player presses the up arrow
+    // start moving up
+    if (keyWentDown("up")) {
+        frog.velocityY = -3;
+    }
+    // if the player reaches the top of the jump
+    // start moving down
+    if (frog.y <= 220) {
+        frog.velocityY = 3;
+    }
+
+
+    // LOOPING
+    // if the obstacle has gone off the left hand side of the screen,
+    // move it to the right hand side of the screen
+    if (fly.x < 0) {
+        fly.x = 405;
+    }
+    if (mushroom.x < 0) {
+        mushroom.x = 405;
+        mushroom.rotation = 0;
+    }
+
+    // if the target has gone off the left hand side of the screen,
+    // move it to the right hand side of the screen
+
+    // DRAW SPRITES
+    drawSprites();
+
+    // SCOREBOARD
+    // add scoreboard and health meter
+    fill("black");
+    textSize(20);
+    text("Health:", 280, 30);
+    text (health, 350, 30);
+    text("Score:", 280, 50);
+    text (score, 350, 50);
+    // GAME OVER
+    // if health runs out
+    // show Game over
+    if (health < 0) {
+        background("black");
+        fill("green");
+        textSize(50);
+        text("Game Over!" , 40, 200);
+    }
+    }
+
+    ```
+
+## Lesson 22: Complex Sprite Movement
+
+-   Learned to use the counter pattern with the `velocityX` block to mimic acceleration and decceleration.
+
+    ```
+    var rock = createSprite(200, 50);
+    rock.setAnimation("rock");
+    rock.velocityY = 0.5;
+
+    function draw() {
+    background("skyblue");
+
+    //1) Add code to make the rock speed up as it falls.
+    rock.velocityY = rock.velocityY + 0.1;
+    drawSprites();
+    }
+
+    ```
+
+## Lesson 23: Collisions
+
+-   Learned to use `sprite.displace()` block to mimic a displace collision between to sprites.
+
+    ```
+    // Create elephant sprite
+    var elephant = createSprite(200, 350);
+    elephant.setAnimation("elephant");
+    elephant.scale = 0.5;
+    elephant.velocityY = randomNumber(-3,-1);
+
+    // Create hippo sprite
+    var hippo = createSprite(200,50);
+    hippo.setAnimation("hippo");
+    hippo.scale = 0.5;
+    hippo.velocityY = randomNumber(1,3);
+
+    function draw(){
+    // Draw background
+    background("white");
+
+    //2) Take a look at the new block and how it is being used.
+    //3) Fix the block so that the elephant is pushing the hippo.
+    elephant.displace(hippo);
+
+    drawSprites();
+    }
+    ```
+
+-   Learned the difference between `displace()`,`collide()`,`bounce()` and `bounceOff()` blocks to mimic real-life collisions.
+
+-   Learned the effect of the `collider` boundaries in the above blocks.
+
+## Lesson 24: Mini-Project - Flyer Game
+
+-   Created a flyer game using the lessons learnt in previous 2 lessons.
+
+    ```
+    // GAME SETUP
+    // create player, target, and obstacles
+    var player = createSprite(200, 100);
+    player.setAnimation("fly_bot");
+    player.scale = 0.8;
+    var coin = createSprite(300, 300);
+    coin.setAnimation("coin");
+    coin.scale = 0.8;
+    var rock1 = createSprite(-20, 50);
+    rock1.setAnimation("rock");
+    rock1.scale = 0.8;
+    rock1.velocityX = 5;
+    var rock2 = createSprite(50, -20);
+    rock2.setAnimation("rock");
+    rock2.scale = 0.8;
+    rock2.velocityY = 5;
+
+
+    function draw() {
+    background("lightblue");
+
+    // FALLING
+    player.velocityY = player.velocityY + 0.5;
+    // LOOPING
+    if (rock1.x > 400) {
+        rock1.x = -5;
+        rock1.y = randomNumber(50,350);
+    }
+    if (rock2.y > 400) {
+        rock2.x = randomNumber(50,350);
+        rock2.y = -5;
+    }
+
+    // PLAYER CONTROLS
+    // change the y velocity when the user clicks "up"
+    if (keyWentDown("up")) {
+        player.velocityY = -5;
+    }
+    // decrease the x velocity when user clicks "left"
+    if (keyDown("left")) {
+        player.velocityX = player.velocityX - 0.1;
+    }
+    // increase the x velocity when the user clicks "right"
+    if (keyDown("right")) {
+        player.velocityX = player.velocityX + 0.1;
+    }
+
+    // SPRITE INTERACTIONS
+    // reset the coin when the player touches it
+    if (player.isTouching(coin)) {
+        coin.x = randomNumber(0,200);
+        coin.y = randomNumber(0,200);
+    }
+    // make the obstacles push the player
+    rock1.displace(player);
+    rock2.displace(player);
+
+    // DRAW SPRITES
+    drawSprites();
+
+    // GAME OVER
+    if (player.x < -50 || player.x > 450 || player.y < -50 || player.y > 450) {
+        background("black");
+        textSize(50);
+        fill("green");
+        text("Game Over!", 50, 200);
+    }
+
+    }
+
+    ```
