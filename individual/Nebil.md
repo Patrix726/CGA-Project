@@ -1478,3 +1478,69 @@ Question of the Day: How can we make our programs behave differently each time t
     }
 
     ```
+
+## Lesson 25: Functions
+
+-   Learned that functions work in Game Lab using `function` block to create them.
+
+    ```
+    //1) Read the 4 functions to understand what each one does.
+    //2) Call the functions in an order that draws the scene in the way that looks best to you.
+    drawBackground();
+    drawClouds();
+    drawTrees();
+    drawFence();
+
+
+    function drawBackground(){
+    noStroke();
+    background(rgb(0,200,255));
+    fill("green");
+    rect(0,380,400,20);
+    }
+
+    function drawTrees(){
+    noStroke();
+    //Draw All Trunks
+    fill(rgb(150,100,0));
+    rect(210,330,30,50);
+    rect(290,330,30,50);
+    rect(360,330,30,50);
+    //Draw All Branches
+    fill("green");
+    regularPolygon(225,280,3,100);
+    regularPolygon(305,280,3,110);
+    regularPolygon(375,290,3,95);
+    }
+
+    function drawClouds(){
+    noStroke();
+    fill(rgb(255,255,255,100));
+    ellipse(300,200,200,50);
+    ellipse(320,200,200,70);
+    ellipse(340,200,200,50);
+
+    ellipse(100,100,200,50);
+    ellipse(120,100,200,70);
+    ellipse(140,100,200,50);
+    }
+
+    function drawFence(){
+    stroke("white");
+    strokeWeight(5);
+    line(0,360,400,360);
+    line(20,350,20,380);
+    line(50,350,50,380);
+    line(80,350,80,380);
+    line(110,350,110,380);
+    line(140,350,140,380);
+    line(170,350,170,380);
+    line(200,350,200,380);
+    line(230,350,230,380);
+    line(260,350,260,380);
+    line(290,350,290,380);
+    line(320,350,320,380);
+    line(350,350,350,380);
+    line(380,350,380,380);
+    }
+    ```
