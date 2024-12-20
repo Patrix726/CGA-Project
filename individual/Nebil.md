@@ -1127,6 +1127,7 @@ Question of the Day: How can we make our programs behave differently each time t
     drawSprites();
     }
     ```
+![image](https://github.com/user-attachments/assets/6146c98f-7fc1-4f6a-8b4e-4714f8281377)
 
 ## Lesson 19: Velocity
 
@@ -1897,3 +1898,5 @@ Question of the Day: How can we make our programs behave differently each time t
     text(redScore,100,30);
     }
     ```
+
+![image](https://github.com/user-attachments/assets/bb37f92c-a436-4cea-8106-7e0bc8b90a7a)
