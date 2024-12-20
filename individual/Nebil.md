@@ -1544,3 +1544,356 @@ Question of the Day: How can we make our programs behave differently each time t
     line(380,350,380,380);
     }
     ```
+
+## Lesson 26: The Game Design Process
+
+-   Applied all that I have learned in making an arcade game.
+
+    ```
+    // Variables
+    var score = 0;
+    // Create Sprites
+    var cake = createSprite(350,200);
+    cake.setAnimation("cake");
+    var player = createSprite(200,200);
+    player.setAnimation("alienWalkRight");
+    var enemy1 = createSprite();
+    enemy1.setAnimation("ladybug");
+    setEnemy1();
+    var enemy2 = createSprite();
+    enemy2.setAnimation("ladybug");
+    setEnemy2();
+    var cakeEaten = 0;
+
+    function draw() {
+    // draw the background
+    gameBackground();
+    // update the sprites
+    if (cakeEaten >=3) {
+        background("black");
+        fill("green");
+        textSize(48);
+        text("Game Over",100,200);
+    }else {
+
+    enemiesTouchCake();
+    movePlayer();
+    displaceEnemies();
+    enemiesTouchWater();
+    showScore();
+    drawSprites();
+    }
+    }
+
+    // Functions
+    function gameBackground() {
+    noStroke();
+    background(rgb(0,100,255));
+    fill(rgb(100,100,100));
+    rect(0,150,400,100);
+    fill(rgb(80,80,80));
+    rect(0,140,400,10);
+    rect(0,250,400,10);
+    }
+
+    function enemiesTouchCake(){
+    if (enemy1.isTouching(cake)) {
+        setEnemy1();
+        score = score-2;
+        cakeEaten = cakeEaten +1;
+    }
+    if (enemy2.isTouching(cake)) {
+        setEnemy2();
+        score = score-2;
+        cakeEaten = cakeEaten +1;
+    }
+    }
+
+    function movePlayer(){
+    if (keyDown("right")) {
+        player.x = player.x + 5;
+        player.mirrorX(1);
+    }
+    if (keyDown("left")) {
+        player.x = player.x - 5;
+        player.mirrorX(-1);
+    }
+    if (keyDown("up")) {
+        player.y = player.y - 5;
+    }
+    if (keyDown("down")) {
+        player.y = player.y + 5;
+
+    }
+    }
+
+    function displaceEnemies(){
+    player.displace(enemy1);
+    player.displace(enemy2);
+    }
+
+    function enemiesTouchWater(){
+    if (enemy1.y > 260 || enemy1.y < 140) {
+        score = score +1;
+        setEnemy1();
+    }
+    if (enemy2.y > 260 || enemy2.y < 140) {
+        score = score +1;
+        setEnemy2();
+    }
+    }
+
+    function showScore() {
+    fill("white");
+    textSize(20);
+    text("Score",20,20,200,100);
+    text(score,20,40,200,100);
+    }
+    function setEnemy1() {
+    enemy1.x = 0;
+    enemy1.y = randomNumber(150,250);
+    enemy1.velocityX = 2;
+    }
+    function setEnemy2() {
+    enemy2.x = 0;
+    enemy2.y = randomNumber(150,250);
+    enemy2.velocityX = 2;
+    }
+    ```
+
+## Lesson 27: Using the Game Design Process
+
+-   Created a project from scratch by applying all the lessons learned thus far.
+
+    ```
+    // Variables
+    var score = 0;
+    // Create Sprites
+    var platform1  = createSprite(100,100);
+    platform1.setAnimation("platform");
+    platform1.velocityY = 3;
+    var platform2  = createSprite(300,300);
+    platform2.setAnimation("platform");
+    platform2.velocityY = 3;
+    var item1 = createSprite(randomNumber(30,370),randomNumber(30,370));
+    item1.setAnimation("star");
+    item1.velocityY = 5;
+    var item2 = createSprite(randomNumber(30,370),randomNumber(30,370));
+    item2.setAnimation("star");
+    item2.velocityY = 5;
+    var item3 = createSprite(randomNumber(30,370),randomNumber(30,370));
+    item3.setAnimation("star");
+    item3.velocityY = 5;
+    var player= createSprite(200,0);
+    player.setAnimation("alien");
+    player.velocityY = 2;
+
+    function draw() {
+    // draw the background
+    if (score > 10) {
+
+        background2();
+    } else {
+        background1();
+
+    }
+    // update the sprites
+    playerLands();
+    controlPlayer();
+    collectItems();
+    playerFall();
+    loopPlatforms();
+    loopItems();
+    drawSprites();
+    showScore();
+    }
+
+    // Functions
+    function background1() {
+    background("darkBlue");
+    noStroke();
+    fill("yellow");
+    ellipse(randomNumber(0, 400), randomNumber(0, 400), 3, 3);
+    ellipse(randomNumber(0, 400), randomNumber(0, 400), 3, 3);
+    ellipse(340, 50, 60, 60);
+    fill("darkBlue");
+    ellipse(320, 30, 60, 60);
+    }
+    function background2() {
+    background("darkBlue");
+    fill(rgb(180, 0, 0));
+    ellipse(30,185,100,100);
+    fill(rgb(50,50,210));
+    ellipse(350,305,140,140);
+    }
+    function showScore() {
+    fill("white");
+    textSize(20);
+    text("Score: ",20, 30);
+    text(score,80,30);
+    }
+    function loopPlatforms() {
+    if (platform1.y>400) {
+        platform1.y = 0;
+    }
+    if (platform2.y>400) {
+        platform2.y = 0;
+    }
+    }
+    function loopItems() {
+    if (item1.y>400) {
+        item1.y = 0;
+    }
+    if (item2.y>400) {
+        item2.y = 0;
+    }
+    if (item3.y>400) {
+        item3.y = 0;
+    }
+    }
+    function playerFall() {
+    player.velocityY = player.velocityY + 0.1;
+    }
+    function controlPlayer() {
+    if (keyDown("left")){
+        player.x = player.x - 2;
+    }
+    if (keyDown("right")){
+        player.x = player.x + 2;
+    }
+    if (keyWentDown("up")){
+        player.velocityY = -5;
+    }
+
+    }
+    function playerLands() {
+    player.collide(platform1);
+    player.collide(platform2);
+    }
+    function collectItems() {
+    if (player.isTouching(item1)) {
+        setItem1();
+        score = score + 1;
+    }
+    if (player.isTouching(item2)) {
+        setItem2();
+        score = score + 1;
+    }
+    if (player.isTouching(item3)) {
+        setItem3();
+        score = score + 1;
+    }
+    }
+    function setItem1() {
+    item1.x = randomNumber(30,370);
+    item1.y = 0;
+    }
+    function setItem2() {
+    item2.x = randomNumber(30,370);
+    item2.y = 0;
+    }
+    function setItem3() {
+    item3.x = randomNumber(30,370);
+    item3.y = 0;
+    }
+    ```
+
+## Lesson 28: Project - Design a Game
+
+-   Created a two player game from scratch that is played using keyboard keys WASD and Arrow keys.
+
+    ```
+    // Create your variables here
+    var redScore = 0;
+    var blueScore = 0;
+    // Create your sprites here
+    var player1 = createSprite(100,200);
+    player1.setAnimation("robot");
+    player1.tint = "black";
+    player1.scale = 0.2;
+    var player2 = createSprite(300,200);
+    player2.setAnimation("robot");
+    player2.tint = rgb(0,0,100);
+    player2.scale = 0.2;
+    var ball = createSprite(200,200);
+    ball.setAnimation("football");
+    ball.scale = 0.1;
+    ball.velocityX = 5;
+    createEdgeSprites();
+    function draw() {
+    // draw background
+    background1();
+    // update sprites
+    controlPlayer();
+    gameLogic();
+    spriteInteraction();
+    showScore();
+    drawSprites();
+    }
+
+    // Create your functions here
+    function background1() {
+    fill(rgb(230,0,0));
+    stroke("white");
+    strokeWeight(5);
+    rect(0,0,200,400);
+    stroke("white");
+    strokeWeight(5);
+    fill(rgb(0,0,100));
+    rect(200,0,400,400);
+    fill(rgb(1,120,210));
+    ellipse(200,200,100,100);
+    }
+    function controlPlayer() {
+    if (keyDown("up")) {
+        player2.y = player2.y - 2;
+    }
+    if (keyDown("down")) {
+        player2.y = player2.y + 2;
+    }
+    if (keyDown("left")) {
+        player2.x = player2.x - 2;
+    }
+    if (keyDown("right")) {
+        player2.x = player2.x + 2;
+    }
+    if (keyDown("w")) {
+        player1.y = player1.y - 2;
+    }
+    if (keyDown("s")) {
+        player1.y = player1.y + 2;
+    }
+    if (keyDown("a")) {
+        player1.x = player1.x - 2;
+    }
+    if (keyDown("d")) {
+        player1.x = player1.x + 2;
+    }
+    }
+
+    function spriteInteraction() {
+    ball.bounceOff(player1);
+    ball.bounceOff(player2);
+    ball.bounceOff(edges);
+    }
+
+    function gameLogic() {
+    if (ball.isTouching(rightEdge)) {
+        redScore = redScore +1;
+    }
+    if (ball.isTouching(leftEdge)) {
+        blueScore = blueScore +1;
+    }
+    }
+    function showScore() {
+    fill("white");
+    stroke(rgb(1,120,210));
+    strokeWeight(2);
+    textSize(24);
+    text("Blue:",220,30);
+    text(blueScore,300,30);
+    textSize(24);
+    text("Red:",20,30);
+    text(redScore,100,30);
+    }
+    ```
