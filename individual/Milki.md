@@ -614,3 +614,238 @@ blueFish.x = blueFish.x - 4;
 
 ###  Screenshot
 ![Screenshot_16-12-2024_145613_studio code org](https://github.com/user-attachments/assets/26dc0877-9190-4dc4-a01d-4e82197f8833)
+
+# Lesson 15 
+### Conditionals
+- Dropped soup
+```
+var soup =  createSprite(200,200);
+soup.setAnimation("stew");
+
+function draw() {
+  background("lightgreen");
+  soup.rotation = soup.rotation + 3;
+  
+  //2) Add a conditional that detects when the bowl is upside down.
+  if (soup.rotation > 90) {
+    //3) Set the sprite's animation to be an empty bowl when the bowl is upside down.
+    soup.setAnimation("bowl");
+  }
+  
+  
+  drawSprites();
+}
+```
+# Lesson 16
+### Keyboard Input
+- This program uses the keyDown() block to detect whether a specific keys are being pressed down.
+```
+//1) Run the code and try pressing the "p" and "h" keys.
+var sprite = createSprite(200, 200);
+sprite.setAnimation("giraffe");
+
+function draw() {
+  background("white");
+
+  //2) Look inside the first two conditional statements to see how the code works.
+  if(keyDown("h")) {
+     sprite.setAnimation("hippo");
+  }
+
+  if(keyDown("p")) {
+     sprite.setAnimation("pig");
+  }
+
+  if(keyDown("r")) {
+      //3) Add code to change the sprite to a different animal when the "r" key is pressed.
+      sprite.setAnimation("giraffe");
+
+  }
+
+  drawSprites();
+}
+```
+- Gears with Conditionals
+```
+var blueGear = createSprite(100, 220);
+blueGear.setAnimation("blue_gear");
+
+var greenGear = createSprite(183, 298);
+greenGear.setAnimation("green_gear");
+
+var redGear = createSprite(185, 145);
+redGear.setAnimation("red_gear");
+
+function draw() {
+  background("white");
+  if (keyDown("up")) {
+    blueGear.rotation = blueGear.rotation - 1;
+  }
+  if (keyDown("down")) {
+    greenGear.rotation = greenGear.rotation + 1;
+  }
+  if (keyDown("left")) {
+    redGear.rotation = redGear.rotation + 1;
+  }
+
+  //1) Add code that will check if the space key is being pressed down.
+  //2) Adjust the program so that the gears only rotate when the space key is pressed down.
+
+  drawSprites();
+}
+```
+- Move in all direction
+```
+var backdrop = createSprite(200,200);
+backdrop.setAnimation("rainbow");
+var flyer = createSprite(200,200);
+flyer.setAnimation("wing_bot");
+
+function draw() {
+background("white");
+
+  //1) Add code to move the sprite left when the left arrow is pressed
+if (keyDown("left")) {
+  flyer.x = flyer.x - 1;
+}
+
+  //2) Add code to move the sprite right when the right arrow is pressed
+if (keyDown("right")) {
+  flyer.x = flyer.x + 1;
+}
+  //3) Add code to move the sprite up when the up arrow is pressed
+if (keyDown("up")) {
+  flyer.y = flyer.y - 1;
+}
+  //4) Add code to move the sprite down when the down arrow is pressed
+if (keyDown("down")) {
+  flyer.y = flyer.y + 1;
+}
+drawSprites();
+}
+```
+- The block keyWentDown() will only give a point for new presses, so it's a better choice for this program.
+
+# Lesson 17
+## Mouse Input
+```
+var balloon = createSprite(200, 50);
+balloon.setAnimation("balloon");
+balloon.scale = 0.1;
+
+function draw() {
+  background("white");
+  
+  //1) Add code that checks whether the mouse is being pressed.
+  if (mouseDown("leftButton")) {
+    balloon.y = balloon.y + 1;
+  } else {
+    balloon.y = balloon.y + -1;
+  }
+  
+  drawSprites();
+}
+```
+```
+var blender = createSprite(100, 300);
+blender.setAnimation("blender");
+var mixer = createSprite(300, 300);
+mixer.setAnimation("mixer");
+
+function draw() {
+  background("lightyellow");
+  fill("burlywood");
+  rect(0, 350, 400, 50);
+  if (World.mouseX < 200) {
+    blender.x = randomNumber(95, 105);
+    blender.y = randomNumber(295, 305);
+  }
+  //2) Add to the conditional so that when the mouse is on the other side of the screen, the mixer shakes instead.
+  if (World.mouseX > 200) {
+    mixer.x = randomNumber(295, 305);
+    mixer.y = randomNumber(295, 305);
+  }
+
+  drawSprites();
+}
+```
+# Lesson 18
+ ## Project Interactive Card
+Example Project
+
+
+- Which elements appear to use drawing commands?
+    
+   - ellipse, line
+- Which elements appear to be sprites?
+  - balloon, bicycle, dog, present
+- For each sprite, which properties are being updated?
+    - roation , sprite.x and sprite.y
+
+- Where do you see conditionals being used?
+    - present dog and bicycle sprite
+- Are there elements that you don’t understand?
+  no
+
+  ### Game
+```
+var score = 0;
+var lives = 3;
+var person = createSprite(200, 350);
+person.setAnimation("black_haori_1");
+person.scale = 0.25;
+var block1 = createSprite(0, 0);
+block1.setAnimation("gameplayobject_item_03_1");
+block1.scale = 0.25;
+var block2 = createSprite(200, 0);
+block2.setAnimation("gameplayobject_item_03_1");
+block2.scale = 0.25;
+var block3 = createSprite(350, 0);
+block3.setAnimation("gameplayobject_item_03_1");
+// 
+block3.scale = 0.25;
+function draw() {
+  background("white");
+  textSize(20);
+  text("Score: "+ score, 300, 30);
+  textSize(20);
+  text("Lives"+ lives, 300, 50);
+  if (keyDown("right")) {
+    person.x = person.x + 5;
+  }
+  if (keyDown("left")) {
+    person.x = person.x - 5;
+  }
+  blockMovement(block1);
+  blockMovement(block2);
+  blockMovement(block3);
+  function blockMovement(block) {
+    block.y = block.y + 6;
+    if (block.y > 400) {
+      block.x = randomNumber(1, 400);
+      block.y = 0;
+      score = score+10;
+    }
+  }
+  touch(block1);
+  touch(block2);
+  touch(block3);
+  function touch(block) {
+    if (person.isTouching(block)) {
+      lives = lives-1;
+      block.x = randomNumber(1, 400);
+      block.y = 0;
+    }
+  }
+  if (lives<1) {
+    person.visible = false;
+    block1.visible = false;
+    block2.visible = false;
+    block3.visible = false;
+    textSize(20);
+    text("Game Over", 200, 200);
+  }
+  drawSprites();
+}
+```
+![Screenshot_23-12-2024_22293_studio code org](https://github.com/user-attachments/assets/75fc586e-83c6-4abc-bd20-4aeb3b308510)
