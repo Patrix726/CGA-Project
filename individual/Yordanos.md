@@ -629,3 +629,102 @@ function draw() {
      drawSprites();
      ```  
 
+**Lesson 21: Mini-Project - Side Scroller**  
+**Objective**: Build a side-scrolling game where the player avoids obstacles.  
+- **Key Points**:  
+  - Use background movement for a scrolling effect.  
+  - Create obstacles that move toward the player.  
+
+**Code Example**:  
+```javascript
+ground.x -= 5; // Scroll the ground
+if (ground.x < 0) ground.x = 400; // Reset position
+drawSprites();
+```
+
+---
+
+**Lesson 22: Complex Sprite Movement**  
+**Objective**: Implement advanced sprite movement using physics or custom algorithms.  
+- **Key Points**:  
+  - Add gravity, acceleration, and friction to sprites.  
+
+**Code Example**:  
+```javascript
+if (keyDown("SPACE")) player.velocityY = -10; // Jump
+player.collide(ground); // Prevent falling through
+```
+
+---
+
+**Lesson 23: Collisions**  
+**Objective**: Detect and handle collisions with precision.  
+- **Key Points**:  
+  - Use `overlap()` to trigger actions on collision.  
+  - Destroy or trigger events upon collision.  
+
+**Code Example**:  
+```javascript
+if (bullet.overlap(enemy)) {
+    enemy.destroy(); // Destroy enemy on collision
+}
+```
+
+---
+
+**Lesson 24: Mini-Project - Flyer Game**  
+**Objective**: Create a game where the player controls a flying object.  
+- **Key Points**:  
+  - Implement upward movement with gravity pulling the object down.  
+
+**Code Example**:  
+```javascript
+bird.velocityY += gravity; // Gravity effect
+if (keyDown("SPACE")) bird.velocityY = -5; // Fly up
+```
+
+---
+
+**Lesson 25: Functions**  
+**Objective**: Refactor code using reusable functions.  
+- **Key Points**:  
+  - Simplify tasks by defining functions for repeated logic.  
+
+**Code Example**:  
+```javascript
+function spawnCloud() {
+    // User-defined function
+}
+
+function draw() {
+    // Draw function
+}
+```
+
+---
+
+**Lesson 26: The Game Design Process**  
+**Objective**: Learn the steps to design a complete game.  
+- **Steps**:  
+  1. Brainstorm ideas.  
+  2. Create a prototype.  
+  3. Test and iterate.  
+  4. Finalize and polish.  
+
+---
+
+**Lesson 27: Using the Game Design Process**  
+**Objective**: Apply the game design process to refine mechanics.  
+- **Examples**:  
+  - Test player controls and enemy interactions.  
+  - Add feedback like sound effects and visual cues.  
+
+---
+
+**Lesson 28: Project - Design a Game**  
+**Objective**: Create a custom game that incorporates all learned concepts.  
+- **Key Points**:  
+  - Combine movement, collisions, scoring, and animations.  
+  - Use polished sprites and backgrounds for final touches.
+ 
+![progeress from lesson 19 - 28](https://i.postimg.cc/Y9nmP2D3/Screenshot-2024-12-24-144852.png)
