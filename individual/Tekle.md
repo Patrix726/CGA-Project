@@ -2097,12 +2097,987 @@
             drawSprites();
             }
       ```
+### Lesson 21: Mini-Project - Side Scroller
+ **Question of the Day:** How can the new types of sprite movement and collision detection be used to create a game?
+
+  - In this lesson, you will use what you have learned about collision detection and velocity to create a simple side-scroller game!
+  - Level One: Page Scroller Example
+  - Level Two: Draw your background
+      ```
+         // BACKGROUND
+         // draw the ground and other background
+            background(rgb(52,159,235));
+      ```
+  - Level Three: Crea tus Sprites
+      ```
+      / /GAME SETUP
+      // Create the sprites
+      // set velocity for the obstacle and the target
+         var frog1 = createSprite(150, 370);
+         frog1.setAnimation("frog");
+         var mush = createSprite(370, 370);
+         mush.setAnimation("mushroom");
+         var fly1 = createSprite(370, 200);
+         fly1.setAnimation("fly");
+         mush.scale = 0.8;
+         fly1.velocityX = -3;
+         fly1.velocityY = 0;
+         mush.velocityX = -3;
+         mush.velocityY = 0;
+      ```
+  - Level Four: Player Controls
+      ```
+        
+      // JUMPING
+      // if the player has reached the ground
+      // stop moving down
+         if (frog1.y > 370) {
+         frog1.x = 150;
+         frog1.y = 370;
+         }
+      // if the player presses the up arrow
+      // start moving up
+         if (keyDown("up")) {
+         frog1.velocityX = 0;
+         frog1.velocityY = -3;
+         }
+
+      // if the player reaches the top of the jump
+      // start moving down
+
+         if (200 > frog1.y) {
+         frog1.velocityX = 0;
+         frog1.velocityY = 2;
+         }
+
+      ```
+  - Level Five: Making 
+      ```
+      // LOOPING
+      // if the obstacle has gone off the left hand side of the screen, 
+      // move it to the right hand side of the screen
+         if (20 > mush.x) {
+         mush.x = 370;
+         }
+
+      // if the target has gone off the left hand side of the screen,
+      // move it to the right hand side of the screen
+         if (20 > fly1.x) {
+         fly1.x = 370;
+         fly1.y = randomNumber(100, 370);
+         }
+
+      ```
+  - Level Six: Sprite 
+      
+      ```
+         // SPRITE INTERACTIONS
+         // if the player touches the obstacle
+         // the health goes down, and the obstacle turns
+            if (frog1.isTouching(mush)) {
+            health = health - 1;
+            mush.rotation = 30;
+            } else {
+            mush.rotation = 0;
+            }
+
+         // if the player touches the target
+         // the score goes up, the target resets
+            if (frog1.isTouching(fly1)) {
+            score = score + 1;
+            fly1.x = 400;
+            fly1.y = randomNumber(100, 400);
+            }
+      ```
+  - Level Seven: Score and Marker
+      ```
+         // SCOREBOARD
+         // add scoreboard and health meter
+            fill("black");
+            textSize(20);
+            text("Health:", 280, 30);
+            text (health, 350, 30);
+            fill("black");
+            textSize(20);
+            text("Score:", 50, 30);
+            text (score, 120, 30);
+         // GAME OVER
+         // if health runs out
+         // show Game over
+            if (health < 0) {
+            background("black");
+            fill("green");
+            textSize(50);
+            text("Game Over!" , 40, 200);
+            textSize(50);
+            text("Score:", 70, 250);
+            text (score, 230, 250);
+            }
+      ```
+  - Level Eight: Check your game
+      ``` 
+         //GAME SETUP
+         // Create the sprites
+         // set velocity for the obstacle and the target
+            var frog1 = createSprite(150, 370);
+            frog1.setAnimation("frog");
+            var mush = createSprite(370, 370);
+            mush.setAnimation("mushroom");
+            var fly1 = createSprite(370, 200);
+            fly1.setAnimation("fly");
+            mush.scale = 0.8;
+            fly1.velocityX = -3;
+            fly1.velocityY = 0;
+            mush.velocityX = -3;
+            mush.velocityY = 0;
 
 
+         //create the variables
+            var score = 0;
+            var health = 100;
+
+            function draw() {
+         // BACKGROUND
+         // draw the ground and other background
+            background(rgb(52,159,235));
 
 
+         // SPRITE INTERACTIONS
+         // if the player touches the obstacle
+         // the health goes down, and the obstacle turns
+            if (frog1.isTouching(mush)) {
+               health = health - 1;
+               mush.rotation = 30;
+            } else {
+               mush.rotation = 0;
+            }
+
+         // if the player touches the target
+         // the score goes up, the target resets
+            if (frog1.isTouching(fly1)) {
+               score = score + 1;
+               fly1.x = 400;
+               fly1.y = randomNumber(100, 400);
+            }
 
 
+         // JUMPING
+         // if the player has reached the ground
+         // stop moving down
+            if (frog1.y > 370) {
+               frog1.x = 150;
+               frog1.y = 370;
+            }
+
+         // if the player presses the up arrow
+         // start moving up
+            if (keyDown("up")) {
+               frog1.velocityX = 0;
+               frog1.velocityY = -3;
+            }
+
+         // if the player reaches the top of the jump
+         // start moving down
+
+            if (200 > frog1.y) {
+               frog1.velocityX = 0;
+               frog1.velocityY = 2;
+            }
+
+         // LOOPING
+         // if the obstacle has gone off the left hand side of the screen, 
+         // move it to the right hand side of the screen
+            if (20 > mush.x) {
+               mush.x = 370;
+            }
+
+         // if the target has gone off the left hand side of the screen,
+         // move it to the right hand side of the screen
+            if (20 > fly1.x) {
+               fly1.x = 370;
+               fly1.y = randomNumber(100, 370);
+            }
+
+         // DRAW SPRITES
+            drawSprites();
+            
+         // SCOREBOARD
+         // add scoreboard and health meter
+            fill("black");
+            textSize(20);
+            text("Health:", 280, 30);
+            text (health, 350, 30);
+            fill("black");
+            textSize(20);
+            text("Score:", 50, 30);
+            text (score, 120, 30);
+         // GAME OVER
+         // if health runs out
+         // show Game over
+            if (health < 0) {
+               background("black");
+               fill("green");
+               textSize(50);
+               text("Game Over!" , 40, 200);
+               textSize(50);
+               text("Score:", 70, 250);
+               text (score, 230, 250);
+            }
+            }
+      ```
+### Lesson 22: Complex Sprite Movement
+  **Question of the Day:** How can previous blocks be combined in new patterns to make interesting movements?
+
+  - In this lesson, you will learn to combine the velocity properties of sprites with the counter pattern to create more complex sprite movements.
+  - Level One: Prediction
+  - Level Two-Four: Skills Development
+     - Level Two:
+         ```
+               var car = createSprite(50, 200);
+               car.setAnimation("red_car");
+               car.velocityX = 0.2;
+
+               function draw() {
+               background("gray");
+               
+            // Add code to make the car speed up.
+               car.velocityX = car.velocityX + 0.1;
+               drawSprites();
+               } 
+         ```
+     - Level Three:
+        ```
+            var rock = createSprite(200, 50);
+            rock.setAnimation("rock");
+            rock.velocityY = 0.5;
+
+            function draw() {
+            background("skyblue");
+            
+         // Add code to make the rock speed up as it falls.
+            rock.velocityY = rock.velocityY + 0.1;
+            
+            drawSprites();
+            }
+        ```
+     - Level Four:
+        ```
+            var car = createSprite(50, 200);
+            car.setAnimation("blue_car");
+            car.velocityX =  10;
+            noStroke();
+            function draw() {
+            background("burlywood");
+            fill("blue");
+            rect(350,0,100,400);     
+         // Add code to slow the car down before it goes into the water.
+            car.velocityX = car.velocityX - 0.25;
+            drawSprites();
+            }
+        ```
+  - Level Five: Practice
+      ```
+         var balloon = createSprite(200, 40);
+         balloon.setAnimation("balloon");
+         balloon.scale = 0.15;
+      // Take a look at the code that makes the balloon move.
+         balloon.velocityY =  8;
+
+
+         function draw() {
+         background("skyblue");
+         fill("green");
+         rect(0, 350, 400, 50);
+
+      // Add code to make the balloon slow down and float away.
+         balloon.velocityY = balloon.velocityY - 0.2;
+
+
+         drawSprites();
+         }
+      ```
+  - Level Six: Assessment
+      ```
+         var rock = createSprite(200, 350);
+         rock.setAnimation("rock");
+         rock.velocityY =  -10;
+         rock.rotationSpeed = 2;
+
+         function draw() {
+         background("skyblue");
+         
+      // Add code to make the rock slow down and then fall.
+         rock.velocityY = rock.velocityY + 0.2;
+ 
+         drawSprites();
+         }
+      ```
+  - Level Seven: Challenges
+      ```
+         var plane = createSprite(50, 350);
+         plane.setAnimation("plane");
+         var rock = createSprite(150, 350);
+         rock.setAnimation("rock");
+         var rockdown = createSprite(350, 100);
+         rockdown.setAnimation("rock_down");
+
+      // You might want to change these 
+         plane.velocityY = -15;
+         plane.velocityX = 1;
+
+         function draw() {
+         background("lightblue");
+         
+      // Add code that moves the plane down.
+         plane.velocityX = plane.velocityX + 0.5;
+         plane.velocityY = plane.velocityY + 0.8;
+
+         
+         drawSprites();
+         }
+      ```
+### Lesson 23: Collisions
+ **Question of the Day:** How can programmers build on abstractions to create further abstractions?
+
+  - In this lesson, you will learn how to use the new collision blocks (collide, displace, bounce, and bounceOff) to make your sprite interact in new ways.
+  - Level One: Code Prediction
+  - Level Two- Five: Skills Development
+     - Level Two:
+        ```
+         // Create giraffe sprite
+            var giraffe = createSprite(30,200);
+            giraffe.setAnimation("giraffe");
+            giraffe.velocityX = 1;
+            giraffe.scale = 0.3;
+
+         // Create monkey sprite
+            var monkey = createSprite(300,200);
+            monkey.setAnimation("monkey");
+            monkey.scale = 0.3;
+
+            function draw(){
+         // Draw background
+            background("white");
+            
+         // Program the giraffe to push the monkey off the screen.
+            if (monkey.isTouching(giraffe)) {
+               monkey.velocityX = 1;
+            }         
+            drawSprites();
+            }
+        ```
+     - Level Three:
+        ```
+         // Create elephant sprite
+            var elephant = createSprite(200, 400);
+            elephant.setAnimation("elephant");
+            elephant.scale = 0.5;
+            elephant.velocityY = randomNumber(-3,-1);
+
+         // Create hippo sprite
+            var hippo = createSprite(200,100);
+            hippo.setAnimation("hippo");
+            hippo.scale = 0.5;
+
+            function draw(){
+         // Draw background
+            background("white");
+            
+         // Add code to make the elephant push the hippo off the screen.
+            if (hippo.isTouching(elephant)) {
+               hippo.velocityY = randomNumber(-3,-1);
+            }
+
+            
+            drawSprites();
+            }
+        ```
+     - Level Four:
+        ```
+         // Create elephant sprite
+            var elephant = createSprite(200, 350);
+            elephant.setAnimation("elephant");
+            elephant.scale = 0.5;
+            elephant.velocityY = randomNumber(-3,-1);
+
+         // Create hippo sprite
+            var hippo = createSprite(200,50);
+            hippo.setAnimation("hippo");
+            hippo.scale = 0.5;
+            hippo.velocityY = randomNumber(1,3);
+
+            function draw(){
+         // Draw background
+            background("white");
+         // Take a look at the new block and how it is being used.
+         // Fix the block so that the elephant is pushing the hippo.
+            elephant.displace(hippo); 
+            drawSprites();
+            }
+        ```
+     - Level Five:
+        ```
+            var parrot = createSprite(50,200);
+            parrot.setAnimation("parrot");
+            parrot.velocityX = 2;
+            parrot.scale = 0.3;
+
+            var penguin = createSprite(350,200);
+            penguin.setAnimation("penguin");
+            penguin.velocityX = -2;
+            penguin.scale = 0.3;
+
+            function draw() {
+         // Switch out the displace block for the new blocks, one at a time 
+         // to see what each one does.
+            penguin.displace(parrot);
+            
+            background("white");
+            drawSprites();
+            }
+        ```
+  - Level Six: Practice
+     ```
+         var scenery = createSprite(200, 200);
+         scenery.setAnimation("subway");
+
+         var kid = createSprite(350, 250);
+         kid.setAnimation("kid");
+         kid.velocityX = -2.5;
+         kid.scale = 0.6;
+
+         var suitcase = createSprite(150, 280);
+         suitcase.setAnimation("suitcase");
+         suitcase.scale = 0.8;
+
+         function draw() {
+      // Choose the best block to make the child push the suitcase.
+         kid.displace(suitcase);
+         
+         drawSprites();
+         }
+     ```
+  - Level Seven: Assessment
+     ```
+      // create sprites
+         var giraffe = createSprite(50, 50);
+         giraffe.setAnimation("giraffe");
+         giraffe.velocityX = 3;
+         var hippo = createSprite(50, 150);
+         hippo.setAnimation("hippo");
+         hippo.velocityX = 3;
+         var rabbit = createSprite(50, 250);
+         rabbit.setAnimation("rabbit");
+         rabbit.velocityX = 3;
+         var snake = createSprite(50, 350);
+         snake.setAnimation("snake");
+         snake.velocityX = 3;
+         var parrot = createSprite(350, 50);
+         parrot.setAnimation("parrot");
+         parrot.velocityX = -3;
+         var elephant = createSprite(350, 150);
+         elephant.setAnimation("elephant");
+         elephant.velocityX = -3;
+         var monkey = createSprite(350, 250);
+         monkey.setAnimation("monkey");
+         monkey.velocityX = -3;
+         var pig = createSprite(350, 350);
+         pig.setAnimation("pig");
+         pig.velocityX = -3;
+
+
+         function draw() {
+         background("lightblue");
+
+      // For each pair of animals, choose the sprite interaction 
+      // that matches the target image.
+
+         giraffe.bounce(parrot);
+         hippo.displace(elephant);
+         monkey.displace(rabbit);
+
+         snake.bounce(pig);
+         drawSprites();
+         }
+     ```
+  - Level Eight: Challenges
+     ```
+      // Read the code below and then run the program to 
+      // see the behavior of the basketball and pool ball.
+
+         var basketball = createSprite(100, 0);
+         basketball.setAnimation("basketball");
+         basketball.bounciness = 0.8;
+
+         var poolball = createSprite(325, 0);
+         poolball.setAnimation("poolball");
+         poolball.bounciness = 0.4;
+
+         var soccerball = createSprite(225, 0);
+         soccerball.setAnimation("soccerball");
+         //2) Use the new block to set the **bounciness** of your soccer ball.
+         soccerball.bounciness = 0.7;
+
+         var wood = createSprite(200, 375);
+         wood.setAnimation("floor");
+
+
+         function draw() {
+         background("skyblue");
+         
+         basketball.bounceOff(wood);
+         soccerball.bounceOff(wood);
+         poolball.bounceOff(wood);
+         
+         basketball.velocityY = basketball.velocityY + 0.2;
+         soccerball.velocityY = soccerball.velocityY + 0.2;
+         poolball.velocityY = poolball.velocityY + 0.2;
+         
+         drawSprites();
+}
+     ```
+### Lesson 24: Mini-Project - Flyer Game
+ **Question of the Day:** How can the new types of collisions and modeling movement be used to create a game?
+
+  - In this lesson, you will use what you have learned about simulating gravity and the different types of collisions to create a simple flyer game!
+  - Level One: Flyer Game Example
+  - Level Two: Crea tus Sprites
+      ```
+         // GAME SETUP
+         // create player, target, and obstacles
+            var player = createSprite(200, 100);
+            player.setAnimation("fly_bot");
+            player.scale = 0.6;
+            var target = createSprite(350, 350);
+            target.setAnimation("coin");
+            target.scale = 0.6;
+            var rock1 = createSprite(0, randomNumber(50, 350));
+            rock1.setAnimation("rock");
+            rock1.scale = 0.7;
+            rock1.velocityX = 3.5;
+            var rock2 = createSprite(randomNumber(50, 350), 0);
+            rock2.setAnimation("rock");
+            rock2.scale = 0.7;
+            rock2.velocityY = 3.5;
+
+
+            function draw() {
+            background("lightblue");
+            
+         // FALLING
+            player.velocityY = 3;
+            
+         // LOOPING
+            if (rock1.x > 350) {
+               rock1.x = 50;
+            }
+            if (rock2.y > 350) {
+               rock2.y = 50;
+            }
+            
+            
+         // PLAYER CONTROLS
+         // change the y velocity when the user clicks "up"
+            if (keyDown("up")) {
+               player.y = player.y - 7;
+            }
+            
+         // decrease the x velocity when user clicks "left"
+            
+            if (keyDown("left")) {
+               player.x = player.x - 3;
+            }
+         // increase the x velocity when the user clicks "right"
+            if (keyDown("right")) {
+               player.x = player.x + 3;
+            }
+            
+         // SPRITE INTERACTIONS
+         // reset the coin when the player touches it
+            if (player.isTouching(target)) {
+               target.x = randomNumber(50, 350);
+               target.y = randomNumber(50, 350);
+            }
+            
+         // make the obstacles push the player
+            player.bounce(rock1);
+            
+            player.bounce(rock2);
+            
+         // DRAW SPRITES
+            drawSprites();
+            
+         // GAME OVER
+            if (player.x < -50 || player.x > 450 || player.y < -50 || player.y > 450) {
+               background("black");
+               textSize(50);
+               fill("green");
+               text("Game Over!", 50, 200);
+            }
+            
+            }
+      ```
+  - Level Three - Five: Player Controls
+     - Level Three:
+        ```
+         // FALLING
+            player.velocityY = 3;
+        ```
+     - Level Four:
+        ```
+         // change the y velocity when the user clicks "up"
+            if (keyDown("up")) {
+            player.y = player.y - 7;
+            }
+
+         // decrease the x velocity when user clicks "left"
+
+            if (keyDown("left")) {
+            player.x = player.x - 3;
+            }
+         // increase the x velocity when the user clicks "right"
+            if (keyDown("right")) {
+            player.x = player.x + 3;
+            }  
+
+        ```
+     - Level Five:
+        ```
+         // PLAYER CONTROLS
+         // change the y velocity when the user clicks "up"
+            if (keyDown("up")) {
+            player.y = player.y - 7;
+            }
+
+         // decrease the x velocity when user clicks "left"
+
+            if (keyDown("left")) {
+            player.x = player.x - 3;
+            }
+         // increase the x velocity when the user clicks "right"
+            if (keyDown("right")) {
+            player.x = player.x + 3;
+            }
+        ```
+  - Level Six: Sprite movement
+     ```
+      // LOOPING
+         if (rock1.x > 350) {
+         rock1.x = 50;
+         }
+         if (rock2.y > 350) {
+         rock2.y = 50;
+         }
+     ```
+  - Level Seven: Sprite interactions
+     ```
+      // SPRITE INTERACTIONS
+      // reset the coin when the player touches it
+         if (player.isTouching(target)) {
+         target.x = randomNumber(50, 350);
+         target.y = randomNumber(50, 350);
+         }
+     ```
+  - Level Eight: Check your game
+     ```
+      // GAME SETUP
+      // create player, target, and obstacles
+         var player = createSprite(200, 100);
+         player.setAnimation("fly_bot");
+         player.scale = 0.6;
+         var target = createSprite(350, 350);
+         target.setAnimation("coin");
+         target.scale = 0.6;
+         var rock1 = createSprite(0, randomNumber(50, 350));
+         rock1.setAnimation("rock");
+         rock1.scale = 0.7;
+         rock1.velocityX = 3.5;
+         var rock2 = createSprite(randomNumber(50, 350), 0);
+         rock2.setAnimation("rock");
+         rock2.scale = 0.7;
+         rock2.velocityY = 3.5;
+
+
+         function draw() {
+         background("lightblue");
+         
+      // FALLING
+         player.velocityY = 3;
+         
+      // LOOPING
+         if (rock1.x > 350) {
+            rock1.x = 50;
+         }
+         if (rock2.y > 350) {
+            rock2.y = 50;
+         }
+         
+         
+      // PLAYER CONTROLS
+      // change the y velocity when the user clicks "up"
+         if (keyDown("up")) {
+            player.y = player.y - 7;
+         }
+         
+      // decrease the x velocity when user clicks "left"
+         
+         if (keyDown("left")) {
+            player.x = player.x - 3;
+         }
+      // increase the x velocity when the user clicks "right"
+         if (keyDown("right")) {
+            player.x = player.x + 3;
+         }
+         
+      // SPRITE INTERACTIONS
+      // reset the coin when the player touches it
+         if (player.isTouching(target)) {
+            target.x = randomNumber(50, 350);
+            target.y = randomNumber(50, 350);
+         }
+         
+      // make the obstacles push the player
+         player.bounce(rock1);
+         
+         player.bounce(rock2);
+         
+      // DRAW SPRITES
+         drawSprites();
+         
+      // GAME OVER
+         if (player.x < -50 || player.x > 450 || player.y < -50 || player.y > 450) {
+            background("black");
+            textSize(50);
+            fill("green");
+            text("Game Over!", 50, 200);
+         }
+         
+         }
+     ```
+### Lesson 25: Functions
+ **Question of the Day:** How can programmers use functions to create their own abstractions?
+
+  - In this lesson, you will learn how to better organize your code using functions to make your program code more readable and remove repeated blocks of code.
+  - Level One: Predict
+  - Level Two-Three: Skills Development
+     - Level Two:
+        ```
+         // Call the drawBalloons function to reveal the full image. 
+            drawBalloons();
+        ```
+     - Level Three:
+        ```
+         // Read the 4 functions to understand what each one does.
+         // Call the functions in an order that draws the scene in the way that looks best to you.
+            drawBackground();
+            drawTrees();
+            drawClouds();
+
+            drawFence();
+        ```
+  - Level Four: Predict
+      ```
+        Answer is C
+      ```
+  - Level Five: Practice
+      ```
+         var flyer = createSprite();
+         flyer.setAnimation("flyer");
+         setFlyer();
+
+         function draw(){
+         treesBackground();
+         if(flyer.x < -50){
+
+         }
+         drawSprites();
+         }
+
+         function setFlyer(){
+         flyer.x = 450;
+         flyer.y = randomNumber(0, 400);
+         flyer.velocityX = randomNumber(-1, -3);
+         }
+      ```
+  - Level Six:Quick Check
+  - Level Seven - Nine: Collector's Game
+     - Level Seven:
+         ```
+            var coin = createSprite(200,10);
+            coin.setAnimation("coin_gold_1");
+            setCoin();
+
+            var bunny = createSprite(200,350);
+            bunny.setAnimation("bunny1_ready_1");
+
+            var score = 0;
+
+            function draw() {
+            background("white");
+            
+            if(keyDown("left")){
+               bunny.x = bunny.x - 2;
+            }
+            
+            if(keyDown("right")){
+               bunny.x = bunny.x + 2;
+            }
+            
+            if(coin.y > 400){
+               setCoin();
+            }
+            if (bunny.isTouching(coin)) {
+               score = score + 1;
+            }
+            
+            textSize(20);
+            text("Score: " + score, 10, 10, 100, 100);
+            drawSprites();
+            }
+         ```
+     - Level Eight:
+         ```
+            var coin = createSprite(200,10);
+            coin.setAnimation("coin_gold_1");
+            setCoin();
+
+            var bunny = createSprite(200,350);
+            bunny.setAnimation("bunny1_ready_1");
+
+            var score = 0;
+
+            function draw() {
+            background("white");
+            
+            if(keyDown("left")){
+               bunny.x = bunny.x - 2;
+            }
+            
+            if(keyDown("right")){
+               bunny.x = bunny.x + 2;
+            }
+            
+            if(coin.y > 400){
+               setCoin();
+            }
+            if (bunny.isTouching(coin)) {
+               score = score + 1;
+            }
+            
+            textSize(20);
+            text("Score: " + score, 10, 10, 100, 100);
+            drawSprites();
+            }
+
+            function setCoin(){
+            coin.velocityY = 3;
+            }
+         ```
+     - Level Nine:
+        ```
+            var coin = createSprite(200,10);
+            coin.setAnimation("coin_gold_1");
+            setCoin();
+
+            var bunny = createSprite(200,350);
+            bunny.setAnimation("bunny1_ready_1");
+
+            var score = 0;
+
+            function draw() {
+            background("white");
+            
+            if(keyDown("left")){
+               bunny.x = bunny.x - 2;
+            }
+            
+            if(keyDown("right")){
+               bunny.x = bunny.x + 2;
+            }
+            
+            if(coin.y > 400){
+               setCoin();
+            }
+            if (bunny.isTouching(coin)) {
+               score = score + 1;
+            }
+            
+            textSize(20);
+            text("Score: " + score, 10, 10, 100, 100);
+            drawSprites();
+            }
+
+            function setCoin(){
+            coin.velocityY = 3;
+            }
+        ```
+  - Level Ten: Challenges
+      ```
+         var ball = createSprite(200, 200);
+         ball.setAnimation("ball");
+         ball.scale = 0.10;
+         ball.velocityY = 5;
+         ball.velocityX = 10;
+         var paddle = createSprite(200, 380);
+         paddle.setAnimation("paddle");
+         paddle.width = 200;
+         var brick1 = createSprite(100, 150);
+         brick1.setAnimation("brick");
+         var brick2 = createSprite(300, 75);
+         brick2.setAnimation("brick");
+         var star = createSprite(54, 95);
+         star.setAnimation("redstar");
+         var star2 = createSprite(302, 25);
+         star2.setAnimation("redstar");
+
+      //Creates an invisible sprite around the edges
+         createEdgeSprites();
+         function draw() {
+      //Call Functions
+         background1();
+         move();
+         ballBounce();
+         collectStar();
+         drawSprites();
+         }
+      //Create the gameBackground Function
+         function background1() {
+         background("white");
+         }
+      //Create the movePaddle Function
+         function move() {
+         if (keyDown("left")) {
+            sprite.x = __;
+         }
+         if (keyDown("right")) {     
+         }
+         }
+
+
+      //Create the ballBounce Function
+         function ballBounce() {
+         ball.bounceOff(paddle);
+         ball.bounceOff(brick1);
+         ball.bounceOff(brick2);
+         ball.bounceOff(topEdge);
+         ball.bounceOff(bottomEdge);
+         ball.bounceOff(leftEdge);
+         ball.bounceOff(rightEdge);
+         }
+
+      //Create the collectStar Function
+         function collectStar() {
+         if (ball.isTouching(star)) {
+            star.x = 450;
+            star.y = 450;
+         }
+         if (ball.isTouching(star2)) {
+            star2.x = 450;
+            star2.y = 450;
+         }
+         }
+      //Bonus Function: setScore
+      ```
 
 
 
