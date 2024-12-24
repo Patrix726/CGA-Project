@@ -524,3 +524,108 @@ function draw() {
 
 
 
+**Lesson 19: Velocity**  
+
+1. **Learned Concepts**:  
+   - `velocityX` and `velocityY` replace the counter pattern to move sprites.  
+   - Sprites can rotate using the `rotationSpeed` block.  
+
+2. **Examples**:  
+
+   - **Make a feather sprite move down the screen**:  
+     ```javascript
+     var feather = createSprite(200, 50);
+     feather.setAnimation("feather");
+     feather.velocityY = 2; // Move feather down
+     
+     function draw() {
+         background("skyblue");
+         drawSprites();
+     }
+     ```
+
+   - **Rotate a sun sprite by 3 degrees per frame**:  
+     ```javascript
+     var sun = createSprite(200, 200);
+     sun.setAnimation("sun");
+     sun.rotationSpeed = 3; // Rotate the sun
+     
+     function draw() {
+         background("blue");
+         drawSprites();
+     }
+     ```  
+
+---
+
+**Lesson 20: Collision Detection**  
+
+1. **Learned Concepts**:  
+   - Detect sprite collisions using the `isTouching` block.  
+   - Use the `debug` block to identify and fix bugs.  
+   - Adjust collider parameters with `setCollider`.  
+
+2. **Examples**:  
+
+   - **Collision Detection Between Bunny and Dinner**:  
+     ```javascript
+     var backdrop = createSprite(200, 200);
+     backdrop.setAnimation("meadow");
+     var bunny = createSprite(50, 300);
+     bunny.setAnimation("bunny");
+     bunny.velocityX = 3;
+     var robot = createSprite(400, 320);
+     robot.setAnimation("robot");
+     robot.scale = 0.2;
+     robot.velocityX = -3;
+     var dinner = createSprite(370, 350);
+     dinner.setAnimation("stew");
+     dinner.velocityX = -3;
+
+     function draw() {
+         if (bunny.isTouching(dinner)) {
+             bunny.velocityX = 0;
+             dinner.velocityX = 0;
+             robot.velocityX = 0;
+             dinner.setAnimation("bowl"); // Change to empty bowl
+         }
+         drawSprites();
+     }
+     ```  
+
+   - **Debugging a Sprite**:  
+     ```javascript
+     var balloon = createSprite(200, 200);
+     balloon.setAnimation("balloon");
+     balloon.debug = true; // Enable debugging
+     
+     var tack = createSprite(350, 50);
+     tack.setAnimation("tack");
+
+     function draw() {
+         background("gray");
+
+         if (balloon.isTouching(tack)) {
+             balloon.setAnimation("popped"); // Change to popped balloon
+         }
+
+         if (keyDown("up")) tack.y -= 1;
+         if (keyDown("down")) tack.y += 1;
+         if (keyDown("left")) tack.x -= 1;
+         if (keyDown("right")) tack.x += 1;
+
+         drawSprites();
+     }
+     ```  
+
+   - **Custom Collider Parameters**:  
+     ```javascript
+     var roller = createSprite(200, 200);
+     roller.scale = 2;
+     roller.setAnimation("roller_1");
+     roller.debug = true; // Enable debugging
+     roller.setCollider("rectangle", 0, 0, 45, 180, 30); // Custom collider
+
+     drawSprites();
+     ```  
+
