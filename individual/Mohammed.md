@@ -102,7 +102,7 @@ Question of the Day: Why is testing essential, and how can it improve programs?
 ![Getting Started](./Screenshot_2.png)
 
 ## Lesson 11: Mini-Project - Captioned Scenes
-`
+```
 background("white");
 rect(100, 100, 200, 200);
 rect(100, 100, 200, 200);
@@ -120,9 +120,9 @@ fill("black");
 text("Let's collect the balls", 200, 360);
 text("Pool and Baseball", 200, 390);
 textSize(36);
-`
+```
 ## Lesson 12: The Draw Loop
-
+```
 // Setting Frame Rate
 World.frameRate = 5;
 
@@ -157,11 +157,12 @@ function draw() {
 }
 
 //make the animals appear like they are jumping on the couch like the image
-
+```
 ## Lesson 13: Sprite Movement
 
 Spinnig:
 
+```
 var pan = createSprite(200, 200);
 pan.setAnimation("pan");
 
@@ -171,9 +172,9 @@ function draw() {
   pan.rotation= pan.rotation + 1;
   drawSprites();
 }
-
+```
 Assesment:
-
+```
 var orangeFish = createSprite(400, randomNumber(0, 100));
 orangeFish.setAnimation("orange_fish");
 var blueFish = createSprite(250, randomNumber(0, 200));
@@ -196,9 +197,9 @@ function draw() {
   drawSprites();
 }
 
-
+```
 ## Lesson 14: Mini-Project - Animation
-
+```
 background(rgb(40,0,0));
 var landscape = createSprite(200, 170);
 var higher = createSprite(300, 240);
@@ -246,7 +247,7 @@ function draw() {
   
   drawSprites();
 }
-
+```
 ## Lesson 16: Keyboard Input
 
 Question of the Day: How can our programs react to user input?
@@ -281,6 +282,7 @@ Using mouseDown to trigger animations.
 - Sprite behavior changes dynamically based on which side of the screen the mouse pointer is located.
 
 ## Lesson 18: Project - Interactive Card
+```
 var backgroundSprite = createSprite(200,200);
 backgroundSprite.setAnimation("space");
 
@@ -336,7 +338,7 @@ function draw() {
 
   drawSprites();
 }
-
+```
 ## Lesson 19: Velocity
 Learning Insights:
 -  Automating Movement:
@@ -382,7 +384,7 @@ Scoreboard and Game Over:
 - Learned Concept: Counter Pattern for Acceleration and Deceleration
 
 - Gained knowledge of using the counter pattern with the velocityX block to simulate acceleration and deceleration.
-
+```
 var rock = createSprite(200, 50);  
 rock.setAnimation("rock");  
 rock.velocityY = 0.5;  
@@ -395,7 +397,7 @@ function draw() {
 
   drawSprites();  
 }  
-
+```
 ## Lesson 23: Collisions
 
 - Using sprite.displace():
@@ -489,6 +491,7 @@ Score Display:
    - Score updates dynamically based on gameplay actions and is displayed on the screen.
 
 ## Lesson 27: 
+```
 // Variables
 var score = 0;
 
@@ -632,9 +635,9 @@ function setItem3() {
   item3.x = randomNumber(30, 370);
   item3.y = 0;
 }
-
+```
 ## Lesson 28: Project - Design a Game
-
+```
 // Variables
 var redScore = 0;
 var blueScore = 0;
@@ -752,4 +755,4 @@ function showScore() {
   text("Red:", 20, 30);
   text(redScore, 100, 30);
 }
-
+```
