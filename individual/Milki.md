@@ -1307,4 +1307,5 @@ function draw() {
   drawSprites();
 }
 ```
-![Screenshot_24-12-2024_131613_studio code org](https://github.com/user-attachments/assets/738a0a3e-d6c2-4dbe-baf3-af442dbf3286)
+![Screenshot_24-12-2024_164111_studio code org](https://github.com/user-attachments/assets/e96a26bb-2bc2-4e3c-bdbf-d88415297b27)
+
