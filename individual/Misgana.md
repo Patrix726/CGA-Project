@@ -304,3 +304,355 @@ Here’s a structured report for Lessons 6 through 16:
 7. **Challenges**: Explore creative and advanced applications of keyboard interactivity. 
 
 ![Screenshot 2024-12-16 at 17-12-07 Unit 3 - Interactive Animations and Games ('24-'25) - Code org](https://github.com/user-attachments/assets/3864a856-5411-4bae-bc5d-13e645712f06)
+
+### Lesson 17: Mouse Input  
+**Question of the Day**: What are more ways that the computer can react to user input?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Use mouse input to interact with the program.  
+- Implement `if` and `if-else` statements to handle mouse events in conditional logic.  
+
+**Activities**:  
+1. **Prediction**: Predict how the mouse can be used for interactivity.  
+2-5. **Skill Building**:  
+   - Learn to detect mouse clicks and movements.  
+   - Write conditional statements to respond to mouse events (e.g., clicking, hovering).  
+6. **Practice**: Create a program that reacts to mouse inputs.  
+7. **Assessment**: Demonstrate knowledge by designing a program with mouse-based interactions.  
+8. **Challenges**: Experiment with advanced mouse interactivity like drag-and-drop or drawing.  
+
+---
+
+### Lesson 18: Project - Interactive Card  
+**Question of the Day**: What skills and practices are important when creating an interactive program?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Combine user interaction, animations, and conditional logic to create a polished project.  
+
+**Activities**:  
+1. **Demo App: Interactive Card**: Explore a sample interactive card project.  
+2. **Interactive Card Examples**: Review and analyze examples for inspiration.  
+3-7. **Project Work**:  
+   - Plan your card by choosing a theme and elements.  
+   - Develop the interactive features using mouse input, animations, and sprites.  
+   - Test and refine your project.  
+8. **Reflection**: Reflect on the skills and techniques applied in your project.  
+
+---
+
+### Lesson 19: Velocity  
+**Question of the Day**: How can programming languages hide complicated patterns so that it is easier to program?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Use velocity to move sprites.  
+- Apply the counter pattern to update a sprite’s position automatically.  
+
+**Activities**:  
+1. **Predict**: Predict how velocity simplifies sprite movement.  
+2-7. **Skill Building**:  
+   - Learn to set a sprite's `velocityX` and `velocityY`.  
+   - Use the counter pattern to control movement speed and direction.  
+8. **Practice**: Create a program demonstrating controlled velocity.  
+9. **Assessment**: Show mastery by building a program with multiple moving sprites.  
+10. **Challenges**: Experiment with complex movements, like acceleration or bouncing effects.  
+
+---
+
+### Lesson 20: Collision Detection  
+**Question of the Day**: How can programming help make complicated problems more simple?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Detect when sprites are touching or overlapping.  
+- Use collision detection for gameplay mechanics like scoring or interaction.  
+
+**Activities**:  
+1. **Sample Game**: Explore a game that uses collision detection.  
+2-5. **Skill Building**:  
+   - Learn to use `isTouching()` and `collide()` methods.  
+   - Write conditional logic to respond to collisions.  
+6. **Practice**: Create a program that uses collision detection.  
+7. **Assessment**: Build a game with collision-based mechanics.  
+8. **Challenges**: Experiment with advanced collision interactions, such as chain reactions or triggers.  
+
+---
+
+### Lesson 11: Mini-Project - Captioned Scenes  
+**Question of the Day**: How can we use Game Lab to express our creativity?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Combine backgrounds, sprites, and text for storytelling.  
+- Use problem-solving approaches to design creative scenes.  
+
+**Activities**:  
+1. **Captioned Scene Example**: Analyze examples of captioned scenes.  
+2. **Create a Background**: Design an engaging background.  
+3. **Add Sprites**: Populate the scene with sprites.  
+4. **Add Text**: Include captions for storytelling.  
+5. **Review Your Scene**: Evaluate and refine your project.  
+
+---
+
+### Lesson 12: The Draw Loop  
+**Question of the Day**: How can we animate our images in Game Lab?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Use the draw loop for continuous updates to the program.  
+- Combine random numbers and the draw loop for dynamic animations.  
+
+**Activities**:  
+1. **Prediction**: Predict how the draw loop could enable animations.  
+2-3. **Skill Building**: Learn to use the draw loop for updates.  
+4-5. **Skill Building**: Add randomness for dynamic animations.  
+6. **Practice**: Create simple animations with the draw loop.  
+7. **Assessment**: Demonstrate understanding by creating a dynamic animation.  
+8. **Challenges**: Experiment with advanced animations using the draw loop.  
+
+---
+
+### Lesson 13: Sprite Movement  
+**Question of the Day**: How can we control sprite movement in Game Lab?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Use the counter pattern for sprite movement.  
+- Update sprite positions over time for motion.  
+
+**Activities**:  
+1. **Prediction**: Explore how sprite movement enhances a program.  
+2-5. **Skill Building**:  
+   - Implement the counter pattern for movement.  
+   - Control direction and speed.  
+6. **Practice**: Create programs with moving sprites.  
+7. **Assessment**: Design a program demonstrating sprite movement.  
+8. **Challenges**: Experiment with complex movement patterns and interactivity.  
+
+### Lesson 18: Project - Interactive Card  
+**Question of the Day**: What skills and practices are important when creating an interactive program?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Plan and design an interactive project using prior programming concepts.  
+- Combine sprites, animations, and user interactions to create a functional card.  
+
+**Activities**:  
+1. **Demo App: Interactive Card**: Explore an example of an interactive greeting card.  
+2. **Interactive Card Examples**: Analyze completed examples for inspiration.  
+3-7. **Project Work**:  
+   - Plan your greeting card's theme and features.  
+   - Implement sprites, animations, and interactivity.  
+   - Test and refine the design.  
+8. **Reflection**: Reflect on the creative and technical aspects of the project.  
+
+---
+
+### Lesson 19: Velocity  
+**Question of the Day**: How can programming languages hide complicated patterns so that it is easier to program?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Set and control a sprite's velocity to automate movement.  
+- Use the counter pattern to manage sprite positions over time.  
+
+**Activities**:  
+1. **Predict**: Discuss how velocity simplifies movement programming.  
+2-7. **Skill Building**:  
+   - Learn to use `velocityX` and `velocityY` properties for sprite motion.  
+   - Implement movement patterns like acceleration or controlled speed.  
+8. **Practice**: Create a program showcasing sprite velocity.  
+9. **Assessment**: Demonstrate understanding by designing a program with automated sprite movement.  
+10. **Challenges**: Experiment with advanced velocity patterns or effects.  
+
+---
+
+### Lesson 20: Collision Detection  
+**Question of the Day**: How can programming help make complicated problems more simple?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Detect and respond to collisions between sprites.  
+- Simplify interaction design with built-in collision methods.  
+
+**Activities**:  
+1. **Sample Game**: Explore a game demonstrating collision detection.  
+2-5. **Skill Building**:  
+   - Use `isTouching()` to detect sprite overlaps.  
+   - Learn `collide()` to stop movement on collision.  
+6. **Practice**: Create a program with collision-based mechanics.  
+7. **Assessment**: Build a game demonstrating sprite collisions.  
+8. **Challenges**: Implement advanced collision logic like triggers or effects.  
+
+---
+
+### Lesson 21: Mini-Project - Side Scroller  
+**Question of the Day**: How can the new types of sprite movement and collision detection be used to create a game?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Apply velocity and collision detection to design a side-scrolling game.  
+
+**Activities**:  
+1. **Side Scroller Example**: Explore a completed side-scroller game for inspiration.  
+2. **Draw Your Background**: Create a looping or dynamic background.  
+3. **Create Your Sprites**: Design the characters and objects in your game.  
+4. **Player Controls**: Add interactive controls for the player sprite.  
+5. **Looping**: Implement looping mechanics for continuous gameplay.  
+6. **Sprite Interactions**: Add collision and interaction mechanics.  
+7. **Scoring & Scoreboard**: Track player progress with a scoreboard.  
+8. **Review Your Game**: Test and refine your game design.  
+
+---
+
+### Lesson 22: Complex Sprite Movement  
+**Question of the Day**: How can previous blocks be combined in new patterns to make interesting movements?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Combine velocity with the counter pattern for complex movements.  
+
+**Activities**:  
+1. **Prediction**: Predict how new patterns can enhance sprite movement.  
+2-4. **Skill Building**:  
+   - Experiment with diagonal, bouncing, and curved movements.  
+   - Use velocity changes to simulate acceleration or deceleration.  
+5. **Practice**: Design programs with advanced movement patterns.  
+6. **Assessment**: Create a program showcasing complex sprite motion.  
+7. **Challenges**: Explore gravity, friction, or multi-step movements.  
+
+---
+
+### Lesson 23: Collisions  
+**Question of the Day**: How can programmers build on abstractions to create further abstractions?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Use advanced collision methods (`collide`, `displace`, `bounce`, `bounceOff`).  
+
+**Activities**:  
+1. **Code Prediction**: Predict behaviors based on collision code examples.  
+2-5. **Skill Building**:  
+   - Learn and implement different collision methods.  
+   - Combine collision behaviors to create complex interactions.  
+6. **Practice**: Create a program with various collision interactions.  
+7. **Assessment**: Design a program using advanced collision logic.  
+8. **Challenges**: Experiment with combining collisions and game mechanics.  
+
+---
+
+### Lesson 24: Mini-Project - Flyer Game  
+**Question of the Day**: How can the new types of collisions and modeling movement be used to create a game?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Simulate gravity and implement advanced collisions in a flyer game.  
+
+**Activities**:  
+1. **Flyer Game Example**: Explore an example of a flyer game.  
+2. **Make Your Sprites**: Design and animate game sprites.  
+3-5. **Player Controls**: Implement interactive controls for flying mechanics.  
+6. **Sprite Movement**: Simulate gravity and other movement effects.  
+7. **Sprite Interactions**: Add collisions and reactions.  
+8. **Review Your Game**: Test and polish your flyer game design.  
+
+---
+
+### Lesson 25: Functions  
+**Question of the Day**: How can programmers use functions to create their own abstractions?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Use functions to simplify and organize code.  
+- Remove redundancy by creating reusable code blocks.  
+
+**Activities**:  
+1. **Predict**: Discuss how functions improve readability and efficiency.  
+2-3. **Skill Building**:  
+   - Write functions to encapsulate repeated logic.  
+   - Pass parameters to make functions more flexible.  
+4. **Practice**: Refactor programs using functions.  
+5. **Quick Check**: Test knowledge with quick exercises.  
+6. **Collector Game**:  
+   - Use functions to create a game where the player collects items.  
+   - Practice abstraction in game mechanics.  
+7-9. **Challenges**: Experiment with creative ways to use functions in your game design.
+
+### Lesson 26: The Game Design Process  
+**Question of the Day**: How does having a plan help to make a large project easier?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Understand and apply the game design process to organize development.  
+- Break down large projects into manageable stages.  
+
+**Activities**:  
+1. **Same Game**: Analyze a completed game to understand design stages.  
+2. **Plan Your Project**:  
+   - Identify objectives, features, and mechanics for your game.  
+   - Create a step-by-step plan for implementation.  
+3-4. **Set Up Sprites**: Create and design initial sprites.  
+5-7. **Control Your Player**:  
+   - Implement player controls for movement and interaction.  
+   - Test and refine control mechanics.  
+8-12. **Sprite Interactions**:  
+   - Add collision detection, sprite reactions, and gameplay logic.  
+   - Test interactions and refine functionality.  
+13. **Challenges**: Experiment with advanced interactions or mechanics.  
+
+---
+
+### Lesson 27: Using the Game Design Process  
+**Question of the Day**: How can the problem-solving process help programmers to manage large projects?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Use the problem-solving process to design and develop a platform jumper game.  
+- Build incrementally, testing and refining each stage.  
+
+**Activities**:  
+1. **Sample Platform Jumper Game**: Explore a completed platform jumper game for inspiration.  
+2. **Build a Platform Jumper**: Plan the structure and features of your game.  
+3-6. **Platform Jumper - Background and Variables**:  
+   - Create and animate the game background.  
+   - Set up variables to track game state (score, player lives, etc.).  
+7-9. **Platform Jumper - Platforms**:  
+   - Add platforms and implement logic for player interaction.  
+   - Test platform movement, collisions, and reactions.  
+10-12. **Platform Jumper - Items**:  
+   - Add collectible or interactive items.  
+   - Implement logic for items to affect gameplay (e.g., scoring, power-ups).  
+13-16. **Platform Jumper - Player**:  
+   - Add player movement and gravity mechanics.  
+   - Implement collisions and refine player control.  
+17. **Platform Jumper Review**: Test the entire game and refine the design.  
+18. **Challenges**: Enhance the game with advanced features (e.g., new levels, enemies).  
+
+---
+
+### Lesson 28: Project - Design a Game  
+**Question of the Day**: How can the five CS practices (problem-solving, persistence, communication, collaboration, and creativity) help programmers to complete large projects?  
+**Lesson Resources**  
+
+**Key Concepts**:  
+- Use the five CS practices to collaboratively design and implement an original game.  
+- Apply the problem-solving process to plan, build, and test a game.  
+
+**Activities**:  
+1. **Sample Games**: Analyze sample games to brainstorm ideas for your project.  
+2-5. **Project - Background and Variables**:  
+   - Design the game background and visuals.  
+   - Set up variables for tracking game state (score, level, etc.).  
+6-10. **Project - Sprites and Interactions**:  
+   - Create game sprites and implement interactions (e.g., collisions, player controls).  
+   - Add logic for scoring, objectives, and other mechanics.  
+11. **Review Your Game**:  
+   - Test and refine your game for functionality and playability.  
+   - Solicit feedback from peers to make improvements.  
+12. **End-Of-Unit Survey**: Reflect on what you’ve learned and provide feedback on the unit.  
+
+![Screenshot 2024-12-24 at 14-16-50 Unit 3 - Interactive Animations and Games ('24-'25) - Code org](https://github.com/user-attachments/assets/5792c0af-53f7-46ab-9e4f-ba9e24b62060)
+
