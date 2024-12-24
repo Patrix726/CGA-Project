@@ -3078,6 +3078,235 @@
          }
       //Bonus Function: setScore
       ```
+### Lesson 26: The Game Design Process
+ **Question of the Day:** How does having a plan help to make a large project easier?
+   - In this lesson, you will explore the process you will use for the remainder of the unit when designing games.
+   - Level One: Same Game
+   - Level Two: Plan your Project
+   - Level Three-Four: Set Up Sprites
+       ```
+         // Variables
+            var score = 0;
+         // Create Sprites
+            var cake = createSprite(350,200);
+
+            cake.setAnimation("cake");
+            var player = createSprite(200,200);
+            player.setAnimation("alienWalkRight");
+
+            var enemy1 = createSprite();
+            enemy1.setAnimation("ladybug");
+       ```
+   - Level Five-seven: Control Your Player
+       ```
+          var enemy2 = createSprite();
+
+         function draw() {
+      // draw the background
+         gameBackground();
+      // update the sprites
+         enemiesTouchCake();
+         movePlayer();
+         displaceEnemies();
+         enemiesTouchWater();
+         showScore();
+         drawSprites();
+         }
+       ```
+   - Level Eight-Twelve: Sprite Interactions
+       ```
+         // Variables
+            var score = 0;
+         // Create Sprites
+            var cake = createSprite(350,200);
+
+            cake.setAnimation("cake");
+            var player = createSprite(200,200);
+            player.setAnimation("alienWalkRight");
+
+            var enemy1 = createSprite();
+            enemy1.setAnimation("ladybug");
+
+            var enemy2 = createSprite();
+
+            function draw() {
+         // draw the background
+            gameBackground();
+         // update the sprites
+            enemiesTouchCake();
+            movePlayer();
+            displaceEnemies();
+            enemiesTouchWater();
+            showScore();
+            drawSprites();
+            }
+
+         // Functions
+            function gameBackground() {
+            noStroke();
+            background(rgb(0,100,255));
+            fill(rgb(100,100,100));
+            rect(0,150,400,100);
+            fill(rgb(80,80,80));
+            rect(0,140,400,10);
+            rect(0,250,400,10);
+            }
+       ```
+   - Level 13: Challenges
+       ```
+         // Variables
+            var score = 0;
+         // Create Sprites
+            var cake = createSprite(350,200);
+
+            cake.setAnimation("cake");
+            var player = createSprite(200,200);
+            player.setAnimation("alienWalkRight");
+
+            var enemy1 = createSprite();
+            enemy1.setAnimation("ladybug");
+
+            var enemy2 = createSprite();
+
+            function draw() {
+         // draw the background
+            gameBackground();
+         // update the sprites
+            enemiesTouchCake();
+            movePlayer();
+            displaceEnemies();
+            enemiesTouchWater();
+            showScore();
+            drawSprites();
+            }
+
+         // Functions
+            function gameBackground() {
+            noStroke();
+            background(rgb(0,100,255));
+            fill(rgb(100,100,100));
+            rect(0,150,400,100);
+            fill(rgb(80,80,80));
+            rect(0,140,400,10);
+            rect(0,250,400,10);
+            }
+
+            function enemiesTouchCake(){
+            
+            }
+
+            function movePlayer(){
+            
+            }
+
+            function displaceEnemies(){
+
+            }
+
+            function enemiesTouchWater(){
+            
+            }
+
+            function showScore() {
+            fill("white");
+            textSize(20);
+            text("Score",20,20,200,100);
+            text(score,20,40,200,100);
+            }
+       ```
+### Lessson 27 Using the Game Design Process
+ **Question of the Day:** How can the problem-solving process help programmers to manage large projects?
+
+   - In this multi-day lesson, you will use the problem-solving process to create a platform jumper game!
+   - Level One: Sample Platform Jumper Game
+   - Level Two: Build a Platform Jumper
+   - Level Three-Six: Platform Jumper - Background and Variables
+        ```
+            function background2() {
+            background("white");
+            }
+        ```
+   - Level Seven - Nine: Platform Jumper - Jumper
+        ```
+            function draw() {
+         // draw the background
+            background1();
+         // update the sprites
+            
+            drawSprites();
+            }
+        ```
+   - Level Ten - Twelve: Platform Jumper - Items
+   - Level Threen - Sixteen: Platform Jumper - Player
+        ```
+         // Variables
+
+         // Create Sprites
+
+            function draw() {
+         // draw the background
+            background1();
+         // update the sprites
+            
+            drawSprites();
+            }
+
+         // Functions
+            function background1() {
+            background("darkBlue");
+            noStroke();
+            fill("yellow");
+            ellipse(randomNumber(0, 400), randomNumber(0, 400), 3, 3);
+            ellipse(randomNumber(0, 400), randomNumber(0, 400), 3, 3);
+            ellipse(340, 50, 60, 60);
+            fill("darkBlue");
+            ellipse(320, 30, 60, 60);
+            }
+            function background2() {
+            background("white");
+            }
+            function showScore() {
+            fill("white");
+            textSize(20);
+            text("Score: ",10, 10, 80, 20);
+            }
+        ```
+   - Level Seventeen: Platform Jumper Review
+        ```
+         // Variables
+
+         // Create Sprites
+
+            function draw() {
+         // draw the background
+            background1();
+         // update the sprites
+            
+            drawSprites();
+            }
+
+         // Functions
+            function background1() {
+            background("darkBlue");
+            noStroke();
+            fill("yellow");
+            ellipse(randomNumber(0, 400), randomNumber(0, 400), 3, 3);
+            ellipse(randomNumber(0, 400), randomNumber(0, 400), 3, 3);
+            ellipse(340, 50, 60, 60);
+            fill("darkBlue");
+            ellipse(320, 30, 60, 60);
+            }
+            function background2() {
+            background("white");
+            }
+            function showScore() {
+            fill("white");
+            textSize(20);
+            text("Score: ",10, 10, 80, 20);
+            }
+        ```
+   - Level 18: challenges
+
 
 
 
