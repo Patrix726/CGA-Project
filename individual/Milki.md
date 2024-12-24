@@ -849,3 +849,462 @@ function draw() {
 }
 ```
 ![Screenshot_23-12-2024_22293_studio code org](https://github.com/user-attachments/assets/75fc586e-83c6-4abc-bd20-4aeb3b308510)
+
+# Lesson 19
+### Velocity
+
+- velocityX
+One way to move sprites in Game Lab is with the counter pattern. For example `sprite.x=sprite.x+1` moves a sprite by 1 pixel each frame of the draw loop. This pattern is so common that sprites have a velocityX property that does this for you.
+
+- You can use rotationSpeed to make your sprites spin. If you want your sun to rotate by two degrees each time it's drawn, you can use sun.rotationSpeed = 2; outside of the draw loop, after you create your sprite.
+```
+var field = createSprite(200,200);
+field.setAnimation("field");
+var ball = createSprite(200, 50);
+ball.setAnimation("ball");
+ball.scale = 0.2;
+ball.velocityY = 5;
+
+function draw() {
+  //2) Look at how conditionals and velocity are used to make the ball bounce at the bottom of the screen.
+  if (ball.y > 380) {
+    ball.velocityY = -5;
+  }
+  //3) Add code to make the ball bounce at the top of the screen.
+  if (ball.y < 0) {
+    ball.velocityY = 5;
+  }
+
+  drawSprites();
+}
+```
+
+# Lesson 20
+## Collision Detection
+```
+
+// Create the sprites and start them moving
+var backdrop = createSprite(200,200);
+backdrop.setAnimation("meadow");
+var bunny = createSprite(50, 300);
+bunny.setAnimation("bunny");
+bunny.velocityX = 3;
+var robot = createSprite(400, 320);
+robot.setAnimation("robot");
+robot.scale = 0.2;
+robot.velocityX = -3;
+var dinner = createSprite(370, 350);
+dinner.setAnimation("stew");
+dinner.velocityX = -3;
+
+function draw() {
+  //1) Check if the bunny is touching the dinner.
+  if (bunny.isTouching(dinner)) {
+    // stop everything and change to empty bowl
+    bunny.velocityX = 0;
+    dinner.velocityX = 0;
+    robot.velocityX = 0;
+    dinner.setAnimation("bowl");
+  }
+  drawSprites();
+}
+```
+
+```
+// create the sprites
+var horse = createSprite(200, 150);
+horse.setAnimation("horse");
+var rainbow = createSprite(400, 370);
+rainbow.setAnimation("rainbow");
+rainbow.velocityX = -5;
+rainbow.velocityY = -5;
+rainbow.rotateToDirection = true;
+
+function draw() {
+  // draw the background
+  background("skyblue");
+
+  //1) Change the horse into a unicorn when the rainbow touches it.
+  if (horse.isTouching(rainbow)) {
+    horse.setAnimation("unicorn");
+  }
+
+
+  
+  drawSprites();
+}
+```
+
+# Lesson 21  
+### Mini-Project Side-Scroller
+```
+// GAME SETUP
+// Create the sprites
+var frog = createSprite(200, 300);
+frog.setAnimation("frog");
+var target = createSprite(300, 100);
+target.setAnimation("fly");
+var obstacle = createSprite(350, 310);
+obstacle.setAnimation("mushroom");
+obstacle.scale = 0.7;
+
+// set velocity for the obstacle and the target
+obstacle.velocityX = -5;
+target.velocityX = -4;
+
+// create the variables
+var score = 0;
+var health = 100;
+
+function draw() {
+  // BACKGROUND
+  background(rgb(0, 150, 250));
+  // draw the ground and other background
+  noStroke();
+  fill("white");
+  ellipse(50, 50, 200, 50);
+ 
+  fill(rgb(255, 140, 0));
+  rect(0, 325, 400, 320);
+ 
+  // SPRITE INTERACTIONS
+  // if the player touches the obstacle
+  // the health goes down, and the obstacle turns
+  if (frog.isTouching(obstacle)) {
+    health -= 1; // Decrease health
+    obstacle.rotation += 15; // Rotate the obstacle
+  }
+ 
+  // if the player touches the target
+  // the score goes up, the target resets
+  if (frog.isTouching(target)) {
+    score += 1; // Increase score
+    target.x = 400; // Reset target position
+  }
+ 
+  // JUMPING
+  if (keyWentDown("up") && frog.y >= 300) {
+    frog.velocityY = -14; // Move the frog up
+  }
+ 
+  frog.velocityY += 0.5; // Gravity effect
+ 
+  if (frog.y > 300) { // If the frog is on the ground
+    frog.y = 300;
+    frog.velocityY = 0; // Stop the frog from falling
+  }
+ 
+  // LOOPING
+  // if the obstacle has gone off the left hand side of the screen, 
+  // move it to the right hand side of the screen
+  if (obstacle.x < 0) {
+    obstacle.x = 400;
+  }
+ 
+  // if the target has gone off the left hand side of the screen,
+  // move it to the right hand side of the screen
+  if (target.x < 0) {
+    target.x = 400;
+  }
+ 
+  // DRAW SPRITES
+  drawSprites();
+ 
+  // SCOREBOARD
+  // add scoreboard and health meter
+  fill("black");
+  textSize(20);
+  text("Health:", 280, 30);
+  text(health, 350, 30);
+  text("Score:", 20, 30);
+  text(score, 90, 30);
+ 
+  // GAME OVER
+  // if health runs out
+  // show Game over
+  if (health < 0) {
+    background("black");
+    fill("green");
+    textSize(50);
+    text("Game Over!", 40, 200);
+  }
+}
+```
+
+# Lesson 22
+## Complex Sprite Movement
+- Velocity and the Counter Pattern
+This program already makes a car move across the screen, but it's going very slowly. By using the velocityX property with the counter pattern, you can change the sprite's speed during the program.
+
+`car.velocityX = car.velocityX + 0.5;`
+
+```
+var scenery = createSprite(200, 200);
+scenery.setAnimation("park_view");
+var cat = createSprite(50, 250);
+cat.setAnimation("brown_cat");
+cat.scale = 0.5;
+
+var mouse = createSprite(375, 325);
+mouse.setAnimation("mouse");
+//1) Take a look at the code that makes the mouse move.
+mouse.velocityX = -20;
+
+function draw() {
+  //2) Add code to make the mouse change directions when it reaches the cat.
+  mouse.velocityX = mouse.velocityX + 1;
+
+
+  drawSprites();
+}
+```
+# Lesson 23
+## Collision
+- Sprite Interactions
+So far you've been able to create simple sprite interactions by using the sprite.isTouching() block. For example, you've reset a coin to a different location on the screen when a character touches it.
+
+```
+// Create giraffe sprite
+var giraffe = createSprite(30,200);
+giraffe.setAnimation("giraffe");
+giraffe.velocityX = 1;
+giraffe.scale = 0.3;
+
+// Create monkey sprite
+var monkey = createSprite(300,200);
+monkey.setAnimation("monkey");
+monkey.scale = 0.3;
+
+function draw(){
+  // Draw background
+  background("white");
+  
+  //1) Program the giraffe to push the monkey off the screen.
+  if (giraffe.isTouching(monkey)) {
+    monkey.velocityX = 1;
+  }
+
+  
+  drawSprites();
+}
+```
+- Displace
+  - This type of sprite interaction from the previous levels is so common that there's a block for it: `sprite.displace()`
+
+
+- More Collision Blocks
+
+    - Three new types of sprite interactions have been added to the toolbox, sprite.collide(), sprite.bounce(), and sprite.bounceOff().
+```
+// create sprites
+var giraffe = createSprite(50, 50);
+giraffe.setAnimation("giraffe");
+giraffe.velocityX = 3;
+var hippo = createSprite(50, 150);
+hippo.setAnimation("hippo");
+hippo.velocityX = 3;
+var rabbit = createSprite(50, 250);
+rabbit.setAnimation("rabbit");
+rabbit.velocityX = 3;
+var snake = createSprite(50, 350);
+snake.setAnimation("snake");
+snake.velocityX = 3;
+var parrot = createSprite(350, 50);
+parrot.setAnimation("parrot");
+parrot.velocityX = -3;
+var elephant = createSprite(350, 150);
+elephant.setAnimation("elephant");
+elephant.velocityX = -3;
+var monkey = createSprite(350, 250);
+monkey.setAnimation("monkey");
+monkey.velocityX = -3;
+var pig = createSprite(350, 350);
+pig.setAnimation("pig");
+pig.velocityX = -3;
+
+
+function draw() {
+  background("lightblue");
+
+  //1) For each pair of animals, choose the sprite interaction 
+  // that matches the target image.
+  giraffe.bounce(parrot);
+  elephant.collide(hippo);
+  monkey.displace(rabbit);
+  snake.bounceOff(pig);
+
+
+  drawSprites();
+}
+```
+# Lesson 24
+## Mini-Project flyer game
+```
+// GAME SETUP
+// create player, target, and obstacles
+var player = createSprite(200, 100);
+player.setAnimation("fly_bot");
+player.scale = 0.8;
+
+// Create target sprite
+var target = createSprite(150, 200);
+target.setAnimation("coin");
+target.scale = 0.5;
+
+// Create obstacle sprites
+var obstacle1 = createSprite(50, 50);
+obstacle1.setAnimation("rock");
+obstacle1.scale = 0.6;
+
+var obstacle2 = createSprite(350, 350);
+obstacle2.setAnimation("rock");
+obstacle2.scale = 0.6;
+
+// Set starting velocities for obstacles
+obstacle1.velocityX = 2;
+obstacle1.velocityY = 1;
+
+obstacle2.velocityX = -2;
+obstacle2.velocityY = -1;
+
+function draw() {
+  background("lightblue");
+  
+  // FALLING: Simulate gravity for the player
+  player.velocityY += 0.5;
+
+  // PLAYER CONTROLS
+  if (keyDown("up")) {
+    player.velocityY = -10; // Player jumps upwards
+  }
+  if (keyDown("left")) {
+    player.velocityX -= 0.5; // Decrease x velocity to move left
+  }
+  if (keyDown("right")) {
+    player.velocityX += 0.5; // Increase x velocity to move right
+  }
+
+  // SPRITE INTERACTIONS
+  // Reset the coin when the player touches it
+  if (player.isTouching(target)) {
+    target.x = random(50, 350);
+    target.y = random(50, 350);
+  }
+
+  // Make the obstacles push the player
+  if (player.isTouching(obstacle1)) {
+    // Push player in the direction of the obstacle
+    player.velocityX += 2; // Push to the right
+    player.velocityY += 2; // Push downwards
+  }
+  
+  if (player.isTouching(obstacle2)) {
+    // Push player in the opposite direction of the second obstacle
+    player.velocityX -= 2; // Push to the left
+    player.velocityY -= 2; // Push upwards
+  }
+
+  // LOOPING: Make obstacles wrap around the screen
+  if (obstacle1.x > 400) {
+    obstacle1.x = 0;
+    obstacle1.y = random(50, 350);
+  }
+  if (obstacle1.x < 0) {
+    obstacle1.x = 400;
+    obstacle1.y = random(50, 350);
+  }
+
+  if (obstacle2.x > 400) {
+    obstacle2.x = 0;
+    obstacle2.y = random(50, 350);
+  }
+  if (obstacle2.x < 0) {
+    obstacle2.x = 400;
+    obstacle2.y = random(50, 350);
+  }
+
+  if (obstacle1.y > 400) {
+    obstacle1.y = 0;
+    obstacle1.x = random(50, 350);
+  }
+  if (obstacle1.y < 0) {
+    obstacle1.y = 400;
+    obstacle1.x = random(50, 350);
+  }
+
+  if (obstacle2.y > 400) {
+    obstacle2.y = 0;
+    obstacle2.x = random(50, 350);
+  }
+  if (obstacle2.y < 0) {
+    obstacle2.y = 400;
+    obstacle2.x = random(50, 350);
+  }
+
+  // DRAW SPRITES
+  drawSprites();
+  
+  // GAME OVER
+  if (player.x < -50 || player.x > 450 || player.y < -50 || player.y > 450) {
+    background("black");
+    textSize(50);
+    fill("green");
+    text("Game Over!", 50, 200);
+  }
+}
+```
+# Lesson 25
+## Functions
+- Calling Functions
+Functions let you build your own blocks and decide what code goes inside of them. This program has already created two functions, but only one of them is being called.
+```
+var coin = createSprite(200, 10);
+coin.setAnimation("coin_gold_1");
+setCoin();
+
+var bunny = createSprite(200, 350);
+bunny.setAnimation("bunny1_ready_1");
+
+var score = 0;
+
+function setCoin() {
+  // Set the coin's y position to the top of the screen
+  coin.y = 10;
+  
+  // Randomize the coin's x position
+  coin.x = random(50, 350); // Ensures the coin falls between x positions 50 and 350
+  
+  // Randomize the coin's velocityY for varied falling speed
+  coin.velocityY = random(3, 7); // Coin will fall at a random speed between 3 and 7
+}
+
+function draw() {
+  background("white");
+  
+  if(keyDown("left")){
+    bunny.x = bunny.x - 2;
+  }
+  
+  if(keyDown("right")){
+    bunny.x = bunny.x + 2;
+  }
+  
+  // Check if bunny is touching the coin
+  if(bunny.isTouching(coin)) {
+    score++;         // Increase the score
+    setCoin();       // Reset the coin
+  }
+  
+  // Reset coin if it goes off screen
+  if(coin.y > 400){
+    setCoin();
+  }
+
+  // Display the score
+  textSize(20);
+  text("Score: " + score, 10, 10, 100, 100);
+  
+  drawSprites();
+}
+```
+![Screenshot_24-12-2024_131613_studio code org](https://github.com/user-attachments/assets/738a0a3e-d6c2-4dbe-baf3-af442dbf3286)
