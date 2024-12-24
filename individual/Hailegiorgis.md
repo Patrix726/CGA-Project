@@ -142,18 +142,194 @@ To position and size shapes effectively on a screen, we must understand how coor
 14. **Mini-Project - Animation:** Encourages applying learned skills to create a full animation, using sprite properties and motion.
 15. **Conditionals:** Explores how to use if-statements to control actions based on conditions, enhancing program interactivity and responsiveness.
 
-![Screenshot of 4-10 Lessons](https://i.ibb.co/PYPz49y/Capture.png)
+- **Code Example**:
+  ```javascript
+
+      if (bird.x < 0) bird.x = 400;
+
+
+  ```
+
+![Screenshot of 11-15 Lessons](https://i.ibb.co/PYPz49y/Capture.png)
 
 
 
-**Lesson 16   to 20 Summary in short and simple statment**
 
-11. **Key Board Input:** This is focus on Key board events what happen with the entites or the sprite when the key is pressed how to use them in condition and more. Example: KeyDown("space")
-12. **Mouse input:** This is focus on Mouse events what happen with the entites or the sprite when the Mouse button is clicked how to use them in condition and more. Example: MouseDown()
-13. **Sprite Movement:** develop an interactive greeting card using all the programming concepts and techniques you have learned so far!
-14. **Velocity:** This is seting movment direction speed to the entities along in y or x with speed setted same or differently. We focus on the function like setVelocity(), sprite.velocityX or Y and more with condition , in function and outside of it.
-15. **Collision Detaction :** This is mainly focus on the interconnection between object and how they should interacte what action should they need to replay and more other action to the game. mostly we use the isTouching through out the trainning.
+---
+
+### **Lesson 16: Debugging**
+- **Objective**: Identify and fix bugs to ensure smooth gameplay and performance.
+- **Key Points**:
+  - Use `console.log()` for debugging.
+  - Trace errors in sprite movement, collisions, and animations.
+- **Code Example**:
+  ```javascript
+
+      console.log("Ball Position: " + ball.x); // Debugging log
+
+  ```
+
+---
+
+### **Lesson 17: Functions and Loops**
+- **Objective**: Create reusable functions and use loops to streamline repetitive tasks.
+- **Key Points**:
+  - Define and call custom functions for modularity.
+  - Use loops for repetitive actions like spawning multiple enemies.
+- **Code Example**:
+  ```javascript
+  function spawnEnemy() {}
+  ```
+
+---
+
+### **Lesson 18: Animation States**
+- **Objective**: Switch between different animation states based on user input or game conditions.
+- **Key Points**:
+  - Use conditional statements to change sprite animations.
+  - Represent different states like idle, running, or jumping.
+- **Code Example**:
+
+  ```javascript
+
+      if (keyDown("RIGHT_ARROW")) {
+          player.x += 5;
+          player.shapeColor = "blue"; // Running state
+      } 
+  ```
+
+---
+
+### **Lesson 19: Timer and Scoring**
+- **Objective**: Add score and timer elements to games.
+- **Key Points**:
+  - Update score dynamically.
+  - Display timers to create challenges.
+
+---
+
+### **Lesson 20: Collision Basics**
+- **Objective**: Handle sprite collisions to add interaction.
+- **Key Points**:
+  - Use `isTouching()` for collision detection.
+  - Use `bounceOff()` or `collide()` for specific collision effects.
+- **Code Example**:
+  ```javascript
+
+      if (ball.isTouching(wall)) {
+          ball.velocityX = -2; // Reverse direction on collision
+      }
+  ```
+
+---
+
+
+![Screenshot of 15-20 Lessons](https://i.ibb.co/T1tzXgs/20.png)
+
+
+### **Lesson 21: Mini-Project - Side Scroller**
+- **Objective**: Build a side-scrolling game where the player avoids obstacles.
+- **Key Points**:
+  - Use background movement for scrolling effect.
+  - Create obstacles that move toward the player.
+- **Code Example**:
+  ```javascript
+      ground.x -= 5; // Scroll the ground
+      if (ground.x < 0) ground.x = 400; // Reset position
+      drawSprites();
+  
+  ```
+
+---
+
+### **Lesson 22: Complex Sprite Movement**
+- **Objective**: Implement advanced sprite movement using physics or custom algorithms.
+- **Key Points**:
+  - Add gravity, acceleration, and friction to sprites.
+- **Code Example**:
+  ```javascript
+
+      if (keyDown("SPACE")) player.velocityY = -10; // Jump
+      player.collide(ground); // Prevent falling through
+
+  ```
+
+---
+
+### **Lesson 23: Collisions**
+- **Objective**: Detect and handle collisions with more precision.
+- **Key Points**:
+  - Use `overlap()` for actions on collision.
+  - Destroy or trigger events on collision.
+- **Code Example**:
+  ```javascript
+
+      if (bullet.overlap(enemy)) {
+          enemy.destroy(); // Destroy enemy on collision
+      }
+  ```
+
+---
+
+### **Lesson 24: Mini-Project - Flyer Game**
+- **Objective**: Create a game where the player controls a flying object.
+- **Key Points**:
+  - Implement upward movement with gravity pull-down.
+- **Code Example**:
+  ```javascript
+
+      bird.velocityY += gravity;
+      if (keyDown("SPACE")) bird.velocityY = -5; // Fly up
+
+  ```
+
+---
+
+### **Lesson 25: Functions**
+- **Objective**: Refactor code using reusable functions.
+- **Key Points**:
+  - Simplify tasks by defining functions for repeating logic.
+- **Code Example**:
+  ```javascript
+  function spawnCloud() {
+  //user define func
+  }
+
+  function draw() {
+     //draw func
+  }
+  ```
+
+---
+
+### **Lesson 26: The Game Design Process**
+- **Objective**: Introduce steps to design a complete game.
+- **Steps**:
+  1. Brainstorm ideas.
+  2. Create a prototype.
+  3. Test and iterate.
+  4. Finalize and polish.
+
+---
+
+### **Lesson 27: Using the Game Design Process**
+- **Objective**: Apply the design process to refine game mechanics.
+- **Example**:
+  - Testing player controls and enemy interactions.
+  - Adding feedback like sound effects and visual cues.
+
+---
+
+### **Lesson 28: Project - Design a Game**
+- **Objective**: Create a custom game incorporating all learned concepts.
+- **Key Points**:
+  - Combine movement, collisions, scoring, and animations.
+  - Use polished sprites and backgrounds for final touches.
+
+
+![Screenshot of 21-28 Lessons](https://i.ibb.co/HpNZrrz/Capture.png)
 
 
 
-![Screenshot of 4-10 Lessons](https://i.ibb.co/T1tzXgs/20.png)
+
+
