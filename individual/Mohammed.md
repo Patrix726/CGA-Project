@@ -104,9 +104,11 @@ Question of the Day: Why is testing essential, and how can it improve programs?
 ## Lesson 16: Keyboard Input
 
 Question of the Day: How can our programs react to user input?
+
 After this lesson I understood that:
    - The keyDown() block allows interaction through keyboard input.
    - Responding to user input makes programs more dynamic and engaging.
+   - 
 Activities: 
    - Prediction: Consider how keyboard input can enhance program interactivity.
    - Skill Building: Learn to use the keyDown() block to respond to user actions. 
