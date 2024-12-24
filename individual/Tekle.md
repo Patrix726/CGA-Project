@@ -3307,6 +3307,8 @@
         ```
    - Level 18: challenges
 
+![Screenshot 2024-12-24 182900 1](https://github.com/user-attachments/assets/67dc16db-37ea-4aff-84f9-e8a18bb52b0e)
+![Screenshot 2024-12-24 182700](https://github.com/user-attachments/assets/1c0bd219-cf5d-4af9-a303-55ebcd70ef1b)
 
 
 
