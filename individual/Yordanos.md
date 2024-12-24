@@ -164,13 +164,11 @@ How can coordinates help us accurately position and size shapes on a canvas?
 ### Activities:
 - Modify sprite properties over time.
 - Create behaviors like bouncing or path-following.
-```
 
 ![progress from lesson 4 upto 9](https://i.ibb.co/gyKPM6N/Screenshot-2024-12-03-134050.png)
 
 
 
-```markdown
 # Programming Lessons Summary
 
 ## Lesson 10: Text
@@ -354,9 +352,8 @@ if (x > 10) {
   console.log("x is not greater than 10");
 }
 ```
-```
+
 ![progress from lesson 10 - 15](https://i.postimg.cc/qqcwkv8z/Screenshot-2024-12-10-133455.png)
-![lesson-15](https://i.postimg.cc/ZnGQZNF6/lesson-15.png)
 
 
 ```
