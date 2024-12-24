@@ -102,7 +102,7 @@ Question of the Day: Why is testing essential, and how can it improve programs?
 ![Getting Started](./Screenshot_2.png)
 
 ## Lesson 11: Mini-Project - Captioned Scenes
-
+`
 background("white");
 rect(100, 100, 200, 200);
 rect(100, 100, 200, 200);
@@ -120,7 +120,7 @@ fill("black");
 text("Let's collect the balls", 200, 360);
 text("Pool and Baseball", 200, 390);
 textSize(36);
-
+`
 ## Lesson 12: The Draw Loop
 
 // Setting Frame Rate
