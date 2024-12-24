@@ -312,3 +312,70 @@ Assessment: Show mastery by designing an interactive program using keyboard inpu
 Challenges: Explore creative and advanced applications of keyboard interactivity.
 
 ![lesson 16-19](https://i.ibb.co/S6GdDdL/Screenshot-2024-12-17-132335.png)
+
+
+Here are the ideas extracted from lessons 20 to 28:
+
+---
+
+### Lesson 20: Collision Detection  
+1. **Collision Detection**: Use `isTouching` to check if two sprites collide and trigger actions like stopping movement or changing sprite animations.  
+2. **Debugging**: Enable sprite debugging by setting `sprite.debug = true` to visualize sprite boundaries.  
+3. **Movement Control**: Use arrow keys or set velocities to move sprites and interact with others.
+
+---
+
+### Lesson 21: Mini-Project - Side Scroller  
+4. **Game Mechanics**: Create simple interactive gameplay with score and health mechanics.  
+5. **Background and Obstacles**: Design backgrounds and add obstacles that loop when they go off-screen.  
+6. **Player Interaction**: Allow the player to jump, interact with obstacles, and collect targets to gain points.  
+
+---
+
+### Lesson 22: Complex Sprite Movement  
+7. **Acceleration**: Use a counter pattern with `velocityX` or `velocityY` to simulate acceleration and deceleration.  
+8. **Physics**: Gradually increase the speed of objects for more dynamic motion.
+
+---
+
+### Lesson 23: Collisions  
+9. **Collision Handling**: Use blocks like `displace`, `collide`, `bounce`, and `bounceOff` to mimic real-life physics and interactions.  
+10. **Collider Boundaries**: Adjust collider parameters to fit the sprite’s actual shape using `.setCollider()` for precision.
+
+---
+
+### Lesson 24: Mini-Project - Flyer Game  
+11. **Looping Mechanics**: Reset obstacles' positions after they go out of bounds.  
+12. **Player Controls**: Provide controls for vertical and horizontal movement and adjust velocities.  
+13. **Object Interaction**: Allow interactions with targets and obstacles, such as collecting items or being pushed by other objects.  
+14. **Game Over Condition**: End the game when the player moves out of bounds or meets failure criteria.
+
+---
+
+### Lesson 25: Functions  
+15. **Modularity**: Break down the game into reusable functions for drawing backgrounds, sprites, and other components.  
+16. **Drawing**: Use functions to create static elements like trees, clouds, and fences.
+
+---
+
+### Lesson 26: Game Design Process  
+17. **Combining Concepts**: Integrate knowledge of movement, collision detection, and game mechanics to create a cohesive arcade game.  
+18. **Variables and States**: Use variables like `score` and `lives` to track game progress and end conditions.  
+
+---
+
+### Lesson 27: Animations and Effects  
+19. **Animation**: Assign different animations to sprites based on interactions (e.g., a popped balloon after collision).  
+20. **Random Behavior**: Randomize positions or velocities to add unpredictability.
+
+---
+
+### Lesson 28: Debugging and Optimization  
+21. **Debugging Tools**: Use visual debug tools and logs to detect and fix bugs in sprite interactions or movement.  
+22. **Optimization**: Simplify code and group repeated actions into functions for cleaner and more efficient code.  
+
+--- 
+
+These points summarize the ideas and concepts from lessons 20 to 28 in a concise, text-based format.
+
+![20 upto 28](https://i.ibb.co/QcNzZYR/Screenshot-2024-12-24-140243.png)
