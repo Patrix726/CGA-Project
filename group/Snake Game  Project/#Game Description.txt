@@ -1,0 +1,101 @@
+# Snake Game
+
+**Game Title:** Infinite Snake Adventure  
+**Developed by:** Misgana Tsegaye
+**Published on:** December 29, 2024  
+**Time Taken to Develop:** 3 Days  
+
+## Overview
+
+Infinite Snake Adventure is a modern, engaging twist on the classic Snake game. Developed using p5.js, this version includes enhanced gameplay mechanics, seamless wall wrapping, and interactive sound effects. Players navigate the snake to collect food while avoiding collisions with its own body, aiming to achieve the highest score possible. With its sleek design and intuitive controls, this game offers an addictive experience for players of all ages.
+
+The game features visually appealing graphics, gradient backgrounds, and dynamic sound effects that make gameplay more immersive. Infinite Snake Adventure balances simplicity with sophistication, offering hours of fun.
+
+## Features
+
+- **Main Menu:** Allows players to start the game, view instructions, or see credits.
+- **How to Play:** Explains the basic mechanics of controlling the snake and earning points.
+- **Credits:** Highlights the game developer and sound sources.
+- **Gameplay:** Players guide the snake using arrow keys to collect food while avoiding self-collision. The game incorporates smooth animations, wall wrapping, and a responsive scoring system.
+- **Wall Wrapping:** The snake can pass through one side of the screen and reappear on the opposite side, adding an extra layer of challenge.
+- **Sound Effects:** Integrated sound effects for food collection and game over events.
+- **Game Over and Restart:** The game ends when the snake collides with itself, and players can restart with a single key press.
+- **Dynamic Backgrounds:** Gradient backgrounds create a visually appealing environment.
+
+## Controls
+
+- **Arrow Keys:** Navigate the snake (up, down, left, right).
+- **'P':** Pause the game.
+- **'R':** Restart the game after a game over.
+
+## Game Mechanics
+
+### Snake Movement
+
+- The snake moves continuously in the direction of the last key pressed.
+- Players must strategically plan movements to avoid collisions and collect food.
+
+### Food
+
+- Food appears at random positions on the grid.
+- Eating food increases the snake’s length and the player's score.
+- Each piece of food adds 10 points to the score.
+
+### Wall Wrapping
+
+- The snake can move off one edge of the screen and reappear on the opposite side, avoiding traditional wall collisions.
+- This feature introduces a unique gameplay element, requiring players to think differently.
+
+### Collisions
+
+- The game ends when the snake's head collides with its own body.
+- Players must navigate carefully as the snake grows longer with each piece of food.
+
+### Scoring
+
+- Points are awarded for each piece of food collected.
+- The current score is displayed at the top of the screen during gameplay.
+
+## Installation Instructions
+
+To play the game on Code.org Game Lab, copy and paste the provided JavaScript code into a new project and click "Run."
+
+## Game Screens
+
+### Main Menu
+- Displays the game title and options to start the game, view instructions, or see credits.
+
+### How to Play
+- Explains controls and gameplay mechanics.
+
+### Credits
+- Acknowledges the game developer and any additional resources used.
+
+### Game Over
+- Displays the player's final score and offers an option to restart the game.
+
+## Sound Integration
+
+- **Food Collection Sound:** A cheerful sound plays when the snake eats food.
+- **Game Over Sound:** A distinct sound effect signals the end of the game.
+
+## Credits
+
+- **Game Design & Development:** Abdi's Game Studio
+- **Sounds:** Free sound effects sourced from royalty-free platforms
+
+## Future Updates
+
+- Additional snake skins and customization options.
+- Power-ups such as speed boosts and temporary invincibility.
+- Advanced AI for procedurally generated food placement.
+- High score leaderboard to track and save player progress.
+
+## License
+
+This project will be released under the MIT License in its final version.
+
+## Conclusion
+
+Infinite Snake Adventure redefines the classic Snake game with innovative features, modern graphics, and immersive sound effects. Developed in just three days by Abdi's Game Studio, this game is a testament to how simple concepts can be transformed into highly engaging experiences.
+
