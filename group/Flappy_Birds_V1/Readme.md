@@ -1,4 +1,4 @@
-# Flappy Bird Game Documentation
+# Flappy Bird Game
 
 ### Game Title: **The Double Flappy Birds**
 Developed by: **Patrik Game Developer**  
