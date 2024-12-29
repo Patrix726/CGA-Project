@@ -161,7 +161,7 @@ function showCredits() {
   textAlign(CENTER, CENTER);
   text("Credits", width / 2, height / 4);
   textSize(15);
-  text("Game Design: You\nMusic: On update version\nThanks for Playing!", width / 1.75, height / 2);
+  text("Game Design: Patrix Game Dev\nMusic: On update version\nThanks for Playing!", width / 1.75, height / 2);
   text("Press '0' to return to Main Menu", width / 2, height - 50);
 }
 
