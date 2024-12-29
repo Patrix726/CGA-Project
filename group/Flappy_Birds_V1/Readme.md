@@ -1,7 +1,7 @@
 # Flappy Bird Game
 
 ### Game Title: **The Double Flappy Birds**
-Developed by: **Patrik Game Developer**  
+Developed by: **Patrix Game Developer**  
 Published on: **December 29, 2024**  
 Time Taken to Develop: **3 Days**
 
@@ -104,7 +104,7 @@ To run the game on code.org Game Lab
 
 ## Credits
 
-- **Game Design & Development**: Patrik Game Developer
+- **Game Design & Development**: Patrix Game Developer
 - **Music**: Custom background music (or link to source, if available)
 - **Sounds**: Sound effects sourced from soundjay.com or other free resources.
 
@@ -127,4 +127,4 @@ This project is not licensed when the final version released we will have the MI
 
 ## Conclusion
 
-**The Double Flappy Birds** offers an exciting and nostalgic take on the popular Flappy Bird game with improved gameplay features and a simple yet engaging interface. It was developed over three days by Patrik Game Developer, with sound integration and multiple gameplay modes to enhance user experience.
+**The Double Flappy Birds** offers an exciting and nostalgic take on the popular Flappy Bird game with improved gameplay features and a simple yet engaging interface. It was developed over three days by Patrix Game Developer, with sound integration and multiple gameplay modes to enhance user experience.
