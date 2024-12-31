@@ -1,0 +1,92 @@
+body {
+	background-color: #9c9c9c;
+	padding: 0;
+	margin: 0;
+}
+canvas {
+	inset: 0;
+	position: absolute;
+	margin: auto;
+}
+.banner {
+	position: fixed;
+	margin: auto;
+	border-radius: 8px;
+	padding-top: 10px;
+	left: 20px;
+	bottom: 20px;
+	width: 500px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	justify-content: center;
+	align-items: center;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	font-size: 48px;
+	padding: 10px;
+	color: rgb(0, 255, 204);
+}
+.highscore-container {
+	position: fixed;
+	margin: auto;
+	border-radius: 8px;
+	background-color: white;
+	padding-top: 10px;
+	right: 0px;
+	width: 300px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	justify-content: start;
+	align-items: center;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.highscores {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	gap: 16px;
+}
+.highscores div {
+	width: 80%;
+	border-radius: 4px;
+	display: flex;
+	border: 2px solid crimson;
+	padding: 6px;
+	transition: all 500ms ease;
+}
+.highscores div:hover {
+	background-color: crimson;
+	color: white;
+}
+.highscores div span:first-child {
+	flex: 1;
+}
+.highscores div span:nth-child(2) {
+	flex: 5;
+}
+.highscores div span:last-child {
+	flex: 1;
+}
+dialog {
+	z-index: 200;
+	inset: 0;
+	margin: auto;
+	border-radius: 12px;
+}
+form {
+	border-radius: 1rem;
+	padding: 16px;
+	font-family: monospace;
+	font-size: 16px;
+}
+form p {
+	margin: 0;
+	margin-bottom: 20px;
+	font-size: 24px;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
